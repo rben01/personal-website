@@ -7,8 +7,8 @@ https://github.com/rben01/[My GitHub profile (`rben01`)]
 == Links to my other *GitHub Pages* pages
 https://rben01.github.io/covid19/[COVID-19 Tracker]::
 	A collection of graphs displaying how coronavirus has spread throughout the world. +
-	GitHub repo: https://github.com/rben01/covid19[]
+	*GitHub repo*: https://github.com/rben01/covid19[]
 
 https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune_]::
 	A trivia game I put together to give friends something to play when hanging out virtually. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`". +
-	GitHub repo: https://github.com/rben01/quarantine-music-trivia
+	*GitHub repo*: https://github.com/rben01/quarantine-music-trivia
