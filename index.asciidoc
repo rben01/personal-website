@@ -1,6 +1,8 @@
-= Robert Bennett's GitHub Page
+= Robert Bennett's Page
+:author: Robert Bennett
+:email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/adoc-readthedocs.css
+:stylesheet: styles/adoc-rubygems.css
 :nofooter:
 :repo-covid: rben01/covid19
 :repo-quarantine-music-trivia: rben01/quarantine-music-trivia
@@ -8,12 +10,13 @@
 // best themes: adoc-rubygems, adoc-readthedocs, boot-readable, boot-cosmo
 
 [.lead]
-https://github.com/rben01/[My GitHub username is `rben01`]. This page is just a portal to other GitHub pages of mine.
+This page is just a portal to other GitHub pages of mine:
+
 
 [pass]
 ++++
 <style>
-.hdlist1 { font-size: 22px }
+.hdlist1 { font-size: 20px }
 body {
      max-width: 850px;
      margin: 0px auto;
@@ -22,7 +25,6 @@ body {
 </style>
 ++++
 
-== My pages
 
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
 	A collection of graphs displaying how coronavirus has spread throughout the world. +
