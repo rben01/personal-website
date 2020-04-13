@@ -1,11 +1,11 @@
 = Robert Bennett's GitHub Page
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/italian-pop.css
+:stylesheet: styles/adoc-maker.css
 
 // best is iconic, tufte
 
 [.lead]
-https://github.com/rben01/[My GitHub profile (`rben01`)]
+https://github.com/rben01/[My GitHub profile, `rben01`]
 
 [pass]
 ++++
