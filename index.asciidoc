@@ -1,4 +1,4 @@
-= Robert Bennett's Page
+= Robert Bennett's Projects
 :author: Robert Bennett
 :email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
