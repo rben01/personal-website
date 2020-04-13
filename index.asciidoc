@@ -18,7 +18,7 @@ This page is just a portal to other GitHub pages of mine:
 ++++
 <style>
 html * { font-family: "Tahoma", "Helvetica", sans-serif !important; }
-.hdlist1 { font-size: 20px }
+.hdlist1 { font-size: 19px }
 a { color: #00609a !important; text-decoration: underline !important; }
 body {
      max-width: 800px;
