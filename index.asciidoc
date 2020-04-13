@@ -1,8 +1,9 @@
 = Robert Bennett's GitHub Page
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/tufte.css
+:stylesheet: styles/boot-readable.css
+:nofooter:
 
-// best is adoc-iconic, tufte, adoc-github
+// best is adoc-iconic, adoc-readthedocs, boot-readable
 
 [.lead]
 https://github.com/rben01/[My GitHub username is `rben01`]. This page is just a portal to other GitHub pages of mine.
@@ -14,7 +15,7 @@ https://github.com/rben01/[My GitHub username is `rben01`]. This page is just a 
 </style>
 ++++
 
-== My other pages (titles are links)
+== My other pages
 
 https://rben01.github.io/covid19/[COVID-19 Tracker]::
 	A collection of graphs displaying how coronavirus has spread throughout the world. +
