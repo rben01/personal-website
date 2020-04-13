@@ -1,11 +1,11 @@
 = Robert Bennett's GitHub Page
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/boot-readable.css
+:stylesheet: styles/bootstrap.min.css
 :nofooter:
 :repo-covid: rben01/covid19
 :repo-quarantine-music-trivia: rben01/quarantine-music-trivia
 
-// best themes adoc-iconic, adoc-readthedocs, boot-readable
+// best themes adoc-iconic, adoc-readthedocs, boot-readable, bootstrap.min.css
 
 [.lead]
 https://github.com/rben01/[My GitHub username is `rben01`]. This page is just a portal to other GitHub pages of mine.
@@ -13,7 +13,11 @@ https://github.com/rben01/[My GitHub username is `rben01`]. This page is just a 
 [pass]
 ++++
 <style>
-.hdlist1 { font-size: 20px }
+.hdlist1 { font-size: 22px }
+body {
+     width: 800px;
+     margin: 50px auto;
+     }
 </style>
 ++++
 
@@ -24,4 +28,4 @@ https://rben01.github.io/covid19/[COVID-19 Tracker]::
 	*GitHub repo*: https://github.com/{covid-repo}[{repo-covid}]
 https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune_]::
 	A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`". +
-	*GitHub repo*: https://github.com/rben01/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}]
+	*GitHub repo*: https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}]
