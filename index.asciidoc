@@ -15,7 +15,7 @@ https://github.com/rben01/[My GitHub username is `rben01`]. This page is just a 
 <style>
 .hdlist1 { font-size: 22px }
 body {
-     width: 800px;
+     max-width: 800px;
      margin: 50px auto;
      }
 </style>
