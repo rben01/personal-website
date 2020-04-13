@@ -22,7 +22,7 @@ body {
 </style>
 ++++
 
-== My other pages
+== My pages
 
 https://rben01.github.io/covid19/[COVID-19 Tracker]::
 	A collection of graphs displaying how coronavirus has spread throughout the world. +
