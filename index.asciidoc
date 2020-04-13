@@ -2,7 +2,7 @@
 :author: Robert Bennett
 :email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/adoc-rubygems.css
+:stylesheet: styles/adoc-maker.css
 :nofooter:
 :repo-covid: rben01/covid19
 :repo-quarantine-music-trivia: rben01/quarantine-music-trivia
