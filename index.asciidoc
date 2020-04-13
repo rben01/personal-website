@@ -2,12 +2,12 @@
 :author: Robert Bennett
 :email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/adoc-maker.css
+:stylesheet: styles/plain.css
 :nofooter:
 :repo-covid: rben01/covid19
 :repo-quarantine-music-trivia: rben01/quarantine-music-trivia
 
-// best themes: adoc-rubygems, adoc-readthedocs, boot-readable, boot-cosmo
+// best themes: adoc-rubygems, boot-readable, boot-cosmo, plain
 
 [.lead]
 This page is just a portal to other GitHub pages of mine:
@@ -16,9 +16,11 @@ This page is just a portal to other GitHub pages of mine:
 [pass]
 ++++
 <style>
+html * { font-family: "Tahoma", "Arial", sans-serif !important; }
 .hdlist1 { font-size: 20px }
+a { color: #00609a !important; text-decoration: underline !important; }
 body {
-     max-width: 850px;
+     max-width: 800px;
      margin: 0px auto;
 	 padding: 15px white;
      }
