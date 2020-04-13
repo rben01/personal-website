@@ -2,8 +2,9 @@
 :author: Robert Bennett
 :email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/plain.css
+:stylesheet: styles/adoc-rubygems.css
 :nofooter:
+:hide-uri-scheme:
 :repo-covid: rben01/covid19
 :repo-quarantine-music-trivia: rben01/quarantine-music-trivia
 
@@ -16,13 +17,13 @@ This page is just a portal to other GitHub pages of mine:
 [pass]
 ++++
 <style>
-html * { font-family: "Tahoma", "Arial", sans-serif !important; }
+html * { font-family: "Tahoma", "Helvetica", sans-serif !important; }
 .hdlist1 { font-size: 20px }
 a { color: #00609a !important; text-decoration: underline !important; }
 body {
      max-width: 800px;
      margin: 0px auto;
-	 padding: 15px white;
+	 padding: 5px 15px white;
      }
 </style>
 ++++
