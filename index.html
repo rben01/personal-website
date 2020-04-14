@@ -300,8 +300,9 @@ body {
   cursor: auto;
 }
 
+
 a:hover {
-  cursor: pointer;
+  cursor: auto;
   text-decoration: underline;
 }
 
@@ -457,7 +458,7 @@ a img {
   border: none;
 }
 
-/* Customizations made here!!! */
+/* Customizations made here!!! ~~~*/
 /* Default paragraph styles */
 body {
   max-width: 800px;
@@ -480,6 +481,10 @@ p aside {
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+}
+
 br {
   content: "";
   margin: .8em;
@@ -495,9 +500,19 @@ br {
   transform: translateY(.005em);
 }
 
-#header .fa-github {
-  color: #111111
+a .fa-github {
+  color: #111111;
 }
+
+
+a.no-underline:hover {
+  text-decoration: none;
+}
+
+a.no-underline:hover+a {
+  text-decoration: underline;
+}
+
 
 /* Default header styles */
 h1,
@@ -1964,6 +1979,10 @@ div.unbreakable {
   text-decoration: underline;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .overline {
   text-decoration: overline;
 }
@@ -2185,7 +2204,7 @@ span.icon>[class*=" icon-"] {
 <h1>Robert Bennett&#8217;s Projects</h1>
 <div class="details">
 <span id="author" class="author">Robert Bennett</span><br>
-<span id="email" class="email"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/rben01">rben01</a></span><br>
+<span id="email" class="email"><a href="https://github.com/rben01" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01">rben01</a></span><br>
 </div>
 </div>
 <div id="content">
@@ -2196,12 +2215,12 @@ span.icon>[class*=" icon-"] {
 <dl>
 <dt class="hdlist1"><a href="https://rben01.github.io/covid19/">COVID-19/Coronavirus Tracker</a></dt>
 <dd>
-<p><span class="icon"><i class="fa fa-github"></i></span>  <a href="https://github.com/rben01/covid19">rben01/covid19</a><br>
+<p><a href="https://github.com/rben01/covid19" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01/covid19">rben01/covid19</a><br>
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US.<br></p>
 </dd>
 <dt class="hdlist1"><a href="https://rben01.github.io/quarantine-music-trivia/">Quarantine <em>Name That Tune Trivia</em></a></dt>
 <dd>
-<p><span class="icon"><i class="fa fa-github"></i></span>  <a href="https://github.com/rben01/quarantine-music-trivia">rben01/quarantine-music-trivia</a><br>
+<p><a href="https://github.com/rben01/quarantine-music-trivia" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01/quarantine-music-trivia">rben01/quarantine-music-trivia</a><br>
 A game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as &#8220;Name the song.&#8221; and &#8220;What movie had this song as the theme?&#8221;.</p>
 <div class="admonitionblock warning">
 <table>

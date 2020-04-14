@@ -1,15 +1,21 @@
 = Robert Bennett's Projects
 :author: Robert Bennett
-:email: icon:github[] link:https://github.com/rben01[rben01]
+:user: rben01
+:github-site: link:https://github.com
+:github-repo: {github-site}/{user}
+:github-icon-in-link: icon:github[]{nbsp},role="no-underline"
+:email: {github-repo}[{github-icon-in-link}]{github-repo}[{user}]
 :docinfo: shared-head
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/homepage.css
 :nofooter:
+:linkcss!:
 :icons: font
 :hide-uri-scheme:
-:user: rben01
-:repo-covid: {user}/covid19
-:repo-quarantine-music-trivia: {user}/quarantine-music-trivia
+:name-covid: {user}/covid19
+:repo-covid: {github-site}/{name-covid}
+:name-quarantine-music-trivia: {user}/quarantine-music-trivia
+:repo-quarantine-music-trivia: {github-site}/{name-quarantine-music-trivia}
 
 // best themes: adoc-rubygems, boot-readable, boot-cosmo, plain
 // (homepage.css is based off adoc-rubygems)
@@ -23,10 +29,10 @@ This page is just a portal to other GitHub pages of mine:
 
 
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
-icon:github[]  https://github.com/{repo-covid}[{repo-covid}] +
+{repo-covid}[{github-icon-in-link}]{repo-covid}[{name-covid}] +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune Trivia_]::
-icon:github[]  https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}] +
+{repo-quarantine-music-trivia}[{github-icon-in-link}]{repo-quarantine-music-trivia}[{name-quarantine-music-trivia}] +
 A game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
 +
 [WARNING]

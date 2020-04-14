@@ -289,8 +289,9 @@ body {
   cursor: auto;
 }
 
+
 a:hover {
-  cursor: pointer;
+  cursor: auto;
   text-decoration: underline;
 }
 
@@ -446,7 +447,7 @@ a img {
   border: none;
 }
 
-/* Customizations made here!!! */
+/* Customizations made here!!! ~~~*/
 /* Default paragraph styles */
 body {
   max-width: 800px;
@@ -469,6 +470,10 @@ p aside {
   font-style: italic;
 }
 
+a {
+  text-decoration: none;
+}
+
 br {
   content: "";
   margin: .8em;
@@ -484,9 +489,19 @@ br {
   transform: translateY(.005em);
 }
 
-#header .fa-github {
-  color: #111111
+a .fa-github {
+  color: #111111;
 }
+
+
+a.no-underline:hover {
+  text-decoration: none;
+}
+
+a.no-underline:hover+a {
+  text-decoration: underline;
+}
+
 
 /* Default header styles */
 h1,
@@ -1951,6 +1966,10 @@ div.unbreakable {
 
 .underline {
   text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
 }
 
 .overline {
