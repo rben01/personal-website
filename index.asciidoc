@@ -1,6 +1,6 @@
 = Robert Bennett's Projects
 :author: Robert Bennett
-:email: https://github.com/rben01
+:email: icon:github[] link:https://github.com/rben01[rben01]
 :docinfo: shared-head
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/homepage.css
@@ -23,10 +23,10 @@ This page is just a portal to other GitHub pages of mine:
 
 
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
-icon:github[] {nbsp} https://github.com/{repo-covid}[{repo-covid}] +
+icon:github[]  https://github.com/{repo-covid}[{repo-covid}] +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune Trivia_]::
-icon:github[] {nbsp} https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}] +
+icon:github[]  https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}] +
 A game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
 +
 [WARNING]

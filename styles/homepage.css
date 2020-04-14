@@ -481,7 +481,11 @@ br {
 }
 
 .fa-github {
-  transform: translateY(.04em);
+  transform: translateY(.005em);
+}
+
+#header .fa-github {
+  color: #111111
 }
 
 /* Default header styles */
@@ -2110,7 +2114,7 @@ span.icon>[class*=" icon-"] {
 
 .admonitionblock td.icon .icon-warning:before {
   content: "\f071";
-  color: #bf6900;
+  color: #e4a700;
 }
 
 .admonitionblock td.icon .icon-caution:before {
