@@ -457,7 +457,7 @@ p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1.05em;
-  line-height: 1.45;
+  line-height: 1.5;
   margin-bottom: 1.2em;
   text-rendering: optimizeLegibility;
 }
@@ -470,7 +470,7 @@ p aside {
 
 br {
   content: "";
-  margin: 1em;
+  margin: .8em;
   display: block;
   font-size: 20%;
 }
