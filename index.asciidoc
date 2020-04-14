@@ -1,14 +1,15 @@
 = Robert Bennett's Projects
 :author: Robert Bennett
-:email: https://github.com/rben01[GitHub: rben01]
+:email: https://github.com/rben01
 :docinfo: shared-head
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/homepage.css
 :nofooter:
 :icons: font
 :hide-uri-scheme:
-:repo-covid: rben01/covid19
-:repo-quarantine-music-trivia: rben01/quarantine-music-trivia
+:user: rben01
+:repo-covid: {user}/covid19
+:repo-quarantine-music-trivia: {user}/quarantine-music-trivia
 
 // best themes: adoc-rubygems, boot-readable, boot-cosmo, plain
 // (homepage.css is based off adoc-rubygems)
@@ -26,7 +27,7 @@ icon:github[] {nbsp} https://github.com/{repo-covid}[{repo-covid}] +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune Trivia_]::
 icon:github[] {nbsp} https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}] +
-A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
+A game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
 +
 [WARNING]
 --
