@@ -27,7 +27,6 @@
 This page is just a portal to other GitHub pages of mine:
 
 
-
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
 {repo-covid}[{github-icon-in-link}]{repo-covid}[{name-covid}] +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
