@@ -468,6 +468,13 @@ p aside {
   font-style: italic;
 }
 
+br {
+  content: "";
+  margin: 1em;
+  display: block;
+  font-size: 20%;
+}
+
 /* Default header styles */
 h1,
 h2,
