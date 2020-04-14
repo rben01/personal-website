@@ -2,7 +2,7 @@
 :author: Robert Bennett
 :email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
-:stylesheet: styles/adoc-rubygems.css
+:stylesheet: styles/homepage.css
 :favicon: favicon_64x64.png
 :nofooter:
 :icons: font
@@ -20,9 +20,9 @@ This page is just a portal to other GitHub pages of mine:
 [pass]
 ++++
 <style>
-body { font-family: "Tahoma", "Helvetica", sans-serif !important; }
 .hdlist1 { font-size: 19px }
-a { color: #00609a !important; text-decoration: underline !important; }
+// body { font-family: "Charter", "Helvetica", sans-serif !important; }
+// a { color: #00609a !important; text-decoration: underline !important; }
 body {
      max-width: 800px;
      margin: 0px auto;
