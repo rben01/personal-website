@@ -3,7 +3,7 @@
 :email: https://github.com/rben01[GitHub: rben01]
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/homepage.css
-:favicon: favicon_64x64.png
+:favicon: favicon_128x128.png
 :nofooter:
 :icons: font
 :hide-uri-scheme:
@@ -11,7 +11,7 @@
 :repo-quarantine-music-trivia: rben01/quarantine-music-trivia
 
 // best themes: adoc-rubygems, boot-readable, boot-cosmo, plain
-// favicon font is macondo
+// Good favicon fonts: macondo, habibi
 
 [.lead]
 This page is just a portal to other GitHub pages of mine:
