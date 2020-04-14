@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="description" content="My GitHub Pages home page, linking to my other pages.">
-<meta name="author" content="Robert Bennett">
-<link rel="icon" type="image/png" href="favicon_64x64.png">
-<title>Robert Bennett&#8217;s Projects</title>
-<style>
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
@@ -632,45 +620,3 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 .conum + b { display: none; }
 .conum:after { content: attr(data-value); }
 .conum:not([data-value]):empty { display: none; }
-
-</style>
-</head>
-<body class="article">
-<div id="header">
-<h1>Robert Bennett&#8217;s Projects</h1>
-<div class="details">
-<span id="author" class="author">Robert Bennett</span><br>
-<span id="email" class="email"><a href="https://github.com/rben01">GitHub Profile</a></span><br>
-</div>
-</div>
-<div id="content">
-<div class="paragraph lead">
-<p>This page is just a portal to other GitHub pages of mine:</p>
-</div>
-<style>
-html * { font-family: "Tahoma", "Helvetica", sans-serif !important; }
-.hdlist1 { font-size: 19px }
-a { color: #00609a !important; text-decoration: underline !important; }
-body {
-     max-width: 800px;
-     margin: 0px auto;
-	 padding: 5px 15px white;
-     }
-</style>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="https://rben01.github.io/covid19/">COVID-19/Coronavirus Tracker</a></dt>
-<dd>
-<p>A collection of graphs displaying how coronavirus has spread throughout the world.<br>
-<strong>GitHub repo</strong>: <a href="https://github.com/rben01/covid19">rben01/covid19</a></p>
-</dd>
-<dt class="hdlist1"><a href="https://rben01.github.io/quarantine-music-trivia/">Quarantine <em>Name That Tune</em></a></dt>
-<dd>
-<p>A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as &#8220;Name the song.&#8221; and &#8220;What movie had this song as the theme?&#8221;.<br>
-<strong>GitHub repo</strong>: <a href="https://github.com/rben01/quarantine-music-trivia">rben01/quarantine-music-trivia</a></p>
-</dd>
-</dl>
-</div>
-</div>
-</body>
-</html>
