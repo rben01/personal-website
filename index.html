@@ -63,12 +63,6 @@ html {
   /* 4 */
 }
 
-/** Remove default margin. */
-body {
-  max-width: 800px;
-  margin: 0px auto;
-  padding: 5px 15px white;
-}
 
 /* ========================================================================== Links ========================================================================== */
 /** Address `outline` inconsistency between Chrome and other browsers. */
@@ -309,6 +303,7 @@ body {
 
 a:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 a:focus {
@@ -450,21 +445,27 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #00408a;
-  text-decoration: underline;
+  color: #0c6aa8;
+  text-decoration: none;
   line-height: inherit;
 }
 
-a:hover,
 a:focus {
-  color: #4090da;
+  color: #229ea7;
 }
 
 a img {
   border: none;
 }
 
+/* Customizations made here!!! */
 /* Default paragraph styles */
+body {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 5px 15px white;
+}
+
 p {
   font-family: inherit;
   font-weight: normal;
@@ -485,6 +486,14 @@ br {
   margin: .8em;
   display: block;
   font-size: 20%;
+}
+
+.hdlist1 {
+  font-size: 20px;
+}
+
+.fa-github {
+  transform: translateY(.08em);
 }
 
 /* Default header styles */
@@ -760,10 +769,10 @@ blockquote p {
     text-shadow: none !important;
   }
 
-  a,
+  /* a,
   a:visited {
     text-decoration: underline;
-  }
+  } */
 
   a[href]:after {
     content: " ("attr(href) ")";
@@ -2169,33 +2178,24 @@ span.icon>[class*=" icon-"] {
 <h1>Robert Bennett&#8217;s Projects</h1>
 <div class="details">
 <span id="author" class="author">Robert Bennett</span><br>
-<span id="email" class="email"><a href="https://github.com/rben01">GitHub Profile</a></span><br>
+<span id="email" class="email"><a href="https://github.com/rben01">GitHub: rben01</a></span><br>
 </div>
 </div>
 <div id="content">
 <div class="paragraph lead">
 <p>This page is just a portal to other GitHub pages of mine:</p>
 </div>
-<style>
-.hdlist1 { font-size: 19px }
-// body { font-family: "Charter", "Helvetica", sans-serif !important; }
-// a { color: #00609a !important; text-decoration: underline !important; }
-body {
-     max-width: 800px;
-     margin: 0px auto;
-	 padding: 5px 15px white;
-     }
-</style>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="https://rben01.github.io/covid19/">COVID-19/Coronavirus Tracker</a></dt>
 <dd>
-<p>A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US.<br>
-<strong>GitHub repo</strong>: <a href="https://github.com/rben01/covid19">rben01/covid19</a></p>
+<p><span class="icon"><i class="fa fa-github"></i></span> &#160; <a href="https://github.com/rben01/covid19">rben01/covid19</a><br>
+A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US.<br></p>
 </dd>
 <dt class="hdlist1"><a href="https://rben01.github.io/quarantine-music-trivia/">Quarantine <em>Name That Tune Trivia</em></a></dt>
 <dd>
-<p>A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as &#8220;Name the song.&#8221; and &#8220;What movie had this song as the theme?&#8221;.</p>
+<p><span class="icon"><i class="fa fa-github"></i></span> &#160; <a href="https://github.com/rben01/quarantine-music-trivia">rben01/quarantine-music-trivia</a><br>
+A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as &#8220;Name the song.&#8221; and &#8220;What movie had this song as the theme?&#8221;.</p>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -2204,14 +2204,11 @@ body {
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The site makes no attempt to discard videos that have been scrolled out of view, so it <em>will</em> use a lot of memory. Refreshing should purge memory, but I recommend only playing on desktop for the time being.</p>
+<p>The site makes no attempt to discard videos that have been scrolled out of view, so it <em>will</em> use a lot of memory. Refreshing should purge memory, but I recommend only playing on desktop for the time being. Hopefully I&#8217;ll get around to fixing this at some point.</p>
 </div>
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p><strong>GitHub repo</strong>: <a href="https://github.com/rben01/quarantine-music-trivia">rben01/quarantine-music-trivia</a></p>
 </div>
 </dd>
 </dl>

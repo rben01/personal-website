@@ -51,12 +51,6 @@ html {
   /* 4 */
 }
 
-/** Remove default margin. */
-body {
-  max-width: 800px;
-  margin: 0px auto;
-  padding: 5px 15px white;
-}
 
 /* ========================================================================== Links ========================================================================== */
 /** Address `outline` inconsistency between Chrome and other browsers. */
@@ -297,6 +291,7 @@ body {
 
 a:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 a:focus {
@@ -438,21 +433,27 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #00408a;
-  text-decoration: underline;
+  color: #0c6aa8;
+  text-decoration: none;
   line-height: inherit;
 }
 
-a:hover,
 a:focus {
-  color: #4090da;
+  color: #229ea7;
 }
 
 a img {
   border: none;
 }
 
+/* Customizations made here!!! */
 /* Default paragraph styles */
+body {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 5px 15px white;
+}
+
 p {
   font-family: inherit;
   font-weight: normal;
@@ -473,6 +474,14 @@ br {
   margin: .8em;
   display: block;
   font-size: 20%;
+}
+
+.hdlist1 {
+  font-size: 20px;
+}
+
+.fa-github {
+  transform: translateY(.08em);
 }
 
 /* Default header styles */
@@ -748,10 +757,10 @@ blockquote p {
     text-shadow: none !important;
   }
 
-  a,
+  /* a,
   a:visited {
     text-decoration: underline;
-  }
+  } */
 
   a[href]:after {
     content: " ("attr(href) ")";

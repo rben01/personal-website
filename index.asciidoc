@@ -1,6 +1,6 @@
 = Robert Bennett's Projects
 :author: Robert Bennett
-:email: https://github.com/rben01[GitHub Profile]
+:email: https://github.com/rben01[GitHub: rben01]
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/homepage.css
 :favicon: favicon_64x64.png
@@ -17,30 +17,16 @@
 This page is just a portal to other GitHub pages of mine:
 
 
-[pass]
-++++
-<style>
-.hdlist1 { font-size: 19px }
-// body { font-family: "Charter", "Helvetica", sans-serif !important; }
-// a { color: #00609a !important; text-decoration: underline !important; }
-body {
-     max-width: 800px;
-     margin: 0px auto;
-	 padding: 5px 15px white;
-     }
-</style>
-++++
-
 
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
-	A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
-	*GitHub repo*: https://github.com/{repo-covid}[{repo-covid}]
+icon:github[] {nbsp} https://github.com/{repo-covid}[{repo-covid}] +
+A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune Trivia_]::
-	A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
+icon:github[] {nbsp} https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}] +
+A trivia game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
 +
 [WARNING]
 --
-The site makes no attempt to discard videos that have been scrolled out of view, so it _will_ use a lot of memory. Refreshing should purge memory, but I recommend only playing on desktop for the time being.
+The site makes no attempt to discard videos that have been scrolled out of view, so it _will_ use a lot of memory. Refreshing should purge memory, but I recommend only playing on desktop for the time being. Hopefully I'll get around to fixing this at some point.
 --
 +
-*GitHub repo*: https://github.com/{repo-quarantine-music-trivia}[{repo-quarantine-music-trivia}]
