@@ -3,6 +3,7 @@
 :email: https://github.com/rben01[GitHub Profile]
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/adoc-rubygems.css
+:favicon: favicon_64x64.png
 :nofooter:
 :hide-uri-scheme:
 :repo-covid: rben01/covid19
