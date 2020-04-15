@@ -36,6 +36,5 @@ A game I put together to give friends something to play when hanging out virtual
 +
 [WARNING]
 --
-The site makes no attempt to discard videos that have been scrolled out of view, so it _will_ use a lot of memory. Refreshing should purge memory, but I recommend only playing on desktop for the time being. Hopefully I'll get around to fixing this at some point.
+The site does not discard videos that have been scrolled out of view, so it _will_ use a lot of memory. Refreshing should purge memory, but I recommend only playing on desktop for the time being. Hopefully I'll get around to fixing this at some point.
 --
-+
