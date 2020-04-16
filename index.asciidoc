@@ -30,9 +30,9 @@ This page is just a portal to other GitHub pages of mine:
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
 {repo-covid}[{github-icon-in-link}]{repo-covid}[{name-covid}] +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
-https://rben01.github.io/quarantine-music-trivia/[Quarantine _Name That Tune Trivia_]::
+https://rben01.github.io/quarantine-music-trivia/[Quarantine __Name That Tune__ Trivia]::
 {repo-quarantine-music-trivia}[{github-icon-in-link}]{repo-quarantine-music-trivia}[{name-quarantine-music-trivia}] +
-A game I put together to give friends something to play when hanging out virtually during the coronavirus pandemic. Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song.`" and "`What movie had this song as the theme?`".
+A game I put together to give friends something to play while hanging out virtually during the coronavirus pandemic. It's like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song`", "`Name the album`", and "`What movie had this song as the theme?`".
 +
 [WARNING]
 --
