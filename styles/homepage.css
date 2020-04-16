@@ -78,22 +78,22 @@
   --admon-note-icon-color: #0c465e;
   --admon-tip-shadow-color: rgba(155, 155, 0, 0.8);
   --admon-tip-icon-color: #111;
-  --admon-warning-icon-color: #e4a700;
+  --admon-warning-icon-color: #f8b90a;
   --admon-caution-icon-color: #bf3400;
   --admon-important-icon-color: #bf0000;
   --conum-text-color: white;
   --conum-bg-color: #222;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   :root {
     --default-bg-color: #080808;
-    --default-text-color: #eee;
+    --default-text-color: #e4e4e4;
     --mark-bg-color: rgb(224, 224, 0);
     --mark-text-color: black;
     --fieldset-border-color: #4e4e4e;
     --body-bg-color: #080808;
-    --body-text-color: #e8e8e8;
+    --body-text-color: #eee;
     --title-text-color: rgb(226, 226, 226);
     --link-text-color: #58a2d3;
     --link-focus-text-color: #29c8d3;
@@ -137,7 +137,7 @@
     --header-link-text-color: #ddd;
     --header-link-hover-text-color: #f0f0f0;
     --admonition-border-color: #333;
-    --admonition-text-color: #919191;
+    --admonition-text-color: #afafaf;
     --example-border-color: #8f8f8f;
     --example-bg-color: rgb(26, 26, 26);
     --example-text-color: rgb(226, 226, 226);
