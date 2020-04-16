@@ -9,7 +9,7 @@
 :description: My GitHub Pages home page, linking to my other pages.
 :stylesheet: styles/homepage.css
 :nofooter:
-:linkcss:
+:linkcss!:
 :icons: font
 :hide-uri-scheme:
 :name-covid: {user}/covid19
