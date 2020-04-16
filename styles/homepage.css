@@ -1,5 +1,175 @@
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.0/css/font-awesome.css);
 
+/* Variables */
+
+:root {
+  --default-bg-color: white;
+  --default-text-color: black;
+  --mark-bg-color: #ff0;
+  --mark-text-color: black;
+  --fieldset-border-color: #c0c0c0;
+  --body-bg-color: white;
+  --body-text-color: black;
+  --title-text-color: #111;
+  --link-text-color: #0a6bac;
+  --link-focus-text-color: #229ea7;
+  --github-icon-color: #111;
+  --header-text-color: #111;
+  --small-header-text-color: #5e5e5e;
+  --h-rule-color: #ddd;
+  --code-text-color: #222;
+  --abbrev-text-color: #222;
+  --abbrev-border-color: #ddd;
+  --blockquote-border-color: #ddd;
+  --blockquote-cite-color: #555;
+  --blockquote-p-color: #6f6f6f;
+  --vcard-text-color: #ddd;
+  --table-bg-color: white;
+  --table-border-color: #ddd;
+  --table-head-foot-bg-color: whitesmoke;
+  --table-text-color: #222;
+  --table-stripe-bg-color: #f9f9f9;
+  --code-parent-bg-color: #eee;
+  --code-parent-border-color: #ddd;
+  --pre-code-text-color: white;
+  --kbd-keyseq-text-color: #555;
+  --kbd-not-keyseq-text-color: #222;
+  --kbd-not-keyseq-bg-color: #F7F7F7;
+  --kbd-not-keyseq-border-color: #ccc;
+  --kbd-not-keyseq-box-shadow-color: rgba(0, 0, 0, 0.2);
+  --kbd-not-keyseq-box-shadow-alt-color: white;
+  --menu-text-color: #090909;
+  --p-a-code-hover-text-color: #151515;
+  --header-h1-text-color: black;
+  --header-h1-border-color: #ddd;
+  --header-span-text-color: #6f6f6f;
+  --toc-border-color: #ddd;
+  --toc-title-text-color: #111;
+  --toc-content-border-color: #d9d9d9;
+  --toc-content-bg-color: #f2f2f2;
+  --footer-bg-color: rgb(231, 231, 231);
+  --footer-text-color: rgb(27, 27, 27);
+  --sec1-sect1-border-color: #ddd;
+  --header-link-text-color: #111;
+  --header-link-hover-text-color: #040404;
+  --admonition-border-color: #ddd;
+  --admonition-text-color: #6f6f6f;
+  --example-border-color: #e6e6e6;
+  --example-bg-color: white;
+  --example-text-color: #333;
+  --example-shadow-color: #d9d9d9;
+  --sidebar-border-color: #d9d9d9;
+  --sidebar-bg-color: #f2f2f2;
+  --sidebar-text-color: #333;
+  --sidebar-title-text-color: #111;
+  --listing-bg-color: #333;
+  --listing-text-color: #999;
+  --pygments-text-color: #999;
+  --pygments-border-color: #ddd;
+  --quote-border-color: #ddd;
+  --quote-attribution-text-color: #555;
+  --table-grid-color: #ddd;
+  --tableblockheader-text-color: #222;
+  --qanda-em-text-color: #1f37be;
+  --thumb-border-color: white;
+  --thumb-shadow-color: #ddd;
+  --gist-table-bg-color: white;
+  --admon-shadow-color: rgba(0, 0, 0, 0.5);
+  --admon-note-icon-color: #0c465e;
+  --admon-tip-shadow-color: rgba(155, 155, 0, 0.8);
+  --admon-tip-icon-color: #111;
+  --admon-warning-icon-color: #e4a700;
+  --admon-caution-icon-color: #bf3400;
+  --admon-important-icon-color: #bf0000;
+  --conum-text-color: white;
+  --conum-bg-color: #222;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --default-bg-color: #080808;
+    --default-text-color: #eee;
+    --mark-bg-color: rgb(224, 224, 0);
+    --mark-text-color: black;
+    --fieldset-border-color: #4e4e4e;
+    --body-bg-color: #080808;
+    --body-text-color: #e8e8e8;
+    --title-text-color: rgb(226, 226, 226);
+    --link-text-color: #58a2d3;
+    --link-focus-text-color: #29c8d3;
+    --github-icon-color: #eee;
+    --header-text-color: #eee;
+    --small-header-text-color: #a0a0a0;
+    --h-rule-color: rgb(56, 56, 56);
+    --code-text-color: rgb(211, 211, 211);
+    --abbrev-text-color: rgb(214, 214, 214);
+    --abbrev-border-color: rgb(43, 43, 43);
+    --blockquote-border-color: rgb(56, 56, 56);
+    --blockquote-cite-color: rgb(161, 161, 161);
+    --blockquote-p-color: #a0a0a0;
+    --vcard-text-color: rgb(110, 110, 110);
+    --table-bg-color: var(--default-bg-color);
+    --table-border-color: rgb(44, 44, 44);
+    --table-head-foot-bg-color: rgb(22, 22, 22);
+    --table-text-color: #ccc;
+    --table-stripe-bg-color: #080808;
+    --code-parent-bg-color: #111;
+    --code-parent-border-color: #333;
+    --pre-code-text-color: black;
+    --kbd-keyseq-text-color: #bbb;
+    --kbd-not-keyseq-text-color: #ddd;
+    --kbd-not-keyseq-bg-color: rgb(10, 10, 10);
+    --kbd-not-keyseq-border-color: #333;
+    --kbd-not-keyseq-box-shadow-color: rgba(255, 255, 255, 0.2);
+    --kbd-not-keyseq-box-shadow-alt-color: black;
+    --menu-text-color: #ebebeb;
+    --p-a-code-hover-text-color: #e0e0e0;
+    --header-h1-text-color: rgb(255, 255, 255);
+    --header-h1-border-color: rgb(39, 39, 39);
+    --header-span-text-color: #b3b3b3;
+    --toc-border-color: #222;
+    --toc-title-text-color: #ddd;
+    --toc-content-border-color: #474747;
+    --toc-content-bg-color: #0e0e0e;
+    --footer-bg-color: rgb(43, 43, 43);
+    --footer-text-color: rgb(211, 211, 211);
+    --sec1-sect1-border-color: #333;
+    --header-link-text-color: #ddd;
+    --header-link-hover-text-color: #f0f0f0;
+    --admonition-border-color: #333;
+    --admonition-text-color: #919191;
+    --example-border-color: #8f8f8f;
+    --example-bg-color: rgb(26, 26, 26);
+    --example-text-color: rgb(226, 226, 226);
+    --example-shadow-color: #242424;
+    --sidebar-border-color: #575757;
+    --sidebar-bg-color: #141414;
+    --sidebar-text-color: #ddd;
+    --sidebar-title-text-color: #eee;
+    --listing-bg-color: #444;
+    --listing-text-color: rgb(202, 202, 202);
+    --pygments-text-color: #999;
+    --pygments-border-color: rgb(75, 75, 75);
+    --quote-border-color: #333;
+    --quote-attribution-text-color: #ccc;
+    --table-grid-color: #333;
+    --tableblockheader-text-color: #ddd;
+    --qanda-em-text-color: #4c61d6;
+    --thumb-border-color: rgb(17, 17, 17);
+    --thumb-shadow-color: rgb(48, 48, 48);
+    --gist-table-bg-color: rgb(24, 24, 24);
+    --admon-shadow-color: rgba(0, 0, 0, 0.5);
+    --admon-note-icon-color: #4e92af;
+    --admon-tip-shadow-color: rgba(155, 155, 0, 0.8);
+    --admon-tip-icon-color: rgb(236, 230, 150);
+    --admon-warning-icon-color: #e4a700;
+    --admon-caution-icon-color: #cc4e20;
+    --admon-important-icon-color: #df2929;
+    --conum-text-color: rgb(29, 29, 29);
+    --conum-bg-color: rgb(224, 224, 224);
+  }
+}
+
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
@@ -39,9 +209,9 @@ audio:not([controls]) {
 /* ========================================================================== Base ========================================================================== */
 /** 1. Prevent system color scheme's background color being used in Firefox, IE, and Opera. 2. Prevent system color scheme's text color being used in Firefox, IE, and Opera. 3. Set default font family to sans-serif. 4. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
 html {
-  background: #fff;
+  background: var(--default-bg-color);
   /* 1 */
-  color: #000;
+  color: var(--default-text-color);
   /* 2 */
   font-family: sans-serif;
   /* 3 */
@@ -96,8 +266,8 @@ hr {
 
 /** Address styling not present in IE 8/9. */
 mark {
-  background: #ff0;
-  color: #000;
+  background: var(--mark-bg-color);
+  color: var(--menu-text-color);
 }
 
 /** Correct font family set oddly in Safari 5 and Chrome. */
@@ -161,7 +331,7 @@ figure {
 /* ========================================================================== Forms ========================================================================== */
 /** Define consistent border, margin, and padding. */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid var(--fieldset-border-color);
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -277,8 +447,8 @@ body {
 }
 
 body {
-  background: white;
-  color: #111111;
+  background: var(--body-bg-color);
+  color: var(--body-text-color);
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -399,7 +569,7 @@ p.lead,
 .hdlist>.title,
 .tableblock>caption {
   line-height: 1.4;
-  color: #111111;
+  color: var(--title-text-color);
   font-weight: 300;
   margin-top: 0.2em;
   margin-bottom: 0.5em;
@@ -434,13 +604,13 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #0a6bac;
+  color: var(--link-text-color);
   text-decoration: none;
   line-height: inherit;
 }
 
 a:focus {
-  color: #229ea7;
+  color: var(--link-focus-text-color);
 }
 
 a img {
@@ -452,7 +622,7 @@ a img {
 body {
   max-width: 800px;
   margin: 0px auto;
-  padding: 5px 15px white;
+  padding: 5px 15px var(--body-bg-color);
 }
 
 p {
@@ -490,7 +660,7 @@ br {
 }
 
 a .fa-github {
-  color: #111111;
+  color: var(--github-icon-color);
 }
 
 .admonitionblock td.icon [class^="fa icon-"] {
@@ -518,7 +688,7 @@ h6 {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #111111;
+  color: var(--header-text-color);
   text-rendering: optimizeLegibility;
   margin-top: 1em;
   margin-bottom: 0.5em;
@@ -534,7 +704,7 @@ h4 small,
 h5 small,
 h6 small {
   font-size: 60%;
-  color: #5e5e5e;
+  color: var(--small-header-text-color);
   line-height: 0;
 }
 
@@ -565,7 +735,7 @@ h6 {
 }
 
 hr {
-  border: solid #dddddd;
+  border: solid var(--h-rule-color);
   border-width: 1px 0 0;
   clear: both;
   margin: 1.25em 0 1.1875em;
@@ -593,7 +763,7 @@ small {
 code {
   font-family: "Andale Mono", "monotype.com", "Lucida Console", monospace;
   font-weight: normal;
-  color: #222222;
+  color: var(--code-text-color);
 }
 
 /* Lists */
@@ -665,8 +835,8 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #222222;
-  border-bottom: 1px dotted #dddddd;
+  color: var(--abbrev-text-color);
+  border-bottom: 1px dotted var(--abbrev-border-color);
   cursor: help;
 }
 
@@ -678,13 +848,13 @@ abbr {
 blockquote {
   margin: 0 0 1.25em;
   padding: 0.5625em 1.25em 0 1.1875em;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid var(--blockquote-border-color);
 }
 
 blockquote cite {
   display: block;
   font-size: inherit;
-  color: #555555;
+  color: var(--blockquote-cite-color);
 }
 
 blockquote cite:before {
@@ -693,20 +863,20 @@ blockquote cite:before {
 
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: var(--blockquote-cite-color);
 }
 
 blockquote,
 blockquote p {
   line-height: 1.5;
-  color: #6f6f6f;
+  color: var(--blockquote-p-color);
 }
 
 /* Microformats */
 .vcard {
   display: inline-block;
   margin: 0 0 1.25em 0;
-  border: 1px solid #dddddd;
+  border: 1px solid var(--vcard-text-color);
   padding: 0.625em 0.75em;
 }
 
@@ -857,14 +1027,14 @@ blockquote p {
 
 /* Tables */
 table {
-  background: white;
+  background: var(--table-bg-color);
   margin-bottom: 1.25em;
-  border: solid 1px #dddddd;
+  border: solid 1px var(--table-border-color);
 }
 
 table thead,
 table tfoot {
-  background: whitesmoke;
+  background: var(--table-head-foot-bg-color);
   font-weight: bold;
 }
 
@@ -874,7 +1044,7 @@ table tfoot tr th,
 table tfoot tr td {
   padding: 0.5em 0.625em 0.625em;
   font-size: inherit;
-  color: #222222;
+  color: var(--table-text-color);
   text-align: left;
 }
 
@@ -882,13 +1052,13 @@ table tr th,
 table tr td {
   padding: 0.5625em 0.625em;
   font-size: inherit;
-  color: #222222;
+  color: var(--table-text-color);
 }
 
 table tr.even,
 table tr.alt,
 table tr:nth-of-type(even) {
-  background: #f9f9f9;
+  background: var(--table-stripe-bg-color);
 }
 
 table thead tr th,
@@ -917,8 +1087,8 @@ table tfoot tr td {
   font-size: inherit;
   padding: 2px;
   white-space: nowrap;
-  background-color: #eeeeee;
-  border: 0 solid #dddddd;
+  background-color: var(--code-parent-bg-color);
+  border: 0 solid var(--code-parent-border-color);
   -webkit-border-radius: 0;
   border-radius: 0;
   text-shadow: none;
@@ -927,26 +1097,26 @@ table tfoot tr td {
 pre,
 pre>code {
   line-height: 1.5;
-  color: white;
+  color: var(--pre-code-text-color);
   font-family: Monaco, Consolas, "Courier New", Courier, Sans-serif;
   font-weight: normal;
 }
 
 kbd.keyseq {
-  color: #555555;
+  color: var(--kbd-keyseq-text-color);
 }
 
 kbd:not(.keyseq) {
   display: inline-block;
-  color: #222222;
+  color: var(--kbd-not-keyseq-text-color);
   font-size: 0.75em;
   line-height: 1.4;
-  background-color: #F7F7F7;
-  border: 1px solid #ccc;
+  background-color: var(--kbd-not-keyseq-bg-color);
+  border: 1px solid var(--kbd-not-keyseq-border-color);
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  -webkit-box-shadow: 0 1px 0 var(--kbd-not-keyseq-box-shadow-color), 0 0 0 2px var(--kbd-not-keyseq-box-shadow-alt-color) inset;
+  box-shadow: 0 1px 0 var(--kbd-not-keyseq-box-shadow-color), 0 0 0 2px var(--kbd-not-keyseq-box-shadow-alt-color) inset;
   margin: -0.15em 0.15em 0 0.15em;
   padding: 0.2em 0.6em 0.2em 0.5em;
   vertical-align: middle;
@@ -963,11 +1133,11 @@ kbd kbd:last-child {
 
 .menuseq,
 .menu {
-  color: #090909;
+  color: var(--menu-text-color);
 }
 
 p a>code:hover {
-  color: #151515;
+  color: var(--p-a-code-hover-text-color);
 }
 
 #header,
@@ -1010,15 +1180,15 @@ p a>code:hover {
 }
 
 #header>h1 {
-  color: black;
+  color: var(--header-h1-text-color);
   font-weight: normal;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid var(--header-h1-border-color);
   margin-bottom: -28px;
   padding-bottom: 32px;
 }
 
 #header span {
-  color: #6f6f6f;
+  color: var(--header-span-text-color);
 }
 
 #header #revnumber {
@@ -1046,7 +1216,7 @@ p a>code:hover {
 }
 
 #toc {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid var(--toc-border-color);
   padding-bottom: 1.25em;
 }
 
@@ -1069,7 +1239,7 @@ p a>code:hover {
 }
 
 #toctitle {
-  color: #111111;
+  color: var(--toc-title-text-color);
 }
 
 @media only screen and (min-width: 1280px) {
@@ -1082,7 +1252,7 @@ p a>code:hover {
     width: 20em;
     left: 0;
     top: 0;
-    border-right: 1px solid #dddddd;
+    border-right: 1px solid var(--toc-content-border-color);
     border-bottom: 0;
     z-index: 1000;
     padding: 1em;
@@ -1116,7 +1286,7 @@ p a>code:hover {
 
   body.toc2.toc-right #toc.toc2 {
     border-right: 0;
-    border-left: 1px solid #dddddd;
+    border-left: 1px solid var(--toc-border-color);
     left: auto;
     right: 0;
   }
@@ -1125,10 +1295,10 @@ p a>code:hover {
 #content #toc {
   border-style: solid;
   border-width: 1px;
-  border-color: #d9d9d9;
+  border-color: var(--toc-content-border-color);
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: #f2f2f2;
+  background: var(--toc-content-bg-color);
   border-width: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -1155,12 +1325,12 @@ p a>code:hover {
 
 #footer {
   max-width: 100%;
-  background-color: #222222;
+  background-color: var(--footer-bg-color);
   padding: 1.25em;
 }
 
 #footer-text {
-  color: #dddddd;
+  color: var(--footer-text-color);
   line-height: 1.35;
 }
 
@@ -1169,7 +1339,7 @@ p a>code:hover {
 }
 
 .sect1+.sect1 {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid var(--sec1-sect1-border-color);
 }
 
 #content h1>a.anchor,
@@ -1232,7 +1402,7 @@ h3>a.link,
 h4>a.link,
 h5>a.link,
 h6>a.link {
-  color: #111111;
+  color: var(--header-link-text-color);
   text-decoration: none;
 }
 
@@ -1244,7 +1414,7 @@ h3>a.link:hover,
 h4>a.link:hover,
 h5>a.link:hover,
 h6>a.link:hover {
-  color: #040404;
+  color: var(--header-link-hover-text-color);
 }
 
 .imageblock,
@@ -1311,8 +1481,8 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 .admonitionblock>table td.content {
   padding-left: 1.125em;
   padding-right: 1.25em;
-  border-left: 1px solid #dddddd;
-  color: #6f6f6f;
+  border-left: 1px solid var(--admonition-border-color);
+  color: var(--admonition-text-color);
 }
 
 .admonitionblock>table td.content> :last-child> :last-child {
@@ -1322,10 +1492,10 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 .exampleblock>.content {
   border-style: solid;
   border-width: 1px;
-  border-color: #e6e6e6;
+  border-color: var(--example-border-color);
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: white;
+  background: var(--example-bg-color);
   -webkit-border-radius: 0;
   border-radius: 0;
 }
@@ -1347,7 +1517,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 .exampleblock>.content h5,
 .exampleblock>.content h6,
 .exampleblock>.content p {
-  color: #333333;
+  color: var(--example-text-color);
 }
 
 .exampleblock>.content h1,
@@ -1374,17 +1544,17 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 }
 
 .exampleblock.result>.content {
-  -webkit-box-shadow: 0 1px 8px #d9d9d9;
-  box-shadow: 0 1px 8px #d9d9d9;
+  -webkit-box-shadow: 0 1px 8px var(--example-shadow-color);
+  box-shadow: 0 1px 8px var(--example-shadow-color);
 }
 
 .sidebarblock {
   border-style: solid;
   border-width: 1px;
-  border-color: #d9d9d9;
+  border-color: var(--sidebar-border-color);
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: #f2f2f2;
+  background: var(--sidebar-bg-color);
   -webkit-border-radius: 0;
   border-radius: 0;
 }
@@ -1406,7 +1576,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 .sidebarblock h5,
 .sidebarblock h6,
 .sidebarblock p {
-  color: #333333;
+  color: var(--sidebar-text-color);
 }
 
 .sidebarblock h1,
@@ -1433,7 +1603,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 }
 
 .sidebarblock>.content>.title {
-  color: #111111;
+  color: var(--sidebar-title-text-color);
   margin-top: 0;
   line-height: 1.5;
 }
@@ -1451,7 +1621,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 
 .literalblock>.content pre,
 .listingblock>.content pre {
-  background: #333333;
+  background: var(--listing-bg-color);
   border-width: 0;
   padding: 10px;
   word-wrap: break-word;
@@ -1500,7 +1670,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 .listingblock:hover code[class*=" language-"]:before {
   text-transform: uppercase;
   font-size: 0.9em;
-  color: #999;
+  color: var(--listing-text-color);
   position: absolute;
   top: 0.375em;
   right: 0.375em;
@@ -1557,7 +1727,7 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 .listingblock.terminal pre .command:before {
   content: attr(data-prompt);
   padding-right: 0.5em;
-  color: #999;
+  color: var(--listing-text-color);
 }
 
 .listingblock.terminal pre .command:not([data-prompt]):before {
@@ -1582,10 +1752,10 @@ table.pyhltable td.code {
 
 .highlight.pygments .lineno,
 table.pyhltable td:not(.code) {
-  color: #999;
+  color: var(--pygments-text-color);
   padding-left: 0;
   padding-right: .5em;
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid var(--pygments-border-color);
 }
 
 .highlight.pygments .lineno {
@@ -1601,7 +1771,7 @@ table.pyhltable .linenodiv {
 .quoteblock {
   margin: 0 0 1.25em;
   padding: 0.5625em 1.25em 0 1.1875em;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid var(--quote-border-color);
 }
 
 .quoteblock blockquote {
@@ -1618,7 +1788,7 @@ table.pyhltable .linenodiv {
   margin-top: -.25em;
   padding-bottom: 0.5625em;
   font-size: inherit;
-  color: #555555;
+  color: var(--quote-attribution-text-color);
 }
 
 .quoteblock .attribution br {
@@ -1640,8 +1810,8 @@ table.tableblock.grid-all {
   border-spacing: 1px;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid var(--table-grid-color);
+  border-bottom: 1px solid var(--table-grid-color);
 }
 
 table.tableblock.frame-topbot,
@@ -1692,7 +1862,7 @@ td.tableblock.valign-middle {
 }
 
 p.tableblock.header {
-  color: #222222;
+  color: var(--tableblockheader-text-color);
   font-weight: bold;
 }
 
@@ -1840,7 +2010,7 @@ td.hdlist2 {
 }
 
 .qanda>ol>li>p>em:only-child {
-  color: #1f37be;
+  color: var(--qanda-em-text-color);
 }
 
 .thumb,
@@ -1848,8 +2018,8 @@ td.hdlist2 {
   line-height: 0;
   display: inline-block;
   border: solid 4px white;
-  -webkit-box-shadow: 0 0 0 1px #dddddd;
-  box-shadow: 0 0 0 1px #dddddd;
+  -webkit-box-shadow: 0 0 0 1px var(--thumb-shadow-color);
+  box-shadow: 0 0 0 1px var(--thumb-shadow-color);
 }
 
 .imageblock.left,
@@ -1946,7 +2116,7 @@ span.footnoteref a {
 
 .gist .file-data>table {
   border: none;
-  background: #fff;
+  background: var(--gist-table-bg-color);
   width: 100%;
   margin-bottom: 0;
 }
@@ -2118,41 +2288,40 @@ span.icon>[class*=" icon-"] {
 
 .admonitionblock td.icon [class^="icon-"]:before {
   font-size: 2.5em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px var(--admon-shadow-color);
   cursor: default;
 }
 
 .admonitionblock td.icon .icon-note:before {
   content: "\f05a";
-  color: #ad141e;
-  color: #820f16;
+  color: var(--admon-note-icon-color);
 }
 
 .admonitionblock td.icon .icon-tip:before {
   content: "\f0eb";
-  text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8);
-  color: #111;
+  text-shadow: 1px 1px 2px var(--admon-tip-shadow-color);
+  color: var(--admon-tip-icon-color);
 }
 
 .admonitionblock td.icon .icon-warning:before {
   content: "\f071";
-  color: #e4a700;
+  color: var(--admon-warning-icon-color);
 }
 
 .admonitionblock td.icon .icon-caution:before {
   content: "\f06d";
-  color: #bf3400;
+  color: var(--admon-caution-icon-color);
 }
 
 .admonitionblock td.icon .icon-important:before {
   content: "\f06a";
-  color: #bf0000;
+  color: var(--admon-important-icon-color);
 }
 
 .conum {
   display: inline-block;
-  color: white !important;
-  background-color: #222222;
+  color: var(--conum-text-color) !important;
+  background-color: var(--conum-bg-color);
   -webkit-border-radius: 100px;
   border-radius: 100px;
   text-align: center;
@@ -2169,7 +2338,7 @@ span.icon>[class*=" icon-"] {
 }
 
 .conum * {
-  color: white !important;
+  color: var(--conum-text-color) !important;
 }
 
 .conum+b {
