@@ -35,9 +35,10 @@ https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 The graphs were built with Pandas and Matplotlib, the site with {asciidoctor-link}.
 Quarantine Trivia::
+__A collection of trivia games I put together to give friends something to play while hanging out virtually during the coronavirus pandemic. The different variations are below.__
 https://rben01.github.io/quarantine-music-trivia/[Quarantine __Name That Tune__ Trivia]:::
 {repo-quarantine-music-trivia}[{github-icon-in-link}]{repo-quarantine-music-trivia}[{name-quarantine-music-trivia}] +
-A game I put together to give friends something to play while hanging out virtually during the coronavirus pandemic. It's like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song`", "`Name the album`", and "`What movie had this song as the theme?`". +
+Like trivia, but the questions are all audio clips from well-known songs with prompts such as "`Name the song`", "`Name the album`", and "`What movie had this song as the theme?`". +
 The site was built by parsing a list of questions and generating {asciidoctor-link} source.
 +
 [WARNING]

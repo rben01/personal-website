@@ -620,7 +620,7 @@ a img {
 /* Customizations made here!!! ~~~*/
 /* Default paragraph styles */
 body {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0px auto;
   padding: 5px 15px var(--body-bg-color);
 }
@@ -673,6 +673,10 @@ a.no-underline:hover {
 
 a.no-underline:hover+a {
   text-decoration: underline;
+}
+
+.dlist .dlist .hdlist1 {
+  font-size: 18px;
 }
 
 
@@ -1465,7 +1469,14 @@ table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p {
 
 .admonitionblock>table td.icon {
   text-align: center;
-  width: 80px;
+  width: 70px;
+}
+
+@media (max-width: 400px) {
+  .admonitionblock>table td.icon {
+    text-align: center;
+    width: 40px;
+  }
 }
 
 .admonitionblock>table td.icon img {
