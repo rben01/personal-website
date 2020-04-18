@@ -52,7 +52,7 @@ https://rben01.github.io/quarantine-movie-trivia/LaTeX/movie_trivia.pdf[Quaranti
 +
 [NOTE]
 --
-The PDF linked above is quite large due to the images it contains; you can download a much smaller, image-free PDF https://rben01.github.io/quarantine-movie-trivia/LaTeX/no_img_movie_trivia.pdf[here].
+The PDF linked above is quite large (~19MB) due to the images it contains; you can download a much smaller (~800KB), image-free PDF https://rben01.github.io/quarantine-movie-trivia/LaTeX/no_img_movie_trivia.pdf[here].
 The pictures make it more fun though, so this isn't recommended.
 --
 +
