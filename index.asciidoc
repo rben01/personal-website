@@ -43,13 +43,13 @@ The site was built by parsing a list of questions and generating {asciidoctor-li
 +
 [WARNING]
 --
-The site does not discard videos that have been scrolled out of view, so it _will_ use a lot of memory.
+The site does not discard media that has been scrolled out of view, so it _will_ use a lot of memory.
 Refreshing should purge memory, but I recommend only playing on desktop for the time being.
 Hopefully I'll get around to fixing this at some point.
 --
 https://rben01.github.io/quarantine-movie-trivia/LaTeX/movie_trivia.pdf[Quarantine Movie Trivia]:::
 {repo-quarantine-movie-trivia}[{github-icon-in-link}]{repo-quarantine-movie-trivia}[{name-quarantine-movie-trivia}] +
 A simpler trivia game -- just Q's and A's about movies.
-The file is an ordinary PDF and should work fine in any web browser or PDF viewer, although it's recommended you use a viewer that supports using the left and right arrow keys to flip between pages without having to scroll.
+The file is a PDF slideshow and should work fine in any web browser or PDF viewer, although it's recommended you use a viewer that can flip through the pages without scrolling.
 You can use the left sidebar of the PDF to navigate; everything in it is a link. +
 The PDF was built by parsing a Q-and-A list and generating LaTeX (http://tug.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf[beamer]) source.
