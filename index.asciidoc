@@ -32,10 +32,11 @@
 :created-with-beamer-note: The PDF was built by parsing a Q-and-A list and generating LaTeX ({resource-link-beamer}) source.
 :bonus-section-note: and a bonus section comprised of one challenging question from each of these categories.
 
-// best themes: adoc-rubygems, boot-readable, boot-cosmo, plain
-// (homepage.css is based off adoc-rubygems)
-// Good favicon fonts: Asar
-// https://favicon.io/favicon-generator/?t=rb&ff=Abel&fs=120&fc=%23011&b=rounded&bc=%23FFF
+// Homepage.css is based off adoc-rubygems
+// Good favicon fonts (Amiri currently in use):
+// [f"https://favicon.io/favicon-generator/?t=rb&ff={fontname}&fs=120&fc=%23011&b=rounded&bc=%23FFF"
+//  for fontname in ["Amiri", "Asar", "Habibi"]
+// ]
 
 
 [.lead]
@@ -70,10 +71,11 @@ You can use the left sidebar of the PDF to navigate; everything in it is a link.
 
 {github-pages-root}/quarantine-general-trivia-2/LaTeX/general_trivia.pdf[Trivia 4]:::
 {repo-quarantine-general-trivia-2}[{github-icon-in-link}]{repo-quarantine-general-trivia-2}[{name-quarantine-general-trivia-2}] +
+__This was the second general trivia game, but the fourth trivia game overall.__ +
 General knowledge trivia with the following categories: sports, plays and playwrights, women in American history, science, plants and animals, U.S. presidents, Dr. Anthony Fauci, famous paintings (identify the artist), Canada, world landmarks, {bonus-section-note} +
 {created-with-beamer-note}
 
 {github-pages-root}/quarantine-trivia-5/LaTeX/general_trivia.pdf[Trivia 5]:::
 {repo-quarantine-trivia-5}[{github-icon-in-link}]{repo-quarantine-trivia-5}[{name-quarantine-trivia-5}] +
-General knowledge trivia with the following categories: logos, cocktails, superheroes, New York City, more plants and animals, geography, real name/stage name, what are they saying about me?, ancient civilizations, TV, {bonus-section-note} +
+General knowledge trivia with the following categories: logos, cocktails (name the drink whose recipe is shown), superheroes, New York City, more plants and animals, geography, real name/stage name, what are they saying about me?, ancient civilizations, TV, {bonus-section-note} +
 {created-with-beamer-note}
