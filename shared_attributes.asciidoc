@@ -18,7 +18,6 @@
 :resource-link-bokeh: link:https://bokeh.org[Bokeh]
 :resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg]
 :resource-link-latex: link:https://www.latex-project.org[LaTeX]
-
 // Homepage.css is based off adoc-rubygems
 // Good favicon fonts (Amiri currently in use):
 // [f"https://favicon.io/favicon-generator/?t=rb&ff={font_name}&fs=120&fc=%23011&b=rounded&bc=%23FFF"
