@@ -3,7 +3,7 @@ include::shared_attributes.asciidoc[]
 :github-profile: link:https://github.com/rben01
 :github-repo: {github-profile}/covid19
 :github-icon-in-link: icon:github[]{nbsp},role="no-underline"
-:email: https://rben01.github.io/[Other Projects,role="underline prominent-link"] {nbsp}/{nbsp} {github-profile}[{github-icon-in-link}]{github-profile}[rben01,role="underline prominent-link"]
+:email: https://rben01.github.io/[Other Projects,role="prominent-link"] {nbsp}/{nbsp} {github-profile}[{github-icon-in-link}]{github-profile}[rben01,role="prominent-link"]
 :description: A collection of trivia games created to pass the time with friends during the COVID-19 quarantine.
 :name-quarantine-music-trivia: quarantine-music-trivia
 :repo-quarantine-music-trivia: {github-user}/{name-quarantine-music-trivia}
