@@ -1,0 +1,26 @@
+:author: Robert Bennett
+:user: rben01
+:github-site: link:https://github.com
+:github-user: {github-site}/{user}
+:github-icon-in-link: icon:github[]{nbsp},role="no-underline"
+:email: {github-user}[{github-icon-in-link}]{github-user}[{user}]
+:docinfo: shared-head
+:stylesheet: styles/homepage.css
+:nofooter:
+:linkcss!:
+:icons: font
+:hide-uri-scheme:
+:github-pages-root: https://rben01.github.io
+:resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor]
+:resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer]
+:resource-link-pandas: link:https://pandas.pydata.org[Pandas]
+:resource-link-matplotlib: link:https://matplotlib.org[Matplotlib]
+:resource-link-bokeh: link:https://bokeh.org[Bokeh]
+:resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg]
+:resource-link-latex: link:https://www.latex-project.org[LaTeX]
+
+// Homepage.css is based off adoc-rubygems
+// Good favicon fonts (Amiri currently in use):
+// [f"https://favicon.io/favicon-generator/?t=rb&ff={font_name}&fs=120&fc=%23011&b=rounded&bc=%23FFF"
+//  for font_name in ["Amiri", "Asar", "Habibi"]
+// ]
