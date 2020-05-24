@@ -50,19 +50,19 @@ A simpler trivia game -- just Q's and A's about movies.
 {github-pages-root}/{name-quarantine-general-trivia-2}/LaTeX/general_trivia.pdf[Trivia 4]:::
 {repo-quarantine-general-trivia-2}[{github-icon-in-link}]{repo-quarantine-general-trivia-2}[{name-quarantine-general-trivia-2}] +
 __This was the second general trivia game, but the fourth trivia game overall.__ +
-General knowledge trivia with the following categories: sports, plays and playwrights, women in American history, science, plants and animals, U.S. presidents, Dr. Anthony Fauci, famous paintings (identify the artist), Canada, world landmarks, {bonus-section-note}
+General knowledge trivia with the following categories: Sports, Plays and Playwrights, Women in American History, Science, Plants and Animals, U.S. Presidents, Dr. Anthony Fauci, Famous Paintings (identify the artist), Canada, World Landmarks, {bonus-section-note}
 
 {github-pages-root}/{name-quarantine-trivia-5}/LaTeX/general_trivia.pdf[Trivia 5]:::
 {repo-quarantine-trivia-5}[{github-icon-in-link}]{repo-quarantine-trivia-5}[{name-quarantine-trivia-5}] +
-General knowledge trivia with the following categories: logos, cocktails (name the drink whose recipe is shown), superheroes, New York City, more plants and animals, geography, real name/stage name, what are they saying about me?, ancient civilizations, TV, {bonus-section-note}
+General knowledge trivia with the following categories: Logos, Cocktails (name the drink whose recipe is shown), Superheroes, New York City, More Plants and Animals, Geography, Real Name/Stage Name, What Are They Saying About Me?, Ancient Civilizations, TV, {bonus-section-note}
 
 {github-pages-root}/{name-quarantine-trivia-6}/LaTeX/general_trivia.pdf[Trivia 6]:::
 {repo-quarantine-trivia-6}[{github-icon-in-link}]{repo-quarantine-trivia-6}[{name-quarantine-trivia-6}] +
-General knowledge trivia with the following categories: weather, word origins, Broadway musical names from song titles, dog breeds, Disney, national parks, Rome, books that had a big impact, inventors and inventions, California, {bonus-section-note}
+General knowledge trivia with the following categories: Weather, Word Origins, Broadway Musical Names From Song Titles, Dog Breeds, Disney, National Parks, Rome, Books That Had a Big Impact, Inventors and Inventions, California, {bonus-section-note}
 
 {github-pages-root}/{name-quarantine-trivia-7}/LaTeX/general_trivia.pdf[Trivia 7]:::
 {repo-quarantine-trivia-7}[{github-icon-in-link}]{repo-quarantine-trivia-7}[{name-quarantine-trivia-7}] +
-General knowledge trivia with the following categories: album by album art, France, airport codes, big dates in history, gangsters in fact and fiction, holidays and observances, all the cool kids are texting about South Dakota, pastries, explorers, products and companies by their slogans, {bonus-section-note}
+General knowledge trivia with the following categories: Album by Album Art, France, Airport Codes, Big Dates in History, Gangsters in Fact and Fiction, Holidays and Observances, All the Cool Kids Are Texting About South Dakota, Pastries, Explorers, Products and Companies by Their Slogans, {bonus-section-note}
 
 {github-pages-root}/{name-quarantine-trivia-8}/LaTeX/general_trivia.pdf[Trivia 8]:::
 {repo-quarantine-trivia-8}[{github-icon-in-link}]{repo-quarantine-trivia-8}[{name-quarantine-trivia-8}] +
