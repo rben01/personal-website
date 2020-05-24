@@ -66,4 +66,4 @@ General knowledge trivia with the following categories: album by album art, Fran
 
 {github-pages-root}/{name-quarantine-trivia-8}/LaTeX/general_trivia.pdf[Trivia 8]:::
 {repo-quarantine-trivia-8}[{github-icon-in-link}]{repo-quarantine-trivia-8}[{name-quarantine-trivia-8}] +
-General knowledge trivia with the following categories: Colleges and Universities, Horse Racing, The Constitution, It happened in 2010, Under the Sea, Myths and Legends, Mexico, Our Friendly Neighbor to the South, Famous Buildings, Nobel Prize Winners, The Beatles {bonus-section-note}
+General knowledge trivia with the following categories: Colleges and Universities, Horse Racing, The Constitution, It happened in 2010, Under the Sea, Myths and Legends, Mexico, Our Friendly Neighbor to the South, Famous Buildings, Nobel Prize Winners, The Beatles, {bonus-section-note}
