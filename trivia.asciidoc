@@ -82,6 +82,6 @@ General knowledge trivia with the following categories: Aviation, Ireland, Colon
 {repo-quarantine-trivia-10}[{github-icon-in-link}]{repo-quarantine-trivia-10}[{name-quarantine-trivia-10}] +
 General knowledge trivia with the following categories: Quotations, East Asia, Musical Instruments, Outer Space, Saturday Night Live, Special Words from Various Fields, Streets, Highways and Boulevards, The Biggest and the Most, The Wild West, Who Originated the Role?, {bonus-section-note}
 
-{github-pages-root}/{name-quarantine-trivia-10}/LaTeX/general_trivia.pdf[Trivia 11]:::
+{github-pages-root}/{name-quarantine-trivia-11}/LaTeX/general_trivia.pdf[Trivia 11]:::
 {repo-quarantine-trivia-11}[{github-icon-in-link}]{repo-quarantine-trivia-11}[{name-quarantine-trivia-11}] +
 General knowledge trivia with the following categories: Flowers, Abraham Lincoln, Civil Rights Movements, How Now Brown Cow?, American Literature, Africa, World War II, Competitions, Name the Film from the Cast, World Leaders, and a very special bonus section consisting of questions in categories that we (the creators) just liked.
