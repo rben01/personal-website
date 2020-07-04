@@ -11,7 +11,7 @@ This page is a portal to other GitHub pages of mine:
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
 {repo-covid}[{github-icon-in-link}]{repo-covid}[{name-covid}] +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
-The graphs were built with {resource-link-pandas} and {resource-link-bokeh}, the site with {resource-link-asciidoctor}.
+The data was ingested with {resource-link-pandas}, the graphics were built with {resource-link-d3}, and the site itself was written with {resource-link-asciidoctor}.
 
 {url-trivia-page}[Quarantine Trivia]::
 A collection of trivia games I put together to give friends something to play while hanging out virtually during the coronavirus pandemic. The games are available {url-trivia-page}[here].

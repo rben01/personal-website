@@ -16,6 +16,7 @@
 :resource-link-pandas: link:https://pandas.pydata.org[Pandas]
 :resource-link-matplotlib: link:https://matplotlib.org[Matplotlib]
 :resource-link-bokeh: link:https://bokeh.org[Bokeh]
+:resource-link-d3: link:https://d3js.org[d3]
 :resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg]
 :resource-link-latex: link:https://www.latex-project.org[LaTeX]
 // Homepage.css is based off adoc-rubygems
