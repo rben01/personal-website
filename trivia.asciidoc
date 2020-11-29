@@ -25,6 +25,8 @@ include::shared_attributes.asciidoc[]
 :repo-quarantine-trivia-10: {github-user}/{name-quarantine-trivia-10}
 :name-quarantine-trivia-11: quarantine-trivia-11
 :repo-quarantine-trivia-11: {github-user}/{name-quarantine-trivia-11}
+:name-quarantine-trivia-12: quarantine-trivia-12
+:repo-quarantine-trivia-12: {github-user}/{name-quarantine-trivia-12}
 :bonus-section-note: and a bonus section comprised of one challenging question from each of these categories.
 
 [.lead]
@@ -85,3 +87,7 @@ General knowledge trivia with the following categories: Quotations, East Asia, M
 {github-pages-root}/{name-quarantine-trivia-11}/LaTeX/general_trivia.pdf[Trivia 11]:::
 {repo-quarantine-trivia-11}[{github-icon-in-link}]{repo-quarantine-trivia-11}[{name-quarantine-trivia-11}] +
 General knowledge trivia with the following categories: Flowers, Abraham Lincoln, Civil Rights Movements, How Now Brown Cow?, American Literature, Africa, World War II, Competitions, Name the Film from the Cast, World Leaders, and a very special bonus section consisting of questions in categories that we (the creators) just liked.
+
+{github-pages-root}/{name-quarantine-trivia-12}/LaTeX/general_trivia.pdf[Trivia 12]:::
+{repo-quarantine-trivia-12}[{github-icon-in-link}]{repo-quarantine-trivia-12}[{name-quarantine-trivia-12}] +
+General knowledge trivia with the following categories: Colorful Songs, Famous Animals in Fact and Fiction, Famous Court Cases, Biden/Harris, The Holiday Season, Scientific Breakthroughs, The Oldest..., Shakespeare, Colorful Movies, Alex Trebek, {bonus-section-note}
