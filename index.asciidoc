@@ -1,9 +1,11 @@
 = Robert Bennett's Projects
 include::shared_attributes.asciidoc[]
 :description: My GitHub Pages home page, linking to my other pages.
-:url-trivia-page: link:{github-pages-root}/trivia.html
+:url-trivia-page: link:{github-pages-root}/quarantine-trivia
 :name-covid: covid19
 :repo-covid: {github-user}/{name-covid}
+:name-trivia: quarantine-trivia
+:repo-trivia: {github-user}/{name-trivia}
 
 [.lead]
 This page is a portal to other GitHub pages of mine:
@@ -14,4 +16,5 @@ A collection of graphs displaying how coronavirus has spread throughout the worl
 The data was ingested with {resource-link-pandas}, the graphics were built with {resource-link-d3}, and the site itself was written with {resource-link-asciidoctor}.
 
 {url-trivia-page}[Quarantine Trivia]::
+{repo-trivia}[{github-icon-in-link}]{repo-trivia}[{name-trivia}] +
 A collection of trivia games I put together to give friends something to play while hanging out virtually during the coronavirus pandemic. The games are available {url-trivia-page}[here].
