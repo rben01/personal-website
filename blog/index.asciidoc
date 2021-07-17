@@ -1,0 +1,6 @@
+= Blog Index
+:basedir: ..
+include::../shared_attributes.asciidoc[]
+:email: {github-user}[{github-icon-in-link}]{github-user}[{user}] — link:/blog/[Blog index]
+
+link:/blog/mixing-whitespace/[Indenting with Tabs and Spaces]

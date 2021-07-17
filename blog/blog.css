@@ -1,0 +1,48 @@
+@import url("/styles/homepage.css");
+@import url("/fonts/iosevka.css");
+@import url("/fonts/cabin.css");
+
+:root {
+	--header-font: "";
+	--pre-code-text-color: black;
+	/* --code-text-color: black; */
+}
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--pre-code-text-color: black;
+		/* --code-text-color: black; */
+	}
+}
+
+body {
+	max-width: 1200px;
+	margin: auto clamp(1vw, calc(15vw - 100px), 120px);
+	/* font-size: 125%; */
+	letter-spacing: 0.1px;
+}
+
+@media screen and (min-width: 1280px) {
+	body.toc2 {
+		padding: 0;
+		--toc-width: calc(16em + 5vw);
+		margin: auto calc(2em + 4vw) auto calc(var(--toc-width) + 5vw / 2);
+		width: unset;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--header-font), var(--font-family);
+}
+
+p {
+	line-height: 1.4;
+}
+
+code span.linenos {
+	padding-right: 20px;
+}

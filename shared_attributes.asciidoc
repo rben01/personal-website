@@ -5,9 +5,13 @@
 :github-icon-in-link: icon:github[]{nbsp},role="no-underline"
 :email: {github-user}[{github-icon-in-link}]{github-user}[{user}]
 :docinfo: shared-head
-:stylesheet: styles/homepage.css
+:stylesheet: {basedir}/styles/homepage.css
 :nofooter:
-:linkcss!:
+:linkcss:
+:toc-title: Contents
+:source-highlighter: pygments
+:pygments-style: default
+:pygments-linenums-mode: table
 :icons: font
 :hide-uri-scheme:
 :github-pages-root: https://rben01.github.io

@@ -1,5 +1,6 @@
 = Robert Bennett's Projects
-include::shared_attributes.asciidoc[]
+:basedir: .
+include::{basedir}/shared_attributes.asciidoc[]
 :description: My GitHub Pages home page, linking to my other pages.
 :url-trivia-page: link:{github-pages-root}/quarantine-trivia
 :name-covid: covid19
