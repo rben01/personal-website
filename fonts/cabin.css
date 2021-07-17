@@ -1,0 +1,63 @@
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-Regular.woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-Medium.woff2");
+	font-weight: 500;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-SemiBold.woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-Bold.woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-Italic.woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-MediumItalic.woff2");
+	font-weight: 500;
+	font-style: italic;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-SemiboldItalic.woff2");
+	font-weight: 600;
+	font-style: italic;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Cabin Condensed";
+	src: url("/fonts/Cabin/fonts/WOFF/CabinCondensed-BoldItalic.woff2");
+	font-weight: 700;
+	font-style: italic;
+	font-display: block;
+}

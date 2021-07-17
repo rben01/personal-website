@@ -8,5 +8,6 @@
 		"latex",
 		"plaintext"
 	],
-	"liveServer.settings.port": 5502
+	"liveServer.settings.port": 5502,
+	"liveServer.settings.wait": 400
 }
