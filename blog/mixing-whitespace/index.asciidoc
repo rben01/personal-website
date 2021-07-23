@@ -499,8 +499,9 @@ If this is your first time hearing about auto-formatters, stop reading this arti
 You'll never manually format your code again (which you shouldn't -- tedium is for computers, not humans).
 --
 
-Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default!
-So if you want to use an autoformatter to format your code, and you're not writing Go, you'll need to either format your code the dumb way, submit a bug report on the auto-formatter's repo, or, preferably, submit a pull request that implements this behavior.
+Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default.
+Rustfmt has the (non-default) option `hard_tabs = true` to use the correct behavior as well.
+So chances are that if you want to use an autoformatter to format your code, you'll need to either format your code the dumb way, submit a bug report on the auto-formatter's repo, or, preferably, submit a pull request that implements this behavior.
 If you're lazy, though, you can just post an article online and hope that enough people read it and agree with it that the idea of mixing tabs and spaces becomes mainstream.
 
 === Other Practical Considerations

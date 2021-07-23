@@ -13,6 +13,7 @@
 :pygments-style: default
 :pygments-linenums-mode: table
 :icons: font
+:sectnums:
 :hide-uri-scheme:
 :github-pages-root: https://rben01.github.io
 :resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]

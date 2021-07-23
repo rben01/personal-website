@@ -17,15 +17,14 @@
 body {
 	max-width: 1200px;
 	margin: auto clamp(1vw, calc(15vw - 100px), 120px);
-	/* font-size: 125%; */
+	font-size: 20px;
 	letter-spacing: 0.1px;
 }
 
 @media screen and (min-width: 1280px) {
 	body.toc2 {
 		padding: 0;
-		--toc-width: calc(16em + 5vw);
-		margin: auto calc(2em + 4vw) auto calc(var(--toc-width) + 5vw / 2);
+		margin: auto calc(4vw) auto calc(var(--toc-width-if-floating-left) + 9vw);
 		width: unset;
 	}
 }

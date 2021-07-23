@@ -22,36 +22,36 @@
 <div id="toc" class="toc2">
 <div id="toctitle">Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_indentation_the_basics">Indentation: The Basics</a>
+<li><a href="#_indentation_the_basics">1. Indentation: The Basics</a>
 <ul class="sectlevel2">
-<li><a href="#_the_two_goals_of_indentation">The Two Goals of Indentation</a></li>
-<li><a href="#_a_brief_history_of_the_tab_key">A Brief History of the Tab Key</a></li>
-<li><a href="#_the_tab_character">The Tab Character</a></li>
-<li><a href="#_virtual_tab_stops">Virtual Tab Stops</a></li>
+<li><a href="#_the_two_goals_of_indentation">1.1. The Two Goals of Indentation</a></li>
+<li><a href="#_a_brief_history_of_the_tab_key">1.2. A Brief History of the Tab Key</a></li>
+<li><a href="#_the_tab_character">1.3. The Tab Character</a></li>
+<li><a href="#_virtual_tab_stops">1.4. Virtual Tab Stops</a></li>
 </ul>
 </li>
-<li><a href="#_camp_1_only_tabs">Camp 1: Only Tabs</a>
+<li><a href="#_camp_1_only_tabs">2. Camp 1: Only Tabs</a>
 <ul class="sectlevel2">
-<li><a href="#_tabs_for_semantic_indentation">Tabs for Semantic Indentation</a></li>
-<li><a href="#_tabs_for_aesthetic_indentation">Tabs for Aesthetic Indentation</a></li>
+<li><a href="#_tabs_for_semantic_indentation">2.1. Tabs for Semantic Indentation</a></li>
+<li><a href="#_tabs_for_aesthetic_indentation">2.2. Tabs for Aesthetic Indentation</a></li>
 </ul>
 </li>
-<li><a href="#_camp_2_only_spaces">Camp 2: Only Spaces</a>
+<li><a href="#_camp_2_only_spaces">3. Camp 2: Only Spaces</a>
 <ul class="sectlevel2">
-<li><a href="#_spaces_for_aesthetic_indentation">Spaces for Aesthetic Indentation</a></li>
-<li><a href="#_spaces_for_semantic_indentation">Spaces for Semantic Indentation</a></li>
+<li><a href="#_spaces_for_aesthetic_indentation">3.1. Spaces for Aesthetic Indentation</a></li>
+<li><a href="#_spaces_for_semantic_indentation">3.2. Spaces for Semantic Indentation</a></li>
 </ul>
 </li>
-<li><a href="#_camp_0_responsibly_mixing_tabs_and_spaces">Camp 0: (Responsibly) Mixing Tabs and Spaces</a></li>
-<li><a href="#_editing_in_practice">Editing in Practice</a>
+<li><a href="#_camp_0_responsibly_mixing_tabs_and_spaces">4. Camp 0: (Responsibly) Mixing Tabs and Spaces</a></li>
+<li><a href="#_editing_in_practice">5. Editing in Practice</a>
 <ul class="sectlevel2">
-<li><a href="#_the_very_dumb_way">The Very Dumb Way</a></li>
-<li><a href="#_the_dumb_way">The Dumb Way</a></li>
-<li><a href="#_the_smart_way">The Smart Way</a></li>
-<li><a href="#_other_practical_considerations">Other Practical Considerations</a></li>
+<li><a href="#_the_very_dumb_way">5.1. The Very Dumb Way</a></li>
+<li><a href="#_the_dumb_way">5.2. The Dumb Way</a></li>
+<li><a href="#_the_smart_way">5.3. The Smart Way</a></li>
+<li><a href="#_other_practical_considerations">5.4. Other Practical Considerations</a></li>
 </ul>
 </li>
-<li><a href="#_conclusion">Conclusion</a></li>
+<li><a href="#_conclusion">6. Conclusion</a></li>
 </ul>
 </div>
 </div>
@@ -70,10 +70,10 @@ This article will show why they are wrong.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_indentation_the_basics">Indentation: The Basics</h2>
+<h2 id="_indentation_the_basics">1. Indentation: The Basics</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_the_two_goals_of_indentation">The Two Goals of Indentation</h3>
+<h3 id="_the_two_goals_of_indentation">1.1. The Two Goals of Indentation</h3>
 <div class="paragraph">
 <p>Unless you&#8217;re using a language with whitespace-based syntax&#8201;&#8212;&#8201;the most notorious example of which is Python&#8201;&#8212;&#8201;your code will run just fine no matter how it&#8217;s indented.
 So why indent at all?
@@ -146,7 +146,7 @@ All examples in this article will be in JavaScript, but the principles apply to 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_a_brief_history_of_the_tab_key">A Brief History of the Tab Key</h3>
+<h3 id="_a_brief_history_of_the_tab_key">1.2. A Brief History of the Tab Key</h3>
 <div class="paragraph">
 <p>The tab key, <kbd>Tab</kbd>, can trace its history back to the <a href="https://en.wikipedia.org/wiki/Tab_stop">tab stop</a> on typewriters.
 On a typewriter, tab stops were used to create fixed horizontal positions for the carriage (the part that holds the paper and moves horizontally as you type) to travel to.
@@ -158,7 +158,7 @@ The question was: what is the right way to implement this behavior in a virtual 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_tab_character">The Tab Character</h3>
+<h3 id="_the_tab_character">1.3. The Tab Character</h3>
 <div class="paragraph">
 <p>Wite-Out notwithstanding, typewritten text is a write-once format, so when advancing the carriage there was no difference between using tab stops and repeatedly pressing the space bar; tab stops just made advancing the carriage more  consistent and convenient.
 But computers allow text to be edited (duh), so when people started using them, the question of how should a computer store the fact that the <kbd>Tab</kbd> key was pressed needed to be settled.
@@ -170,7 +170,7 @@ Throughout this article, I will refer to this character as <code>&lt;TAB&gt;</co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_virtual_tab_stops">Virtual Tab Stops</h3>
+<h3 id="_virtual_tab_stops">1.4. Virtual Tab Stops</h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -266,10 +266,10 @@ It is completely up to your personal preference. Which of the following styles d
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camp_1_only_tabs">Camp 1: Only Tabs</h2>
+<h2 id="_camp_1_only_tabs">2. Camp 1: Only Tabs</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_tabs_for_semantic_indentation">Tabs for Semantic Indentation</h3>
+<h3 id="_tabs_for_semantic_indentation">2.1. Tabs for Semantic Indentation</h3>
 <div class="paragraph">
 <p>Alice and Bob are working on the same codebase.
 Having read the above, they decide that from here on out, they will only use <code>&lt;TAB&gt;</code> to indent their code.
@@ -305,7 +305,7 @@ Same file, different appearance&#8201;&#8212;&#8201;that&#8217;s the magic of th
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tabs_for_aesthetic_indentation">Tabs for Aesthetic Indentation</h3>
+<h3 id="_tabs_for_aesthetic_indentation">2.2. Tabs for Aesthetic Indentation</h3>
 <div class="paragraph">
 <p>Unfortunately, Alice and Bob run into a little bit of a wrinkle. Bob checks in the following code:</p>
 </div>
@@ -350,10 +350,10 @@ Unfortunately, Bob had meant to push over those condition lines by four characte
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camp_2_only_spaces">Camp 2: Only Spaces</h2>
+<h2 id="_camp_2_only_spaces">3. Camp 2: Only Spaces</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_spaces_for_aesthetic_indentation">Spaces for Aesthetic Indentation</h3>
+<h3 id="_spaces_for_aesthetic_indentation">3.1. Spaces for Aesthetic Indentation</h3>
 <div class="paragraph">
 <p>Alice&#8217;s and Bob&#8217;s coworker Simplicio&#8203;<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> watches this unfold from a distance.
 He offers them a solution to their problem: &#8220;Just use spaces!&#8221;.
@@ -379,7 +379,7 @@ But Alice isn&#8217;t so sure about Simplicio&#8217;s solution.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_spaces_for_semantic_indentation">Spaces for Semantic Indentation</h3>
+<h3 id="_spaces_for_semantic_indentation">3.2. Spaces for Semantic Indentation</h3>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -398,7 +398,7 @@ It seemed that Simplicio&#8217;s &#8220;solution&#8221; had merely traded one pr
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camp_0_responsibly_mixing_tabs_and_spaces">Camp 0: (Responsibly) Mixing Tabs and Spaces</h2>
+<h2 id="_camp_0_responsibly_mixing_tabs_and_spaces">4. Camp 0: (Responsibly) Mixing Tabs and Spaces</h2>
 <div class="sectionbody">
 <div class="quoteblock">
 <blockquote>
@@ -504,13 +504,13 @@ To his dismay, it does:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_editing_in_practice">Editing in Practice</h2>
+<h2 id="_editing_in_practice">5. Editing in Practice</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>So, now that we know the right way to indent our code, how can we actually achieve this style of indentation?</p>
 </div>
 <div class="sect2">
-<h3 id="_the_very_dumb_way">The Very Dumb Way</h3>
+<h3 id="_the_very_dumb_way">5.1. The Very Dumb Way</h3>
 <div class="paragraph">
 <p>Don&#8217;t!
 Just give up!
@@ -522,7 +522,7 @@ That&#8217;s <em>their</em> problem.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_dumb_way">The Dumb Way</h3>
+<h3 id="_the_dumb_way">5.2. The Dumb Way</h3>
 <div class="paragraph">
 <p>The &#8220;dumb&#8221; way is to manually indent your own code.
 When you want to increase the scope depth, press <kbd>Tab</kbd> (and make sure your editor is set to insert <code>&lt;TAB&gt;</code> when you do so!).
@@ -532,7 +532,7 @@ Just make sure not to accidentally tell your editor to convert all indentation t
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_smart_way">The Smart Way</h3>
+<h3 id="_the_smart_way">5.3. The Smart Way</h3>
 <div class="paragraph">
 <p>For every programming language, there is almost certainly <em>some</em> auto-formatter that will nicely format its code for you.
 Many languages have several.
@@ -622,13 +622,14 @@ You&#8217;ll never manually format your code again (which you shouldn&#8217;t&#8
 </div>
 </div>
 <div class="paragraph">
-<p>Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default!
-So if you want to use an autoformatter to format your code, and you&#8217;re not writing Go, you&#8217;ll need to either format your code the dumb way, submit a bug report on the auto-formatter&#8217;s repo, or, preferably, submit a pull request that implements this behavior.
+<p>Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default.
+Rustfmt has the (non-default) option <code>hard_tabs = true</code> to use the correct behavior as well.
+So chances are that if you want to use an autoformatter to format your code, you&#8217;ll need to either format your code the dumb way, submit a bug report on the auto-formatter&#8217;s repo, or, preferably, submit a pull request that implements this behavior.
 If you&#8217;re lazy, though, you can just post an article online and hope that enough people read it and agree with it that the idea of mixing tabs and spaces becomes mainstream.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_practical_considerations">Other Practical Considerations</h3>
+<h3 id="_other_practical_considerations">5.4. Other Practical Considerations</h3>
 <div class="paragraph">
 <p>Thus far, we&#8217;ve been focused primarily on the fact that mixed indentation lets programmers express their indentation width preferences while keeping things tidy.
 But indenting with both <code>&lt;TAB&gt;</code>s and <code>&lt;SPACE&gt;</code>s has other advantages as well:</p>
@@ -682,7 +683,7 @@ If you could shrink the sizes of all your files by 5% for no cost, wouldn&#8217;
 </div>
 </div>
 <div class="sect1">
-<h2 id="_conclusion">Conclusion</h2>
+<h2 id="_conclusion">6. Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When indenting, <code>&lt;TAB&gt;</code>s and <code>&lt;SPACE&gt;</code>s serve different purposes.

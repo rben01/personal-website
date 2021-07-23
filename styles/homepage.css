@@ -28,7 +28,7 @@
 	--abbrev-border-color: #ddd;
 	--blockquote-border-color: #ddd;
 	--blockquote-cite-color: #555;
-	--blockquote-p-color: #525252;
+	--blockquote-p-color: #38393b;
 	--vcard-text-color: #ddd;
 	--table-bg-color: white;
 	--table-border-color: #ddd;
@@ -50,7 +50,9 @@
 	--header-h1-text-color: black;
 	--header-h1-border-color: #ddd;
 	--header-span-text-color: #6f6f6f;
+	--toc-width-if-floating-left: calc(1em + 13vw);
 	--toc-border-color: #ddd;
+	--toc-bg-color: #f8f9fa;
 	--toc-title-text-color: #111;
 	--toc-content-border-color: #d9d9d9;
 	--toc-content-bg-color: #f2f2f2;
@@ -115,7 +117,7 @@
 		--abbrev-border-color: rgb(43, 43, 43);
 		--blockquote-border-color: rgb(56, 56, 56);
 		--blockquote-cite-color: rgb(161, 161, 161);
-		--blockquote-p-color: #c0c0c0;
+		--blockquote-p-color: #c5c7ce;
 		--vcard-text-color: rgb(110, 110, 110);
 		--table-bg-color: var(--default-bg-color);
 		--table-border-color: rgb(44, 44, 44);
@@ -138,6 +140,7 @@
 		--header-h1-border-color: rgb(39, 39, 39);
 		--header-span-text-color: #b3b3b3;
 		--toc-border-color: #222;
+		--toc-bg-color: #111;
 		--toc-title-text-color: #ddd;
 		--toc-content-border-color: #474747;
 		--toc-content-bg-color: #0e0e0e;
@@ -250,18 +253,14 @@ a {
 	text-decoration-style: dotted;
 }
 
-a:hover {
-	text-decoration-style: solid;
-}
-
-#toc a {
+/* #toc a {
 	text-decoration: none;
 }
 
 #toc a:hover {
 	text-decoration: underline;
 	text-decoration-style: solid;
-}
+} */
 
 /* ========================================================================== Typography ========================================================================== */
 /** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
@@ -505,8 +504,9 @@ body {
 }
 
 a:hover {
-	cursor: auto;
+	cursor: pointer;
 	text-decoration: underline;
+	text-decoration-style: solid;
 }
 
 a:focus {
@@ -1318,7 +1318,9 @@ p a > code:hover {
 }
 
 #toc ul {
-	list-style-type: none;
+	margin-left: 1em;
+	list-style-type: circle;
+	list-style-position: outside;
 }
 
 #toctitle {
@@ -1329,6 +1331,7 @@ p a > code:hover {
 	font-size: 20px;
 }
 
+/* Width at which the toc folds */
 @media only screen and (min-width: 1280px) {
 	body.toc2 {
 		padding-left: 16.5em;
@@ -1337,16 +1340,19 @@ p a > code:hover {
 
 	#toc.toc2 {
 		position: fixed;
-		/* width: 20em; */
+		background-color: var(--toc-bg-color);
+		width: var(--toc-width-if-floating-left);
 		left: 0;
 		top: 0;
 		border-right: 1px solid var(--toc-content-border-color);
 		border-bottom: 0;
 		z-index: 1000;
 		padding: 1em;
-		padding-right: calc(1em + 15px);
-		height: 100%;
+		padding-right: 18px;
+		/* margin-bottom: 100px; */
+		height: calc(100vh - 2em);
 		overflow: auto;
+		overflow-y: scroll;
 	}
 
 	#toc.toc2 #toctitle {
