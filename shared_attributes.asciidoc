@@ -10,6 +10,7 @@
 :linkcss:
 :toc-title: Contents
 :source-highlighter: pygments
+:rouge-linenums-mode: table
 :pygments-style: default
 :pygments-linenums-mode: table
 :icons: font

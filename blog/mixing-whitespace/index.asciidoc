@@ -60,7 +60,7 @@ We will refer to indentation used this way as _semantic_ indentation.
 This is most useful when when items that are part of a single statement have to be displayed over multiple lines and you wish to horizontally align the lower items with the first item.
 We will refer to indentation used this way as _aesthetic_ indentation.
 +
-Below is an example of this kind of indentation with two equivalent styles show.
+Below is an example of this kind of indentation with two equivalent styles shown.
 All examples in this article will be in JavaScript, but the principles apply to every language.footnote:[
 Even if you are using a language whose link:https://gvanrossum.github.io[dictator] has decreed that you must use spaces for indentation, the _logic_ still applies.
 If you are using such a language, you have my condolences.]

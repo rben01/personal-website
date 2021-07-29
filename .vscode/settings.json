@@ -9,5 +9,8 @@
 		"plaintext"
 	],
 	"liveServer.settings.port": 5502,
-	"liveServer.settings.wait": 400
+	"liveServer.settings.wait": 400,
+	"code-runner.executorMap": {
+		"asciidoc": "asciidoctor -r ./syntax-highlighter $dir$fileName",
+	}
 }
