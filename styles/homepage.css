@@ -1,6 +1,5 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.0/css/font-awesome.css");
-@import url("/fonts/iosevka.css");
-@import url("/fonts/cabin.css");
+@import url("/fonts/fonts.css");
 
 /* Variables */
 
@@ -1164,8 +1163,8 @@ div.listingblock {
 	clear: both;
 }
 
-*:not(pre) > code {
-	padding: 2px 4px 1px 4px;
+:not(pre) > code {
+	padding: 0.05em 0.1em 0.07em 0.1em;
 	white-space: nowrap;
 	background-color: var(--code-parent-bg-color);
 	border: 1px solid var(--code-parent-border-color);
