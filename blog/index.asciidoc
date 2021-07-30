@@ -2,5 +2,15 @@
 :basedir: ..
 include::../shared_attributes.asciidoc[]
 :email: {github-user}[{github-icon-in-link}]{github-user}[{user}] — link:/blog/[Blog index]
+:stylesheet: ./blog.css
+
+++++
+<style>
+body {
+	max-width: 800px;
+	margin: auto;
+}
+</style>
+++++
 
 link:/blog/mixing-whitespace/[Indenting with Tabs and Spaces]

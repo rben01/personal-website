@@ -815,7 +815,6 @@ small {
 code {
 	font-family: var(--mono-font-family);
 	font-size: var(--mono-font-size);
-	font-weight: normal;
 	color: var(--code-text-color);
 }
 

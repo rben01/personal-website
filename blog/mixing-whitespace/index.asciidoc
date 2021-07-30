@@ -115,7 +115,7 @@ The question was: what is the right way to implement this behavior in a virtual 
 === The Tab Character
 
 Wite-Out notwithstanding, typewritten text is a write-once format, so when advancing the carriage there was no difference between using tab stops and repeatedly pressing the space bar; tab stops just made advancing the carriage more  consistent and convenient.
-But computers allow text to be edited (duh), so when people started using them, the question of how should a computer store the fact that the {tk} key was pressed needed to be settled.
+But computers allow text to be edited (duh), so when people started using them, the question of how a computer should store the fact that the {tk} key was pressed needed to be settled.
 Should it simulate pressing space enough times to move over to the next virtual tab stop -- say, some multiple of eight characters from the start of the line?footnote:[
 Assuming that you're using a monospace font so that characters other than {tc} all have the same width; none of this applies to variable-width fonts.]
 Well, if spaces were inserted, then if any edits were made to the previous text on the line, subsequent tab stops would become misaligned and the user would have to manually correct the number of spaces inserted.
