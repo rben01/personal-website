@@ -1,9 +1,9 @@
 @import url("/styles/homepage.css");
 
 :root {
-	--font-family: "Crimson Pro", "Cabin Condensed", "Helvetica Neue", "Helvetica",
+	--font-family: "Source Sans", "Cabin Condensed", "Helvetica Neue", "Helvetica",
 		sans-serif;
-	--header-font: "";
+	--header-font: "Source Sans";
 	--pre-code-text-color: black;
 	/* --code-text-color: black; */
 }
@@ -28,7 +28,10 @@ body {
 	}
 }
 
-h1,
+h1 {
+	font-family: "Crimson Pro";
+}
+
 h2,
 h3,
 h4,
