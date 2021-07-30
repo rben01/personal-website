@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Crimson Pro";
+	src: url("/fonts/Crimson Pro/CrimsonPro-Roman-VF.woff2") format("woff2-variations");
+	font-style: normal;
+	font-display: block;
+}
+@font-face {
+	font-family: "Crimson Pro";
+	src: url("/fonts/Crimson Pro/CrimsonPro-Italic-VF.woff2") format("woff2-variations");
+	font-style: italic;
+	font-display: block;
+}

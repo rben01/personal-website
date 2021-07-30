@@ -486,7 +486,7 @@ details {
 
 html,
 body {
-	font-size: 22px;
+	font-size: 21px;
 }
 
 body {
@@ -500,6 +500,7 @@ body {
 	line-height: 1.45;
 	position: relative;
 	cursor: auto;
+	/* font-variation-settings: "wght" 300; */
 }
 
 a:hover {
