@@ -1,15 +1,10 @@
 @import url("/styles/homepage.css");
 
-@font-face {
-	font-family: "HKGrotesk";
-	src: url("/fonts/HKGrotesk/HKGrotesk-Medium.woff2");
-}
-
 :root {
-	--font-family: "Source Sans", "Helvetica Neue", "Helvetica", sans-serif;
+	--font-family: "Cabin", "Helvetica Neue", "Helvetica", sans-serif;
 	--header-font: "";
 	--pre-code-text-color: black;
-	--bold-font-weight: 620;
+	--bold-font-weight: 800;
 	/* --code-text-color: black; */
 }
 @media screen and (prefers-color-scheme: dark) {
@@ -23,7 +18,7 @@ body {
 	max-width: 1200px;
 	margin: auto clamp(1vw, calc(15vw - 100px), 120px);
 	font-size: 21px;
-	/* font-variation-settings: "wdth" 90, "wght" 430; */
+	font-weight: 430;
 }
 
 @media screen and (min-width: 1280px) {
@@ -31,14 +26,10 @@ body {
 		padding: 0;
 		margin: auto calc(7vw) auto calc(var(--toc-width-if-floating-left) + 9vw);
 		width: unset;
-		font-weight: 440;
 	}
 }
 
-h1 {
-	font-family: "HKGrotesk";
-}
-
+h1,
 h2,
 h3,
 h4,

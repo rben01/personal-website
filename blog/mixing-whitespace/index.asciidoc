@@ -41,7 +41,7 @@ The oft-repeated "`don't mix tabs and spaces`" is wrong.
 
 In this article, I'll explore what programmers use indentation for, the advantages and disadvantages of indenting with tabs or spaces alone, and why mixing them is the best, if not objectively correct, way to indent.
 I am certainly not the first to make this claim, and I'm sure I won't be the last.
-But this point is far from moot; link:https://pep8.org/#indentation[many], link:https://google.github.io/styleguide/jsguide.html#formatting-block-indentation[__many__], link:https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md[__**many**__], link:https://github.com/rubocop/ruby-style-guide[__**MANY**__] people still advocate using a fixed number of spaces.
+But this point is far from moot; link:https://pep8.org/#indentation[many], link:https://google.github.io/styleguide/jsguide.html#formatting-block-indentation[__many__], link:https://github.com/rust-dev-tools/fmt-rfcs/blob/master/guide/guide.md#indentation-and-line-width[__**many**__], link:https://github.com/rubocop/ruby-style-guide#tabs-or-spaces[__**MANY**__] people still advocate using a fixed number of spaces.
 This article will show why they are wrong.
 
 
@@ -490,7 +490,7 @@ Others::
 [horizontal.table-row]
 Go::: link:https://pkg.go.dev/cmd/gofmt[gofmt]
 Rust::: link:https://github.com/rust-lang/rustfmt[rustfmt]
-Ruby::: link:https://github.com/rubocop/rubocop[RuboCop]
+Ruby::: link:https://github.com/rubocop/ruby-style-guide[RuboCop]
 Java::: link:https://github.com/google/google-java-format[google-java-format]
 
 [sidebar]

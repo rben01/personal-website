@@ -1,63 +1,11 @@
 @font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-Regular.woff2");
-	font-weight: 400;
-	font-style: normal;
-	font-display: block;
+	font-family: "Cabin";
+	src: url("/fonts/Cabin/Cabin[wdth,wght].woff2");
+	font-weight: normal;
 }
-
 @font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-Medium.woff2");
-	font-weight: 500;
-	font-style: normal;
-	font-display: block;
-}
-
-@font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-SemiBold.woff2");
-	font-weight: 600;
-	font-style: normal;
-	font-display: block;
-}
-
-@font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-Bold.woff2");
-	font-weight: 700;
-	font-style: normal;
-	font-display: block;
-}
-
-@font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-Italic.woff2");
-	font-weight: 400;
+	font-family: "Cabin";
+	src: url("/fonts/Cabin/Cabin-Italic[wdth,wght].woff2");
 	font-style: italic;
-	font-display: block;
-}
-
-@font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-MediumItalic.woff2");
-	font-weight: 500;
-	font-style: italic;
-	font-display: block;
-}
-
-@font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-SemiboldItalic.woff2");
-	font-weight: 600;
-	font-style: italic;
-	font-display: block;
-}
-
-@font-face {
-	font-family: "Cabin Condensed";
-	src: url("./Cabin/CabinCondensed-BoldItalic.woff2");
-	font-weight: 700;
-	font-style: italic;
-	font-display: block;
+	font-weight: normal;
 }

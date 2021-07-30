@@ -4,7 +4,7 @@
 /* Variables */
 
 :root {
-	--font-family: "Cabin Condensed", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--font-family: "Cabin", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 	--mono-font-family: "Iosevka", monospace;
 	--mono-font-size: 0.9em;
 	--bold-font-weight: bold;
@@ -489,6 +489,7 @@ html,
 body {
 	font-size: 21px;
 	word-wrap: break-word;
+	font-variation-settings: "wdth" 85;
 }
 
 body {
