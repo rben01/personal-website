@@ -488,6 +488,7 @@ details {
 html,
 body {
 	font-size: 21px;
+	word-wrap: break-word;
 }
 
 body {
