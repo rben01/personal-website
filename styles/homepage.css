@@ -7,6 +7,7 @@
 	--font-family: "Cabin Condensed", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 	--mono-font-family: "Iosevka", monospace;
 	--mono-font-size: 0.9em;
+	--bold-font-weight: bold;
 	--default-bg-color: white;
 	--default-text-color: black;
 	--mark-bg-color: #ff0;
@@ -276,7 +277,7 @@ abbr[title] {
 /** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
 b,
 strong {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 /** Address styling not present in Safari 5 and Chrome. */
@@ -803,7 +804,7 @@ i {
 
 strong,
 b {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	line-height: inherit;
 }
 
@@ -875,7 +876,7 @@ ol li ol {
 /* Definition Lists */
 dl dt {
 	margin-bottom: 0.3125em;
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 /* Abbreviations */
@@ -934,18 +935,18 @@ blockquote p {
 }
 
 .vcard .fn {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	font-size: 0.9375em;
 }
 
 .vevent .summary {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 .vevent abbr {
 	cursor: auto;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	border: none;
 	padding: 0 0.0625em;
 }
@@ -1119,7 +1120,7 @@ div.listingblock {
 :not(code) > table thead,
 :not(code) > table tfoot {
 	background: var(--table-head-foot-bg-color);
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 :not(code) > table thead tr th,
@@ -1414,7 +1415,7 @@ p a > code:hover {
 }
 
 #content #toctitle {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	font-family: "Helvetica Neue", "Helvetica", sans-serif;
 	font-size: 1em;
 	padding-left: 0.125em;
@@ -1521,30 +1522,16 @@ h6 > a.link:hover {
 	margin-bottom: 1.25em;
 }
 
-.admonitionblock td.content > .title,
-.exampleblock > .title,
-.imageblock > .title,
-.videoblock > .title,
-.listingblock > .title,
-.literalblock > .title,
-.openblock > .title,
-.paragraph > .title,
-.quoteblock > .title,
-.sidebarblock > .title,
-.tableblock > .title,
-.verseblock > .title,
-.dlist > .title,
-.olist > .title,
-.ulist > .title,
-.qlist > .title,
-.hdlist > .title {
+:is(.admonitionblock
+		td.content, .exampleblock, .imageblock, .videoblock, .listingblock, .literalblock, .openblock, .paragraph, .quoteblock, .sidebarblock, .tableblock, .verseblock, .dlist, .olist, .ulist, .qlist, .hdlist)
+	> .title {
 	text-align: left;
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 .tableblock > caption {
 	text-align: left;
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	white-space: nowrap;
 	overflow: visible;
 	max-width: 0;
@@ -1577,7 +1564,7 @@ table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p {
 }
 
 .admonitionblock > table td.icon .title {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	text-transform: uppercase;
 }
 
@@ -1920,7 +1907,7 @@ table.pyhltable .linenodiv {
 
 table thead th,
 table tfoot th {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 table.tableblock.grid-all {
@@ -1981,7 +1968,7 @@ td.tableblock.valign-middle {
 
 p.tableblock.header {
 	color: var(--tableblockheader-text-color);
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 td > div.verse {
@@ -2130,7 +2117,7 @@ ol.lowergreek {
 
 td.hdlist1 {
 	padding-right: 0.8em;
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 }
 
 td.hdlist1,
@@ -2243,7 +2230,7 @@ span.footnoteref a {
 }
 
 #footnotes .footnote a:first-of-type {
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	text-decoration: none;
 }
 
@@ -2482,7 +2469,7 @@ span.icon > [class*=" icon-"] {
 	width: 20px;
 	height: 20px;
 	font-size: 12px;
-	font-weight: bold;
+	font-weight: var(--bold-font-weight);
 	line-height: 20px;
 	font-family: Arial, sans-serif;
 	font-style: normal;
