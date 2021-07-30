@@ -85,14 +85,59 @@ When writing code, indentation is used to accomplish two goals:</p>
 <p>It makes the structure of your code, as a computer would see it, clear to a human as well; when code is indented correctly, the hierarchical relation between statements and scopes is visible on the screen.
 This way, you and the computer agree on the structure of the code.
 We will refer to indentation used this way as <em>semantic</em> indentation.</p>
+<div class="paragraph">
+<p>An example of semantic indentation is below.
+All examples in this article will be in JavaScript, but the principles apply to every language.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><pre><span></span><span class="tok-c1">// The initial indent level is 0</span>
+<span class="tok-kd">function</span> <span class="tok-nx">f</span><span class="tok-p">(</span><span class="tok-nx">x</span><span class="tok-p">,</span> <span class="tok-nx">y</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+    <span class="tok-c1">// We&#39;re inside the function, so we indent one level</span>
+    <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">x</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+        <span class="tok-c1">// Now we&#39;re inside the `if-elseif-else`, so we indent one additional level</span>
+    <span class="tok-p">}</span> <span class="tok-k">else</span> <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">y</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+        <span class="tok-c1">// Still inside `if-elseif-else`</span>
+        <span class="tok-k">for</span> <span class="tok-p">(</span><span class="tok-kd">let</span> <span class="tok-nx">i</span> <span class="tok-o">=</span> <span class="tok-mf">0</span><span class="tok-p">;</span> <span class="tok-nx">i</span> <span class="tok-o">&lt;</span> <span class="tok-mf">10</span><span class="tok-p">;</span> <span class="tok-nx">i</span><span class="tok-o">++</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+            <span class="tok-c1">// Another scope --&gt; another indent</span>
+            <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-sb">`Logged </span><span class="tok-si">${</span><span class="tok-nx">i</span><span class="tok-o">+</span><span class="tok-mf">1</span><span class="tok-si">}</span><span class="tok-sb"> times`</span><span class="tok-p">);</span>
+        <span class="tok-p">}</span>
+    <span class="tok-p">}</span> <span class="tok-k">else</span> <span class="tok-p">{</span>
+        <span class="tok-c1">// Still inside...</span>
+    <span class="tok-p">}</span>
+    <span class="tok-c1">// Now we&#39;re not, so we go back to the function-level indent</span>
+<span class="tok-p">}</span>
+<span class="tok-c1">// And now we&#39;re outside the function again, so back to 0</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</div>
+</div>
 </li>
 <li>
 <p>It is used for typesetting/alignment.
 This is most useful when when items that are part of a single statement have to be displayed over multiple lines and you wish to horizontally align the lower items with the first item.
 We will refer to indentation used this way as <em>aesthetic</em> indentation.</p>
 <div class="paragraph">
-<p>Below is an example of this kind of indentation with two equivalent styles shown.
-All examples in this article will be in JavaScript, but the principles apply to every language.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+<p>Below is an example of this kind of indentation with two equivalent styles shown.</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -182,7 +227,8 @@ Due to this representation of the <code>&lt;TAB&gt;</code> character, we will ha
 <div class="paragraph">
 <p>The beauty of the <code>&lt;TAB&gt;</code> character, as opposed to using several spaces, is that the computer can dynamically set its width so that it always appears to fill the horizontal space to the next <em>virtual</em> tab stop.
 When text to the left of a <code>&lt;TAB&gt;</code> character is edited, the computer can immediately resize the <code>&lt;TAB&gt;</code> character on the fly so that it is always flush with a tab stop.
-For instance, if tab stops are set to multiples of eight characters, then the following shows how tabs will expand.</p>
+In other words, if you use <code>&lt;TAB&gt;</code> to enter tabular data laid out in columns, the alignment of the columns will be preserved even as the content of the table changes.
+For instance, if tab stops are set to multiples of eight characters, then the following shows how <code>&lt;TAB&gt;</code> will change widths to maintain the columns.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -209,7 +255,7 @@ abc<span class="lies-on-tab-char">d</span>xyz<span class="tabstop">║</span></c
 </div>
 </div>
 <div class="paragraph">
-<p>Looks good!
+<p>Looks good, although in the last row we ran out of space between the columns.
 What about a width of two characters?</p>
 </div>
 <div class="listingblock">
@@ -224,20 +270,20 @@ abc<span class="lies-on-tab-char">d</span>xyz<span class="tabstop">║</span></c
 </div>
 <div class="paragraph">
 <p>Whoops!
-Our tab stops weren&#8217;t wide enough, so things got misaligned.
-But as long as the tab stop width is at least the width of the widest column of text of text entered within a &#8220;column&#8221;, everything works out.</p>
+Our tab stops weren&#8217;t wide enough&#8201;&#8212;&#8201;they were only two spaces wide, but we tried to insert four characters in one column&#8201;&#8212;&#8201;so things got misaligned.
+But as long as the tab stop width is at least the width of the widest column of text entered within a column, everything works out.</p>
 </div>
 <div class="paragraph">
-<p>So, how wide <em>should</em> tab stops be?
+<p>So, if you&#8217;re entering data in columns, how wide should tab stops be?
 Eight characters?
 Four?
 Two?
 (<em>One?</em>)
-It depends on how wide you expect your columns of text to be.</p>
+It depends on how wide you expect your columns to be.</p>
 </div>
 <div class="paragraph">
 <p>But when indenting code, there is by definition no text within the indentation; it&#8217;s all whitespace.
-There are no columns!
+There is <em>no</em> minimum tab width; regardless of the tab width you choose, the (whitespace-only) columns will remain aligned.
 This means that the consideration of how wide to make the tab stops that comprise the indentation in your editor is <strong>immaterial</strong>.
 It is completely up to your personal preference. Which of the following styles do you prefer?</p>
 </div>
@@ -260,7 +306,7 @@ It is completely up to your personal preference. Which of the following styles d
 </div>
 </div>
 <div class="paragraph">
-<p>You could have picked either one; it truly doesn&#8217;t matter, as there is nothing that <em>could</em> become misaligned.</p>
+<p>It&#8217;s entirely a matter of preference; both options perfectly preserve the alignment of the whitespace columns.</p>
 </div>
 </div>
 </div>
@@ -624,7 +670,7 @@ You&#8217;ll never manually format your code again (which you shouldn&#8217;t&#8
 <div class="paragraph">
 <p>Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default.
 Rustfmt has the (non-default) option <code>hard_tabs = true</code> to use the correct behavior as well.
-So chances are that if you want to use an autoformatter to format your code, you&#8217;ll need to either format your code the dumb way, submit a bug report on the auto-formatter&#8217;s repo, or, preferably, submit a pull request that implements this behavior.
+So chances are that if you want to use an autoformatter to format your code, you&#8217;ll need to either format your code the dumb way, open an issue on the auto-formatter&#8217;s repo, or, preferably, submit a pull request that implements this behavior.
 If you&#8217;re lazy, though, you can just post an article online and hope that enough people read it and agree with it that the idea of mixing tabs and spaces becomes mainstream.</p>
 </div>
 </div>
@@ -640,7 +686,7 @@ But indenting with both <code>&lt;TAB&gt;</code>s and <code>&lt;SPACE&gt;</code>
 <p>Some editors have &#8220;smart&#8221; behavior that allows them to treat multiple spaces as a single tab stop.
 Sometimes this takes configuring and varies on a per language/filetype basis.
 And can you guarantee that you&#8217;ll always be using your editor of choice?
-(If you&#8217;ve never had to SSH into a server where the only editor was a config-less Vim, consider yourself lucky.)
+(Imagine having to SSH into a server where the only editor is a config-less Vim&#8201;&#8212;&#8201;not fun!)
 If you use <code>&lt;TAB&gt;</code>s for semantic indentation, everything will just work out of the box.</p>
 </li>
 <li>

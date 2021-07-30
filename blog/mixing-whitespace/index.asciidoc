@@ -56,14 +56,40 @@ When writing code, indentation is used to accomplish two goals:
 . It makes the structure of your code, as a computer would see it, clear to a human as well; when code is indented correctly, the hierarchical relation between statements and scopes is visible on the screen.
 This way, you and the computer agree on the structure of the code.
 We will refer to indentation used this way as _semantic_ indentation.
++
+An example of semantic indentation is below.
+All examples in this article will be in JavaScript, but the principles apply to every language.footnote:[
+Even if you are using a language whose link:https://gvanrossum.github.io[dictator] has decreed that you must use spaces for indentation, the _logic_ still applies.
+If you are using such a language, you have my condolences.]
++
+====
+[source,javascript,linenums]
+--
+// The initial indent level is 0
+function f(x, y) {
+    // We're inside the function, so we indent one level
+    if (x) {
+        // Now we're inside the `if-elseif-else`, so we indent one additional level
+    } else if (y) {
+        // Still inside `if-elseif-else`
+        for (let i = 0; i < 10; i++) {
+            // Another scope --> another indent
+            console.log(`Logged ${i+1} times`);
+        }
+    } else {
+        // Still inside...
+    }
+    // Now we're not, so we go back to the function-level indent
+}
+// And now we're outside the function again, so back to 0
+--
+====
+
 . It is used for typesetting/alignment.
 This is most useful when when items that are part of a single statement have to be displayed over multiple lines and you wish to horizontally align the lower items with the first item.
 We will refer to indentation used this way as _aesthetic_ indentation.
 +
 Below is an example of this kind of indentation with two equivalent styles shown.
-All examples in this article will be in JavaScript, but the principles apply to every language.footnote:[
-Even if you are using a language whose link:https://gvanrossum.github.io[dictator] has decreed that you must use spaces for indentation, the _logic_ still applies.
-If you are using such a language, you have my condolences.]
 +
 ====
 [source,javascript,linenums]
@@ -129,14 +155,15 @@ If your editor doesn't insert the {tc} character when you press {tk}, you might 
 === Virtual Tab Stops
 
 [example]
---
+====
 Throughout this article, within code blocks, `[.tabstop]##{tabstop}##` will represent tab stops, `[.tabstop]##{tab-i}##` will represent space between tab stops, `[.tabstop]##{tab-l}{tab-m}{tab-r}##` will represent a tab character (of variable width), and `[.tabstop]##{space-char}##` will represent a single space character.
 Due to this representation of the {tc} character, we will have to represent tabs of width 1 as `[.tabstop]##{tab-1}##`, and tabs of width 0 as single line behind the previous character, e.g., `[.lies-on-tab-char]##a##`.
---
+====
 
 The beauty of the {tc} character, as opposed to using several spaces, is that the computer can dynamically set its width so that it always appears to fill the horizontal space to the next _virtual_ tab stop.
 When text to the left of a {tc} character is edited, the computer can immediately resize the {tc} character on the fly so that it is always flush with a tab stop.
-For instance, if tab stops are set to multiples of eight characters, then the following shows how tabs will expand.
+In other words, if you use {tc} to enter tabular data laid out in columns, the alignment of the columns will be preserved even as the content of the table changes.
+For instance, if tab stops are set to multiples of eight characters, then the following shows how {tc} will change widths to maintain the columns.
 
 
 
@@ -165,7 +192,7 @@ abc[.lies-on-tab-char]##d##xyz{tab-1-code}
 
 
 
-Looks good!
+Looks good, although in the last row we ran out of space between the columns.
 What about a width of two characters?
 
 [source,text,subs={code-tabstop-example-subs}]
@@ -180,19 +207,19 @@ abc[.lies-on-tab-char]##d##xyz{tab-1-code}
 
 
 Whoops!
-Our tab stops weren't wide enough, so things got misaligned.
-But as long as the tab stop width is at least the width of the widest column of text of text entered within a "`column`", everything works out.
+Our tab stops weren't wide enough -- they were only two spaces wide, but we tried to insert four characters in one column -- so things got misaligned.
+But as long as the tab stop width is at least the width of the widest column of text entered within a column, everything works out.
 
-So, how wide _should_ tab stops be?
+So, if you're entering data in columns, how wide should tab stops be?
 Eight characters?
 Four?
 Two?
 (_One?_)
-It depends on how wide you expect your columns of text to be.
+It depends on how wide you expect your columns to be.
 
 
 But when indenting code, there is by definition no text within the indentation; it's all whitespace.
-There are no columns!
+There is _no_ minimum tab width; regardless of the tab width you choose, the (whitespace-only) columns will remain aligned.
 This means that the consideration of how wide to make the tab stops that comprise the indentation in your editor is *immaterial*.
 It is completely up to your personal preference. Which of the following styles do you prefer?
 
@@ -214,7 +241,7 @@ function f() {
 }
 --
 
-You could have picked either one; it truly doesn't matter, as there is nothing that _could_ become misaligned.
+It's entirely a matter of preference; both options perfectly preserve the alignment of the whitespace columns.
 // If you use {tc} to indent, you can just tell your editor how wide it should display tabs, and it will look how _you_ prefer.
 
 
@@ -501,7 +528,7 @@ You'll never manually format your code again (which you shouldn't -- tedium is f
 
 Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default.
 Rustfmt has the (non-default) option `hard_tabs = true` to use the correct behavior as well.
-So chances are that if you want to use an autoformatter to format your code, you'll need to either format your code the dumb way, submit a bug report on the auto-formatter's repo, or, preferably, submit a pull request that implements this behavior.
+So chances are that if you want to use an autoformatter to format your code, you'll need to either format your code the dumb way, open an issue on the auto-formatter's repo, or, preferably, submit a pull request that implements this behavior.
 If you're lazy, though, you can just post an article online and hope that enough people read it and agree with it that the idea of mixing tabs and spaces becomes mainstream.
 
 === Other Practical Considerations
@@ -512,7 +539,7 @@ But indenting with both {tc}s and {sc}s has other advantages as well:
 * Some editors have "`smart`" behavior that allows them to treat multiple spaces as a single tab stop.
 Sometimes this takes configuring and varies on a per language/filetype basis.
 And can you guarantee that you'll always be using your editor of choice?
-(If you've never had to SSH into a server where the only editor was a config-less Vim, consider yourself lucky.)
+(Imagine having to SSH into a server where the only editor is a config-less Vim -- not fun!)
 If you use {tc}s for semantic indentation, everything will just work out of the box.
 * If your cursor is within {tc}-based indentation, the left and right arrow keys are guaranteed to navigate between tab stops; it's impossible to move just part of the way to the next tab stop.
 This lets you move between tab stops more quickly (regardless of any editor settings).
