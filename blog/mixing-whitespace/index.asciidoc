@@ -1,8 +1,9 @@
 = Indenting with Tabs and Spaces
+:docdate: 2021-07-20
 :basedir: ../..
 include::../blog.asciidoc[]
 :stylesheet: mixing-whitespace.css
-:docdate: 2021-07-20
+:sectnumlevels: 2
 :description: The correct way to indent is using both tabs and spaces
 :toc: left
 :cursor: 𝚰
@@ -120,6 +121,14 @@ In any case, the specifics of how you align your code aren't important as long a
 +
 When everything is in the same place on each line, the code becomes much easier to parse quickly; it's almost like you're looking at a _table_ of text instead of _lines_ of text.
 
+[NOTE]
+====
+For alignment to work consistently, it's imperative that you be using a link:https://en.wikipedia.org/wiki/Monospaced_font[monospace font] -- a font in which every character has the same width (as opposed to a link:https://en.wikipedia.org/wiki/Typeface#Proportion[variable-width font]).
+Otherwise the alignment will be sensitive to the relative widths of the characters, and thus will break if you switch fonts.
+In this article, all the code blocks are written with a monospace font, a custom variant of link:https://github.com/rben01/Iosevka[Iosevka].
+
+====
+
 
 So, what happens when you need to mix both styles of indentation? What happens when, on a single line, you need to use both _semantic_ indentation and _aesthetic_ indentation? Can this situation even occur naturally? (Yes.) Before we talk about that, we should discuss what indentation actually _is_.
 
@@ -142,8 +151,7 @@ The question was: what is the right way to implement this behavior in a virtual 
 
 Wite-Out notwithstanding, typewritten text is a write-once format, so when advancing the carriage there was no difference between using tab stops and repeatedly pressing the space bar; tab stops just made advancing the carriage more  consistent and convenient.
 But computers allow text to be edited (duh), so when people started using them, the question of how a computer should store the fact that the {tk} key was pressed needed to be settled.
-Should it simulate pressing space enough times to move over to the next virtual tab stop -- say, some multiple of eight characters from the start of the line?footnote:[
-Assuming that you're using a monospace font so that characters other than {tc} all have the same width; none of this applies to variable-width fonts.]
+Should it simulate pressing space enough times to move over to the next virtual tab stop -- say, some multiple of eight characters from the start of the line?
 Well, if spaces were inserted, then if any edits were made to the previous text on the line, subsequent tab stops would become misaligned and the user would have to manually correct the number of spaces inserted.
 This wouldn't do; computers are supposed to automate this kind of boring work for us.
 Instead, the answer was the tab character, link:https://unicode-table.com/en/0009/[`U+0009`], often represented in source code as `\t`.
@@ -190,8 +198,7 @@ abc{tab-1-code}xy{tab-2}
 abc[.lies-on-tab-char]##d##xyz{tab-1-code}
 --
 
-
-
+[#overrun-tabs]
 Looks good, although in the last row we ran out of space between the columns.
 What about a width of two characters?
 
@@ -498,7 +505,7 @@ Just make sure not to accidentally tell your editor to convert all indentation t
 
 === The Smart Way
 
-For every programming language, there is almost certainly _some_ auto-formatter that will nicely format its code for you.
+For every programming language, there is almost certainly _some_ auto-formatter that will nicely format your code for you.footnote:[In addition, some IDEs have auto-formatting built right in.]
 Many languages have several.
 Here are some examples:
 
@@ -520,15 +527,16 @@ Rust::: link:https://github.com/rust-lang/rustfmt[rustfmt]
 Ruby::: link:https://github.com/rubocop/ruby-style-guide[RuboCop]
 Java::: link:https://github.com/google/google-java-format[google-java-format]
 
-[sidebar]
---
+[NOTE]
+====
 If this is your first time hearing about auto-formatters, stop reading this article and go install one for a language you work in.
 You'll never manually format your code again (which you shouldn't -- tedium is for computers, not humans).
---
+====
 
-Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default.
-Rustfmt has the (non-default) option `hard_tabs = true` to use the correct behavior as well.
-So chances are that if you want to use an autoformatter to format your code, you'll need to either format your code the dumb way, open an issue on the auto-formatter's repo, or, preferably, submit a pull request that implements this behavior.
+Unfortunately, most of these indent with spaces (Camp 1) by default.
+Gofmt is the only formatter on this list that indents with tabs and spaces (Camp 0) by default, although Rustfmt can also be configured to indent the right way with the non-default option `hard_tabs = true`.
+So unfortunately, chances are that if you use an auto-formatter, you'll be stuck with Simplicio's indentation scheme; if you want to join Camp 0, you'll need to format your code the dumb way.
+To fix this, you can open an issue on the auto-formatter's repo, or, preferably, submit a pull request that implements this behavior.
 If you're lazy, though, you can just post an article online and hope that enough people read it and agree with it that the idea of mixing tabs and spaces becomes mainstream.
 
 === Other Practical Considerations
@@ -536,11 +544,12 @@ If you're lazy, though, you can just post an article online and hope that enough
 Thus far, we've been focused primarily on the fact that mixed indentation lets programmers express their indentation width preferences while keeping things tidy.
 But indenting with both {tc}s and {sc}s has other advantages as well:
 
-* Some editors have "`smart`" behavior that allows them to treat multiple spaces as a single tab stop.
-Sometimes this takes configuring and varies on a per language/filetype basis.
+* Sure, some editors have "`smart`" behavior that allows them to treat multiple spaces as a single tab stop.
+(It's dumb that they need a setting at all for something this simple.)
+But this takes configuring and varies on a per language/filetype basis.
 And can you guarantee that you'll always be using your editor of choice?
 (Imagine having to SSH into a server where the only editor is a config-less Vim -- not fun!)
-If you use {tc}s for semantic indentation, everything will just work out of the box.
+If you use {tc}s for semantic indentation, everything will just work.
 * If your cursor is within {tc}-based indentation, the left and right arrow keys are guaranteed to navigate between tab stops; it's impossible to move just part of the way to the next tab stop.
 This lets you move between tab stops more quickly (regardless of any editor settings).
 It also prevents your cursor from ever being located between tab stops, which would serve no purpose -- if it's between tab stops, the only useful thing for it to do is move somewhere else first.
@@ -558,6 +567,55 @@ Why deal with this when there's a character that was _made_ to indent just beggi
 * Depending on how many {sc}s one uses to simulate a {tc}, {tc}s can take up quite a bit less space in a file.
 If you could shrink the sizes of all your files by 5% for no cost, wouldn't you?
 
+=== Other Thoughts
+
+==== No Indentation At All
+
+An unstated premise of this article was that one's editor should faithfully render one's files, including whitespace (or the lack thereof).
+However, auto-formatters are able to infer where whitespace belongs so that they can format the file correctly.
+Accordingly, it should also be possible for __text editors__ to infer where whitespace belongs.
+This means that it should be possible, in theory, to insert _no_ indentation whatsoever in one's source code, and instead make it the responsibility of the text editor to display the file's (unindented) contents with the correct indentation.
+
+What gets saved is this::
++
+[source,javascript,linenums]
+--
+function f(x) {
+if (x === 1) {
+console.log("x was 1");
+} else {
+console.log(`x wasn't 1; it was ${x}`)
+}
+}
+--
+
+But this is what you see and edit::
++
+[source,javascript,linenums]
+--
+function f(x) {
+    if (x === 1) {
+        console.log("x was 1");
+    } else {
+        console.log(`x wasn't 1; it was ${x}`)
+    }
+}
+--
+
+
+This would make the whole argument of tabs-versus-spaces-versus-both moot, but would require changing both how editors render it code and how people write it (in the event that they're not using such an editor).
+And of course this would not be possible in whitespace-sensitive languages such as Python.
+One interesting consequence of this would be that when using version control, adding or removing a scope would only show up in a diff as just the opening and closing lines being added/removed; the enclosed code would remain unchanged.
+
+Taken one step further, one could imagine saving one's source code in a somewhat minified form (although not completely minified; token names and comments would need to be preserved) which would be expanded to a more easily human-readable and -writable form by the text editor -- in the same manner as an auto-formatter, but, as above, without writing this representation to the file.
+Version control would have to be modified to use semantic diffs instead of line-based diffs (since all the code would be on one line); perhaps it could construct syntax trees from the two versions and then diff the trees.
+
+==== Elastic Tabstops
+
+Elastic Tabstops are somewhat tangential to the issue of how to indent properly, but are nonetheless worth mentioning because they're another interpretation of the {tc} character.
+Rather than assign a fixed position for each tab stop, elastic tabstops auto-magically treats each tab as exactly wide as it needs to be for the text to remain aligned, taking into account the text and {tc}s on surrounding lines.
+This allows one to use {tc}s to align __non__-whitespace text while avoiding <<overrun-tabs,the issue we saw above>> where the tab stops had to be sufficiently far apart.
+I won't delve into it, but if you're interested you can read more link:https://nickgravgaard.com/elastic-tabstops/[here].
 
 == Conclusion
 

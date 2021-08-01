@@ -17,7 +17,7 @@
 <h1>Indenting with Tabs and Spaces</h1>
 <div class="details">
 <span id="author" class="author">Robert Bennett</span><br>
-<span id="email" class="email"><a href="https://github.com/rben01" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01">rben01</a> — <a href="/blog/">Blog index</a></span><br>
+<span id="email" class="email"><a href="https://github.com/rben01" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01">rben01</a> — Published 2021-07-20 — <a href="/blog/">Blog index</a></span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Contents</div>
@@ -49,6 +49,7 @@
 <li><a href="#_the_dumb_way">5.2. The Dumb Way</a></li>
 <li><a href="#_the_smart_way">5.3. The Smart Way</a></li>
 <li><a href="#_other_practical_considerations">5.4. Other Practical Considerations</a></li>
+<li><a href="#_other_thoughts">5.5. Other Thoughts</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion">6. Conclusion</a></li>
@@ -186,6 +187,22 @@ We will refer to indentation used this way as <em>aesthetic</em> indentation.</p
 </li>
 </ol>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For alignment to work consistently, it&#8217;s imperative that you be using a <a href="https://en.wikipedia.org/wiki/Monospaced_font">monospace font</a>&#8201;&#8212;&#8201;a font in which every character has the same width (as opposed to a <a href="https://en.wikipedia.org/wiki/Typeface#Proportion">variable-width font</a>).
+Otherwise the alignment will be sensitive to the relative widths of the characters, and thus will break if you switch fonts.
+In this article, all the code blocks are written with a monospace font, a custom variant of <a href="https://github.com/rben01/Iosevka">Iosevka</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>So, what happens when you need to mix both styles of indentation? What happens when, on a single line, you need to use both <em>semantic</em> indentation and <em>aesthetic</em> indentation? Can this situation even occur naturally? (Yes.) Before we talk about that, we should discuss what indentation actually <em>is</em>.</p>
 </div>
@@ -207,11 +224,11 @@ The question was: what is the right way to implement this behavior in a virtual 
 <div class="paragraph">
 <p>Wite-Out notwithstanding, typewritten text is a write-once format, so when advancing the carriage there was no difference between using tab stops and repeatedly pressing the space bar; tab stops just made advancing the carriage more  consistent and convenient.
 But computers allow text to be edited (duh), so when people started using them, the question of how a computer should store the fact that the <kbd>Tab</kbd> key was pressed needed to be settled.
-Should it simulate pressing space enough times to move over to the next virtual tab stop&#8201;&#8212;&#8201;say, some multiple of eight characters from the start of the line?<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>
+Should it simulate pressing space enough times to move over to the next virtual tab stop&#8201;&#8212;&#8201;say, some multiple of eight characters from the start of the line?
 Well, if spaces were inserted, then if any edits were made to the previous text on the line, subsequent tab stops would become misaligned and the user would have to manually correct the number of spaces inserted.
 This wouldn&#8217;t do; computers are supposed to automate this kind of boring work for us.
 Instead, the answer was the tab character, <a href="https://unicode-table.com/en/0009/"><code>U+0009</code></a>, often represented in source code as <code>\t</code>.
-Throughout this article, I will refer to this character as <code>&lt;TAB&gt;</code>.<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
+Throughout this article, I will refer to this character as <code>&lt;TAB&gt;</code>.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
 </div>
 </div>
 <div class="sect2">
@@ -254,7 +271,7 @@ abc<span class="tabstop">║</span>xy<span class="tabstop">├┤</span>
 abc<span class="lies-on-tab-char">d</span>xyz<span class="tabstop">║</span></code></pre>
 </div>
 </div>
-<div class="paragraph">
+<div id="overrun-tabs" class="paragraph">
 <p>Looks good, although in the last row we ran out of space between the columns.
 What about a width of two characters?</p>
 </div>
@@ -401,7 +418,7 @@ Unfortunately, Bob had meant to push over those condition lines by four characte
 <div class="sect2">
 <h3 id="_spaces_for_aesthetic_indentation"><a class="link" href="#_spaces_for_aesthetic_indentation">3.1. Spaces for Aesthetic Indentation</a></h3>
 <div class="paragraph">
-<p>Alice&#8217;s and Bob&#8217;s coworker Simplicio&#8203;<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> watches this unfold from a distance.
+<p>Alice&#8217;s and Bob&#8217;s coworker Simplicio&#8203;<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> watches this unfold from a distance.
 He offers them a solution to their problem: &#8220;Just use spaces!&#8221;.
 Alice and Bob look at each other reluctantly, but Simplicio insists that Alice and Bob open his version of the file, shown below, on their computers.</p>
 </div>
@@ -561,7 +578,7 @@ To his dismay, it does:</p>
 <p>Don&#8217;t!
 Just give up!
 Accept that the problem is too hard to solve, settle on only tabs or only spaces, and move on.
-This is what Python did from the outset&#8203;<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>, and it doesn&#8217;t seem to have hurt it much.
+This is what Python did from the outset&#8203;<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>, and it doesn&#8217;t seem to have hurt it much.
 In general, imposing your will on others without regard for their individual preferences is the simplest way to get what you want.
 Who cares if people whose preferences differ from your own aren&#8217;t happy with your decision?
 That&#8217;s <em>their</em> problem.</p>
@@ -580,7 +597,7 @@ Just make sure not to accidentally tell your editor to convert all indentation t
 <div class="sect2">
 <h3 id="_the_smart_way"><a class="link" href="#_the_smart_way">5.3. The Smart Way</a></h3>
 <div class="paragraph">
-<p>For every programming language, there is almost certainly <em>some</em> auto-formatter that will nicely format its code for you.
+<p>For every programming language, there is almost certainly <em>some</em> auto-formatter that will nicely format your code for you.<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>
 Many languages have several.
 Here are some examples:</p>
 </div>
@@ -659,18 +676,26 @@ Java
 </dd>
 </dl>
 </div>
-<div class="sidebarblock">
-<div class="content">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>If this is your first time hearing about auto-formatters, stop reading this article and go install one for a language you work in.
 You&#8217;ll never manually format your code again (which you shouldn&#8217;t&#8201;&#8212;&#8201;tedium is for computers, not humans).</p>
 </div>
-</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Unfortunately, gofmt is the only formatter on this list that indents with tabs and spaces by default.
-Rustfmt has the (non-default) option <code>hard_tabs = true</code> to use the correct behavior as well.
-So chances are that if you want to use an autoformatter to format your code, you&#8217;ll need to either format your code the dumb way, open an issue on the auto-formatter&#8217;s repo, or, preferably, submit a pull request that implements this behavior.
+<p>Unfortunately, most of these indent with spaces (Camp 1) by default.
+Gofmt is the only formatter on this list that indents with tabs and spaces (Camp 0) by default, although Rustfmt can also be configured to indent the right way with the non-default option <code>hard_tabs = true</code>.
+So unfortunately, chances are that if you use an auto-formatter, you&#8217;ll be stuck with Simplicio&#8217;s indentation scheme; if you want to join Camp 0, you&#8217;ll need to format your code the dumb way.
+To fix this, you can open an issue on the auto-formatter&#8217;s repo, or, preferably, submit a pull request that implements this behavior.
 If you&#8217;re lazy, though, you can just post an article online and hope that enough people read it and agree with it that the idea of mixing tabs and spaces becomes mainstream.</p>
 </div>
 </div>
@@ -683,11 +708,12 @@ But indenting with both <code>&lt;TAB&gt;</code>s and <code>&lt;SPACE&gt;</code>
 <div class="ulist">
 <ul>
 <li>
-<p>Some editors have &#8220;smart&#8221; behavior that allows them to treat multiple spaces as a single tab stop.
-Sometimes this takes configuring and varies on a per language/filetype basis.
+<p>Sure, some editors have &#8220;smart&#8221; behavior that allows them to treat multiple spaces as a single tab stop.
+(It&#8217;s dumb that they need a setting at all for something this simple.)
+But this takes configuring and varies on a per language/filetype basis.
 And can you guarantee that you&#8217;ll always be using your editor of choice?
 (Imagine having to SSH into a server where the only editor is a config-less Vim&#8201;&#8212;&#8201;not fun!)
-If you use <code>&lt;TAB&gt;</code>s for semantic indentation, everything will just work out of the box.</p>
+If you use <code>&lt;TAB&gt;</code>s for semantic indentation, everything will just work.</p>
 </li>
 <li>
 <p>If your cursor is within <code>&lt;TAB&gt;</code>-based indentation, the left and right arrow keys are guaranteed to navigate between tab stops; it&#8217;s impossible to move just part of the way to the next tab stop.
@@ -726,6 +752,82 @@ If you could shrink the sizes of all your files by 5% for no cost, wouldn&#8217;
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_other_thoughts"><a class="link" href="#_other_thoughts">5.5. Other Thoughts</a></h3>
+<div class="sect3">
+<h4 id="_no_indentation_at_all"><a class="link" href="#_no_indentation_at_all">No Indentation At All</a></h4>
+<div class="paragraph">
+<p>An unstated premise of this article was that one&#8217;s editor should faithfully render one&#8217;s files, including whitespace (or the lack thereof).
+However, auto-formatters are able to infer where whitespace belongs so that they can format the file correctly.
+Accordingly, it should also be possible for <em>text editors</em> to infer where whitespace belongs.
+This means that it should be possible, in theory, to insert <em>no</em> indentation whatsoever in one&#8217;s source code, and instead make it the responsibility of the text editor to display the file&#8217;s (unindented) contents with the correct indentation.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">What gets saved is this</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><pre><span></span><span class="tok-kd">function</span> <span class="tok-nx">f</span><span class="tok-p">(</span><span class="tok-nx">x</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+<span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">x</span> <span class="tok-o">===</span> <span class="tok-mf">1</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+<span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;x was 1&quot;</span><span class="tok-p">);</span>
+<span class="tok-p">}</span> <span class="tok-k">else</span> <span class="tok-p">{</span>
+<span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-sb">`x wasn&#39;t 1; it was </span><span class="tok-si">${</span><span class="tok-nx">x</span><span class="tok-si">}</span><span class="tok-sb">`</span><span class="tok-p">)</span>
+<span class="tok-p">}</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">But this is what you see and edit</dt>
+<dd>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><pre><span></span><span class="tok-kd">function</span> <span class="tok-nx">f</span><span class="tok-p">(</span><span class="tok-nx">x</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+    <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">x</span> <span class="tok-o">===</span> <span class="tok-mf">1</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+        <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;x was 1&quot;</span><span class="tok-p">);</span>
+    <span class="tok-p">}</span> <span class="tok-k">else</span> <span class="tok-p">{</span>
+        <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-sb">`x wasn&#39;t 1; it was </span><span class="tok-si">${</span><span class="tok-nx">x</span><span class="tok-si">}</span><span class="tok-sb">`</span><span class="tok-p">)</span>
+    <span class="tok-p">}</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>This would make the whole argument of tabs-versus-spaces-versus-both moot, but would require changing both how editors render it code and how people write it (in the event that they&#8217;re not using such an editor).
+And of course this would not be possible in whitespace-sensitive languages such as Python.
+One interesting consequence of this would be that when using version control, adding or removing a scope would only show up in a diff as just the opening and closing lines being added/removed; the enclosed code would remain unchanged.</p>
+</div>
+<div class="paragraph">
+<p>Taken one step further, one could imagine saving one&#8217;s source code in a somewhat minified form (although not completely minified; token names and comments would need to be preserved) which would be expanded to a more easily human-readable and -writable form by the text editor&#8201;&#8212;&#8201;in the same manner as an auto-formatter, but, as above, without writing this representation to the file.
+Version control would have to be modified to use semantic diffs instead of line-based diffs (since all the code would be on one line); perhaps it could construct syntax trees from the two versions and then diff the trees.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_elastic_tabstops"><a class="link" href="#_elastic_tabstops">Elastic Tabstops</a></h4>
+<div class="paragraph">
+<p>Elastic Tabstops are somewhat tangential to the issue of how to indent properly, but are nonetheless worth mentioning because they&#8217;re another interpretation of the <code>&lt;TAB&gt;</code> character.
+Rather than assign a fixed position for each tab stop, elastic tabstops auto-magically treats each tab as exactly wide as it needs to be for the text to remain aligned, taking into account the text and <code>&lt;TAB&gt;</code>s on surrounding lines.
+This allows one to use <code>&lt;TAB&gt;</code>s to align <em>non</em>-whitespace text while avoiding <a href="#overrun-tabs">the issue we saw above</a> where the tab stops had to be sufficiently far apart.
+I won&#8217;t delve into it, but if you&#8217;re interested you can read more <a href="https://nickgravgaard.com/elastic-tabstops/">here</a>.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -758,16 +860,16 @@ I think it&#8217;s high time that the rest of us do so as well.</p>
 <a href="#_footnoteref_3">3</a>. Most, if not all, spreadsheet applications still use <kbd>Tab</kbd> to move to the next cell to the right. If it ain&#8217;t broke, don&#8217;t fix it.
 </div>
 <div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. Assuming that you&#8217;re using a monospace font so that characters other than <code>&lt;TAB&gt;</code> all have the same width; none of this applies to variable-width fonts.
+<a href="#_footnoteref_4">4</a>. While many &#8220;smart&#8221; editors will not blindly insert <code>&lt;TAB&gt;</code> when <kbd>Tab</kbd> is pressed&#8201;&#8212;&#8201;<kbd>Tab</kbd> is just another key, and they&#8217;re free to respond to it how they want&#8201;&#8212;&#8201;most &#8220;dumb&#8221; editors like Apple&#8217;s TextEdit and Microsoft&#8217;s Notepad will. If your editor doesn&#8217;t insert the <code>&lt;TAB&gt;</code> character when you press <kbd>Tab</kbd>, you might be able to force it to insert <code>&lt;TAB&gt;</code> by pressing <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>I</kbd></span>
 </div>
 <div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. While many &#8220;smart&#8221; editors will not blindly insert <code>&lt;TAB&gt;</code> when <kbd>Tab</kbd> is pressed&#8201;&#8212;&#8201;<kbd>Tab</kbd> is just another key, and they&#8217;re free to respond to it how they want&#8201;&#8212;&#8201;most &#8220;dumb&#8221; editors like Apple&#8217;s TextEdit and Microsoft&#8217;s Notepad will. If your editor doesn&#8217;t insert the <code>&lt;TAB&gt;</code> character when you press <kbd>Tab</kbd>, you might be able to force it to insert <code>&lt;TAB&gt;</code> by pressing <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>I</kbd></span>
+<a href="#_footnoteref_5">5</a>. <a href="https://en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems" class="bare">en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems</a>
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. <a href="https://en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems" class="bare">en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems</a>
+<a href="#_footnoteref_6">6</a>. Python&#8217;s <a href="https://www.python.org/dev/peps/pep-0008/#indentation">PEP 8</a> simply says &#8220;Use 4 spaces per indentation level&#8221;. It does not state why this is optimal.
 </div>
 <div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. Python&#8217;s <a href="https://www.python.org/dev/peps/pep-0008/#indentation">PEP 8</a> simply says &#8220;Use 4 spaces per indentation level&#8221;. It does not state why this is optimal.
+<a href="#_footnoteref_7">7</a>. In addition, some IDEs have auto-formatting built right in.
 </div>
 <div class="footnote" id="_footnotedef_8">
 <a href="#_footnoteref_8">8</a>. Where &#8220;needless consistency&#8221; can be taken to mean his own personal preferences. Kudos to Mr. van Rossum for getting the world to adopt his personal preferences on code style as the &#8220;right&#8221; way to write one of the most popular programming languages in the world. Shame on the world for bowing to the whims of a dictator, benevolent or otherwise.

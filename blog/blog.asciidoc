@@ -1,3 +1,4 @@
 :basedir: ..
 include::../shared_attributes.asciidoc[]
-:email: {github-user}[{github-icon-in-link}]{github-user}[{user}] — link:/blog/[Blog index]
+:email: {github-user}[{github-icon-in-link}]{github-user}[{user}] — Published {docdate} — link:/blog/[Blog index]
+// :email: {github-user}[{github-icon-in-link}]{github-user}[{user}] — link:/blog/[Blog index]

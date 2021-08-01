@@ -62,7 +62,7 @@
 	--header-link-text-color: #111;
 	--header-link-hover-text-color: #040404;
 	--admonition-border-color: #ddd;
-	--admonition-text-color: #6f6f6f;
+	--admonition-text-color: #4d4d4d;
 	--example-border-color: #e6e6e6;
 	--example-bg-color: white;
 	--example-text-color: #333;
@@ -150,7 +150,7 @@
 		--header-link-text-color: #ddd;
 		--header-link-hover-text-color: #f0f0f0;
 		--admonition-border-color: #333;
-		--admonition-text-color: #b9b9b9;
+		--admonition-text-color: #c5c5c5;
 		--example-border-color: #8f8f8f;
 		--example-bg-color: rgb(26, 26, 26);
 		--example-text-color: rgb(226, 226, 226);
