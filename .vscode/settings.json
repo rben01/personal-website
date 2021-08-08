@@ -12,5 +12,18 @@
 	"liveServer.settings.wait": 400,
 	"code-runner.executorMap": {
 		"asciidoc": "asciidoctor -r ./syntax-highlighter $dir$fileName",
-	}
+	},
+	"cSpell.words": [
+		"Gofmt",
+		"Rossum",
+		"Rustfmt",
+		"Simplicio",
+		"Simplicio's",
+		"formatter's",
+		"linenums",
+		"monospace",
+		"tok",
+		"unindented",
+		"xyz"
+	]
 }

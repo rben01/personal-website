@@ -810,12 +810,16 @@ This means that it should be possible, in theory, to insert <em>no</em> indentat
 </div>
 <div class="paragraph">
 <p>This would make the whole argument of tabs-versus-spaces-versus-both moot, but would require changing both how editors render it code and how people write it (in the event that they&#8217;re not using such an editor).
-And of course this would not be possible in whitespace-sensitive languages such as Python.
+And of course this would not be possible in whitespace-sensitive languages such as Python, nor would it work reliably if your file contained any syntax errors.
 One interesting consequence of this would be that when using version control, adding or removing a scope would only show up in a diff as just the opening and closing lines being added/removed; the enclosed code would remain unchanged.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
 <p>Taken one step further, one could imagine saving one&#8217;s source code in a somewhat minified form (although not completely minified; token names and comments would need to be preserved) which would be expanded to a more easily human-readable and -writable form by the text editor&#8201;&#8212;&#8201;in the same manner as an auto-formatter, but, as above, without writing this representation to the file.
 Version control would have to be modified to use semantic diffs instead of line-based diffs (since all the code would be on one line); perhaps it could construct syntax trees from the two versions and then diff the trees.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
