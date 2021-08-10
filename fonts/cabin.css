@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Cabin";
 	src: url("/fonts/Cabin/Cabin[wdth,wght].woff2");
-	font-weight: normal;
+	font-weight: 400 700;
 }
 @font-face {
 	font-family: "Cabin";
 	src: url("/fonts/Cabin/Cabin-Italic[wdth,wght].woff2");
 	font-style: italic;
-	font-weight: normal;
+	font-weight: 400 700;
 }

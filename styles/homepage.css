@@ -69,7 +69,7 @@
 	--example-shadow-color: #d9d9d9;
 	--sidebar-border-color: #d9d9d9;
 	--sidebar-bg-color: #f2f2f2;
-	--sidebar-text-color: #333;
+	--sidebar-text-color: #111;
 	--sidebar-title-text-color: #111;
 	--listing-bg-color: rgb(240, 240, 240);
 	--listing-text-color: rgb(46, 46, 46);
@@ -157,7 +157,7 @@
 		--example-shadow-color: #242424;
 		--sidebar-border-color: #575757;
 		--sidebar-bg-color: #141414;
-		--sidebar-text-color: #ddd;
+		--sidebar-text-color: #eee;
 		--sidebar-title-text-color: #eee;
 		--listing-bg-color: rgb(58, 58, 58);
 		--listing-text-color: rgb(202, 202, 202);
@@ -487,9 +487,10 @@ details {
 
 html,
 body {
-	font-size: 21px;
+	font-size: 22px;
 	word-wrap: break-word;
 	font-variation-settings: "wdth" 85;
+	font-feature-settings: "liga" on;
 }
 
 body {
@@ -498,7 +499,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: var(--font-family);
-	font-weight: normal;
+	font-weight: 410;
 	font-style: normal;
 	line-height: 1.45;
 	position: relative;
@@ -683,8 +684,7 @@ body {
 
 p {
 	font-family: inherit;
-	font-weight: normal;
-	font-size: 1.05em;
+	/* font-size: 1.05em; */
 	line-height: 1.5;
 	margin-bottom: 1em;
 	text-rendering: optimizeLegibility;
@@ -704,7 +704,7 @@ br {
 }
 
 .hdlist1 {
-	font-size: 20px;
+	font-size: 21px;
 }
 
 .fa-github {
@@ -741,8 +741,9 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-family);
-	font-weight: normal;
+	font-weight: 425;
 	font-style: normal;
+	letter-spacing: -0.03ex;
 	color: var(--header-text-color);
 	text-rendering: optimizeLegibility;
 	margin-top: 0.75em;
@@ -1199,7 +1200,7 @@ kbd:not(.keyseq) {
 	bottom: 2px;
 	display: inline-block;
 	color: var(--kbd-not-keyseq-text-color);
-	font-size: 80%;
+	font-size: 85%;
 	background-color: var(--kbd-not-keyseq-bg-color);
 	border-bottom: 1px solid var(--kbd-not-keyseq-border-color);
 	border-right: 1px solid var(--kbd-not-keyseq-border-color);
@@ -1207,7 +1208,7 @@ kbd:not(.keyseq) {
 	box-shadow: 0 0 1px 2px var(--kbd-not-keyseq-box-shadow-color),
 		0 0.5px 1px 1px var(--kbd-not-keyseq-box-shadow-alt-color);
 	margin: 0.02em 0.2em 0;
-	padding: 0.27em 0.34em max(calc(0.32em - 4px), 0px);
+	padding: 0.24em 0.34em max(calc(0.3em - 4px), 0px);
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -1378,6 +1379,10 @@ p a > code:hover {
 		padding-left: 0;
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
+	}
+
+	#toc.toc2 ul.sectlevel1 {
+		font-size: 0.9em;
 	}
 
 	body.toc2.toc-right {
@@ -1760,7 +1765,7 @@ table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p {
 
 .literalblock > .content pre,
 .listingblock > .content pre {
-	font-size: 1em;
+	font-size: 0.95em;
 	color: var(--code-text-color);
 	background-color: var(--code-parent-bg-color);
 	border-radius: 5px;

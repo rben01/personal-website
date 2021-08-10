@@ -227,7 +227,7 @@ It depends on how wide you expect your columns to be.
 
 But when indenting code, there is by definition no text within the indentation; it's all whitespace.
 There is _no_ minimum tab width; regardless of the tab width you choose, the (whitespace-only) columns will remain aligned.
-This means that the consideration of how wide to make the tab stops that comprise the indentation in your editor is *immaterial*.
+This means that the consideration of how wide to make the tab stops that comprise the indentation in your editor is _immaterial_.
 It is completely up to your personal preference. Which of the following styles do you prefer?
 
 [source,javascript]
