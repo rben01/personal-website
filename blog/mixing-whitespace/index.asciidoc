@@ -123,7 +123,7 @@ When everything is in the same place on each line, the code becomes much easier 
 
 [NOTE]
 ====
-For alignment to work consistently, it's imperative that you be using a link:https://en.wikipedia.org/wiki/Monospaced_font[monospace font] -- a font in which every character has the same width (as opposed to a link:https://en.wikipedia.org/wiki/Typeface#Proportion[variable-width font]).
+For alignment to work consistently, it's imperative that you use a link:https://en.wikipedia.org/wiki/Monospaced_font[monospace font] -- a font in which every character has the same width (as opposed to a link:https://en.wikipedia.org/wiki/Typeface#Proportion[variable-width font]).
 Otherwise the alignment will be sensitive to the relative widths of the characters, and thus will break if you switch fonts.
 In this article, all the code blocks are written with a monospace font, a custom variant of link:https://github.com/rben01/Iosevka[Iosevka].
 
