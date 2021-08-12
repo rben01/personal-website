@@ -98,7 +98,7 @@
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--default-bg-color: #080808;
-		--default-text-color: #e4e4e4;
+		--default-text-color: #f3f3f3;
 		--mark-bg-color: rgb(224, 224, 0);
 		--mark-text-color: black;
 		--fieldset-border-color: #4e4e4e;
@@ -525,6 +525,10 @@ a:visited,
 a:visited > code,
 a:visited:hover > code {
 	color: var(--visited-link-text-color);
+}
+
+.footnote a.footnote {
+	text-decoration: none;
 }
 
 img,

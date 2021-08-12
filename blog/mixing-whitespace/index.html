@@ -864,7 +864,7 @@ I think it&#8217;s high time that the rest of us do so as well.</p>
 <a href="#_footnoteref_3">3</a>. Most, if not all, spreadsheet applications still use <kbd>Tab</kbd> to move to the next cell to the right. If it ain&#8217;t broke, don&#8217;t fix it.
 </div>
 <div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. While many &#8220;smart&#8221; editors will not blindly insert <code>&lt;TAB&gt;</code> when <kbd>Tab</kbd> is pressed&#8201;&#8212;&#8201;<kbd>Tab</kbd> is just another key, and they&#8217;re free to respond to it how they want&#8201;&#8212;&#8201;most &#8220;dumb&#8221; editors like Apple&#8217;s TextEdit and Microsoft&#8217;s Notepad will. If your editor doesn&#8217;t insert the <code>&lt;TAB&gt;</code> character when you press <kbd>Tab</kbd>, you might be able to force it to insert <code>&lt;TAB&gt;</code> by pressing <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>I</kbd></span>
+<a href="#_footnoteref_4">4</a>. While many &#8220;smart&#8221; editors will not blindly insert <code>&lt;TAB&gt;</code> when <kbd>Tab</kbd> is pressed&#8201;&#8212;&#8201;<kbd>Tab</kbd> is just another key, and they&#8217;re free to respond to it how they want&#8201;&#8212;&#8201;most &#8220;dumb&#8221; editors like Apple&#8217;s TextEdit and Microsoft&#8217;s Notepad will. If your editor doesn&#8217;t insert the <code>&lt;TAB&gt;</code> character when you press <kbd>Tab</kbd>, you might be able to force it to insert <code>&lt;TAB&gt;</code> by pressing <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>I</kbd></span>.
 </div>
 <div class="footnote" id="_footnotedef_5">
 <a href="#_footnoteref_5">5</a>. <a href="https://en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems" class="bare">en.wikipedia.org/wiki/Dialogue_Concerning_the_Two_Chief_World_Systems</a>
@@ -880,5 +880,80 @@ I think it&#8217;s high time that the rest of us do so as well.</p>
 </div>
 </div>
 <link rel="stylesheet" href="/styles/syntax-theme.css">
+<script>
+	let footnoteBox;
+	let footnoteP;
+	const _toc = document.getElementById("toc");
+
+	function showFootnoteBoxOnHover(elem) {
+		const FOOTNOTE_BOX_MAX_WIDTH = 400;
+
+		if (footnoteBox === undefined) {
+			footnoteBox = document.createElement("div");
+			document.body.appendChild(footnoteBox);
+			footnoteBox.classList.add("footnote-box");
+			footnoteBox.addEventListener("mouseleave", () => removeFootnoteBox());
+
+			footnoteP = document.createElement("p");
+			footnoteBox.appendChild(footnoteP);
+		}
+
+		// Remove the numbering from this footnote box
+		const footnoteId = elem.getAttribute("href"); // Starts with #
+		const footnoteClone = document
+			.getElementById(footnoteId.substring(1))
+			.cloneNode(true);
+		const footnoteA = footnoteClone.getElementsByTagName("a")[0];
+		footnoteA.remove();
+
+		const footnoteHtml = footnoteClone.innerHTML.replace(/^\s*\.\s*/, "");
+
+		footnoteP.innerHTML = footnoteHtml;
+		footnoteBox.style.left = "0px";
+		footnoteBox.style.top = "0px";
+
+		const bodyRect = document.body.getBoundingClientRect();
+		const elemRect = elem.getBoundingClientRect();
+
+		footnoteBox.style.display = "block";
+
+		const py = -10 + elemRect.top - bodyRect.top;
+		footnoteBox.style.top = `${py}px`;
+
+		if (elemRect.right + FOOTNOTE_BOX_MAX_WIDTH > bodyRect.right) {
+			const px = bodyRect.right - (bodyRect.left + bodyRect.width) - 40;
+			console.log(bodyRect);
+			footnoteBox.style.left = null;
+			footnoteBox.style.right = `${px}px`;
+		} else {
+			const px = -10 + elemRect.left - bodyRect.left;
+			footnoteBox.style.right = null;
+			footnoteBox.style.left = `${px}px`;
+		}
+	}
+
+	function removeFootnoteBox() {
+		if (footnoteBox === undefined) {
+			return;
+		}
+		footnoteBox.style.display = "none";
+	}
+
+	function initializeFootnotes() {
+		const footnotes = document.querySelectorAll(
+			":not(#footnotes) .footnote a.footnote",
+		);
+		const nFootnotes = footnotes.length;
+		for (let i = 0; i < nFootnotes; i++) {
+			const footnote = footnotes[i];
+			footnote.addEventListener("mouseenter", () =>
+				showFootnoteBoxOnHover(footnote),
+			);
+			// footnote.addEventListener("mouseleave", () => removeFootnoteBox());
+		}
+	}
+
+	initializeFootnotes();
+</script>
 </body>
 </html>

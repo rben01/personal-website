@@ -2,6 +2,8 @@
 :docdate: 2021-07-20
 :basedir: ../..
 include::../blog.asciidoc[]
+:docinfodir: ../
+:docinfo: shared-footer
 :stylesheet: mixing-whitespace.css
 :sectnumlevels: 2
 :description: The correct way to indent is using both tabs and spaces
@@ -157,7 +159,7 @@ This wouldn't do; computers are supposed to automate this kind of boring work fo
 Instead, the answer was the tab character, link:https://unicode-table.com/en/0009/[`U+0009`], often represented in source code as `\t`.
 Throughout this article, I will refer to this character as {tc}.footnote:[
 While many "`smart`" editors will not blindly insert {tc} when {tk} is pressed -- {tk} is just another key, and they're free to respond to it how they want -- most "`dumb`" editors like Apple's TextEdit and Microsoft's Notepad will.
-If your editor doesn't insert the {tc} character when you press {tk}, you might be able to force it to insert {tc} by pressing kbd:[Ctrl+I]
+If your editor doesn't insert the {tc} character when you press {tk}, you might be able to force it to insert {tc} by pressing kbd:[Ctrl+I].
 ]
 
 === Virtual Tab Stops
