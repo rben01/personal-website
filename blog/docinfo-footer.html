@@ -39,15 +39,17 @@
 		const py = -10 + elemRect.top - bodyRect.top;
 		footnoteBox.style.top = `${py}px`;
 
-		if (elemRect.right + FOOTNOTE_BOX_MAX_WIDTH > bodyRect.right) {
-			const px = bodyRect.right - (bodyRect.left + bodyRect.width) - 40;
+		if (elemRect.right + FOOTNOTE_BOX_MAX_WIDTH - 30 > bodyRect.right) {
+			const px = bodyRect.right - (bodyRect.left + bodyRect.width);
 			console.log(bodyRect);
 			footnoteBox.style.left = null;
 			footnoteBox.style.right = `${px}px`;
+			console.log("right");
 		} else {
 			const px = -10 + elemRect.left - bodyRect.left;
 			footnoteBox.style.right = null;
 			footnoteBox.style.left = `${px}px`;
+			console.log("left");
 		}
 	}
 
