@@ -1595,8 +1595,7 @@ table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p {
 	border-width: 1px;
 	border-color: var(--example-border-color);
 	margin-bottom: 1.25em;
-	padding: 1.25em;
-	padding-top: 0.8em;
+	padding: 0.8em 1.25em;
 	background: var(--example-bg-color);
 	-webkit-border-radius: 0;
 	border-radius: 0;
