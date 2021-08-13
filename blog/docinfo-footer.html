@@ -2,6 +2,7 @@
 	let footnoteBox;
 	let footnoteP;
 	const _toc = document.getElementById("toc");
+	const _isMobile = "ontouchstart" in document.documentElement;
 
 	function showFootnoteBoxOnHover(elem) {
 		const FOOTNOTE_BOX_MAX_WIDTH = 400;
@@ -64,12 +65,13 @@
 		const nFootnotes = footnotes.length;
 		for (let i = 0; i < nFootnotes; i++) {
 			const footnote = footnotes[i];
-			footnote.addEventListener("mouseenter", () =>
-				showFootnoteBoxOnHover(footnote),
-			);
-			// footnote.addEventListener("mouseleave", () => removeFootnoteBox());
+			footnote.addEventListener("mouseenter", event => {
+				showFootnoteBoxOnHover(footnote);
+			});
 		}
 	}
 
-	initializeFootnotes();
+	if (!_isMobile) {
+		initializeFootnotes();
+	}
 </script>

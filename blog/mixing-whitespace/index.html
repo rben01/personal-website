@@ -884,6 +884,7 @@ I think it&#8217;s high time that the rest of us do so as well.</p>
 	let footnoteBox;
 	let footnoteP;
 	const _toc = document.getElementById("toc");
+	const _isMobile = "ontouchstart" in document.documentElement;
 
 	function showFootnoteBoxOnHover(elem) {
 		const FOOTNOTE_BOX_MAX_WIDTH = 400;
@@ -946,14 +947,15 @@ I think it&#8217;s high time that the rest of us do so as well.</p>
 		const nFootnotes = footnotes.length;
 		for (let i = 0; i < nFootnotes; i++) {
 			const footnote = footnotes[i];
-			footnote.addEventListener("mouseenter", () =>
-				showFootnoteBoxOnHover(footnote),
-			);
-			// footnote.addEventListener("mouseleave", () => removeFootnoteBox());
+			footnote.addEventListener("mouseenter", event => {
+				showFootnoteBoxOnHover(footnote);
+			});
 		}
 	}
 
-	initializeFootnotes();
+	if (!_isMobile) {
+		initializeFootnotes();
+	}
 </script>
 </body>
 </html>
