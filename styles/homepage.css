@@ -1212,7 +1212,7 @@ kbd:not(.keyseq) {
 	box-shadow: 0 0 1px 2px var(--kbd-not-keyseq-box-shadow-color),
 		0 0.5px 1px 1px var(--kbd-not-keyseq-box-shadow-alt-color);
 	margin: 0.02em 0.2em 0;
-	padding: 0.24em 0.34em max(calc(0.3em - 4px), 0px);
+	padding: 0.24em 0.34em max(calc(0.2em - 4px), 0px);
 	vertical-align: middle;
 	white-space: nowrap;
 }
