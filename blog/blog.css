@@ -27,12 +27,16 @@ body {
 
 .footnote-box {
 	position: absolute;
+	block-size: fit-content;
 	background-color: var(--table-head-foot-bg-color);
 	border: 1px solid var(--example-text-color);
 	border-radius: 2px;
 	box-shadow: 0 0 10px 1px var(--default-bg-color);
-	padding: 6px 12px;
+	padding: 10px 15px;
+	width: fit-content;
+	min-width: 300px;
 	max-width: 400px;
+	/* transform: translateX(-100%); */
 }
 
 .footnote-box > p {
