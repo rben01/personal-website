@@ -3,7 +3,7 @@
 :basedir: ../..
 include::../blog.asciidoc[]
 :docinfodir: ../
-:docinfo: shared-footer
+:docinfo: shared
 :stylesheet: mixing-whitespace.css
 :sectnumlevels: 2
 :description: The correct way to indent is using both tabs and spaces
