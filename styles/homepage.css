@@ -924,8 +924,9 @@ blockquote cite a:visited {
 
 blockquote,
 blockquote p {
-	line-height: 1.5;
+	line-height: 1.4;
 	color: var(--blockquote-p-color);
+	margin-bottom: 0.7em;
 }
 
 /* Microformats */

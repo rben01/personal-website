@@ -369,9 +369,12 @@ But Alice isn't so sure about Simplicio's solution.
 
 [quote]
 --
-"`Wait`", Alice said, "`this won't do.`" +
-"`The code is aligned, is it not?`", asked Simplicio. +
-"`Yes, but Bob and I are stuck with your ugly indentation! I like _my_ indentation to be _eight_ characters, and Bob likes _his_ to be _four_.`" +
+"`Wait`", Alice said, "`this won't do.`"
+
+"`The code is aligned, is it not?`", asked Simplicio.
+
+"`Yes, but Bob and I are stuck with your ugly indentation! I like _my_ indentation to be _eight_ characters, and Bob likes _his_ to be _four_.`"
+
 "`I'm sorry`", says Simplicio, "`but I just don't see another way to solve this problem. If you want your code to be aligned, you'll just need to indent with spaces, your preferences be damned.`"
 --
 
@@ -383,8 +386,11 @@ It seemed that Simplicio's "`solution`" had merely traded one problem for anothe
 [quote]
 --
 "`Eureka!`", cries Alice.
-"`I know the solution to this problem. I know how we can each use the indentation width we prefer while keeping our code nicely aligned!`" +
-"`Impossible`", retorts Simplicio. +
+
+"`I know the solution to this problem. I know how we can each use the indentation width we prefer while keeping our code nicely aligned!`"
+
+"`Impossible`", retorts Simplicio.
+
 "`Let's hear her out`", says Bob.
 --
 
