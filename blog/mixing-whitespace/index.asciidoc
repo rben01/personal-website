@@ -385,9 +385,7 @@ It seemed that Simplicio's "`solution`" had merely traded one problem for anothe
 
 [quote]
 --
-"`Eureka!`", cries Alice.
-
-"`I know the solution to this problem. I know how we can each use the indentation width we prefer while keeping our code nicely aligned!`"
+"`Eureka!`", cries Alice. "`I know the solution to this problem. I know how we can each use the indentation width we prefer while keeping our code nicely aligned!`"
 
 "`Impossible`", retorts Simplicio.
 
