@@ -2031,6 +2031,10 @@ ul > li p {
 	margin-bottom: 0.1em;
 }
 
+.dlist > dl > dd > :is(.ulist, .olist) li {
+	line-height: 1.2;
+}
+
 /* ol > li > p:first-child,
 ul > li > p:first-child,
 ol > li > .paragraph > p,
