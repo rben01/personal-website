@@ -290,7 +290,7 @@ That way they can each read each other's code with the indent width that they pr
 --
 
 Looks great!
-Crucially, these two code snippets have the same underlying representation -- they are byte-for-byte-equal.
+Crucially, these two code snippets have the same underlying representation -- they are byte-for-byte equal.
 Yet when Alice and Bob open this file on their own computer, they each get to see the code how _they_ prefer.
 Same file, different appearance -- that's the magic of the tab character.
 

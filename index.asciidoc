@@ -7,6 +7,7 @@ include::{basedir}/shared_attributes.asciidoc[]
 :repo-covid: {github-user}/{name-covid}
 :name-trivia: quarantine-trivia
 :repo-trivia: {github-user}/{name-trivia}
+:favicon: ./favicon.ico
 
 [.lead]
 This page is a portal to other GitHub pages of mine:

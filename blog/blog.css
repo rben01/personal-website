@@ -1,7 +1,7 @@
 @import url("/styles/homepage.css");
 
 :root {
-	--header-font: "";
+	/* --header-foant: ""; */
 	--pre-code-text-color: black;
 	--bold-font-weight: 700;
 }
@@ -22,6 +22,10 @@ body {
 		padding: 0;
 		margin: auto calc(7vw) auto calc(var(--toc-width-if-floating-left) + 9vw);
 		width: unset;
+	}
+
+	body.toc2 #toc {
+		font-family: var(--header-font);
 	}
 }
 

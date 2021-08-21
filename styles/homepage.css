@@ -4,7 +4,8 @@
 /* Variables */
 
 :root {
-	--font-family: "Cabin", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--font-family: "Cabin", "Helvetica Neue", "Helvetica", sans-serif;
+	--header-font: "Rubik", var(--font-family);
 	--mono-font-family: "Iosevka", monospace;
 	--mono-font-size: 0.9em;
 	--bold-font-weight: bold;
@@ -490,7 +491,6 @@ body {
 	font-size: 22px;
 	word-wrap: break-word;
 	font-variation-settings: "wdth" 85;
-	font-feature-settings: "liga" on;
 }
 
 body {
@@ -744,10 +744,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-family);
-	font-weight: 425;
+	font-family: var(--header-font);
+	font-weight: 435;
 	font-style: normal;
-	letter-spacing: -0.03ex;
+	letter-spacing: -0.08ex; /* assumes Rubik header font */
 	color: var(--header-text-color);
 	text-rendering: optimizeLegibility;
 	margin-top: 0.75em;
@@ -1275,7 +1275,7 @@ p a > code:hover {
 
 #header > h1 {
 	color: var(--header-h1-text-color);
-	font-weight: normal;
+	font-weight: 475;
 	border-bottom: 1px solid var(--header-h1-border-color);
 	margin-bottom: -28px;
 	padding-bottom: 32px;
