@@ -1,7 +1,7 @@
 @import url("/styles/homepage.css");
 
 :root {
-	/* --header-foant: ""; */
+	/* --header-font: ""; */
 	--pre-code-text-color: black;
 	--bold-font-weight: 700;
 }
