@@ -4,12 +4,18 @@
 	const _toc = document.getElementById("toc");
 	const _isMobile = "ontouchstart" in document.documentElement;
 
+	// Apparently, sticking the tooltip in a child div of document.body, instead of in
+	// document.body directly, helps performance.
+	// https://atfzl.com/don-t-attach-tooltips-to-document-body
+	const footnoteHolder = document.createElement("div");
+	document.body.appendChild(footnoteHolder);
+
 	function showFootnoteBoxOnHover(elem) {
 		const FOOTNOTE_BOX_MAX_WIDTH = 400;
 
 		if (footnoteBox === undefined) {
 			footnoteBox = document.createElement("div");
-			document.body.appendChild(footnoteBox);
+			footnoteHolder.appendChild(footnoteBox);
 			footnoteBox.classList.add("footnote-box");
 			footnoteBox.addEventListener("mouseleave", () => removeFootnoteBox());
 

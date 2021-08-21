@@ -51,7 +51,7 @@
 	--header-h1-text-color: black;
 	--header-h1-border-color: #ddd;
 	--header-span-text-color: #6f6f6f;
-	--toc-width-if-floating-left: calc(1em + 13vw);
+	--toc-width-if-floating-left: calc(1em + 15vw);
 	--toc-border-color: #ddd;
 	--toc-bg-color: #f8f9fa;
 	--toc-title-text-color: #111;
