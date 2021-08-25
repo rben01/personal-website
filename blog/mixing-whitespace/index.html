@@ -76,10 +76,10 @@ This article will show why they are wrong.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_indentation_the_basics"><a class="link" href="#_indentation_the_basics">1. Indentation: The Basics</a></h2>
+<h2 id="_indentation_the_basics"><a class="anchor" href="#_indentation_the_basics"></a>1. Indentation: The Basics</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_the_two_goals_of_indentation"><a class="link" href="#_the_two_goals_of_indentation">1.1. The Two Goals of Indentation</a></h3>
+<h3 id="_the_two_goals_of_indentation"><a class="anchor" href="#_the_two_goals_of_indentation"></a>1.1. The Two Goals of Indentation</h3>
 <div class="paragraph">
 <p>Unless you&#8217;re using a language with whitespace-based syntax&#8201;&#8212;&#8201;the most notorious example of which is Python&#8201;&#8212;&#8201;your code will run just fine no matter how it&#8217;s indented.
 So why indent at all?
@@ -213,7 +213,7 @@ In this article, all the code blocks are written with a monospace font, a custom
 </div>
 </div>
 <div class="sect2">
-<h3 id="_a_brief_history_of_the_tab_key"><a class="link" href="#_a_brief_history_of_the_tab_key">1.2. A Brief History of the Tab Key</a></h3>
+<h3 id="_a_brief_history_of_the_tab_key"><a class="anchor" href="#_a_brief_history_of_the_tab_key"></a>1.2. A Brief History of the Tab Key</h3>
 <div class="paragraph">
 <p>The tab key, <kbd>Tab</kbd>, can trace its history back to the <a href="https://en.wikipedia.org/wiki/Tab_stop">tab stop</a> on typewriters.
 On a typewriter, tab stops were used to create fixed horizontal positions for the carriage (the part that holds the paper and moves horizontally as you type) to travel to.
@@ -225,7 +225,7 @@ The question was: what is the right way to implement this behavior in a virtual 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_tab_character"><a class="link" href="#_the_tab_character">1.3. The Tab Character</a></h3>
+<h3 id="_the_tab_character"><a class="anchor" href="#_the_tab_character"></a>1.3. The Tab Character</h3>
 <div class="paragraph">
 <p>Wite-Out notwithstanding, typewritten text is a write-once format, so when advancing the carriage there was no difference between using tab stops and repeatedly pressing the space bar; tab stops just made advancing the carriage more  consistent and convenient.
 But computers allow text to be edited (duh), so when people started using them, the question of how a computer should store the fact that the <kbd>Tab</kbd> key was pressed needed to be settled.
@@ -237,7 +237,7 @@ Throughout this article, I will refer to this character as <code>&lt;TAB&gt;</co
 </div>
 </div>
 <div class="sect2">
-<h3 id="_virtual_tab_stops"><a class="link" href="#_virtual_tab_stops">1.4. Virtual Tab Stops</a></h3>
+<h3 id="_virtual_tab_stops"><a class="anchor" href="#_virtual_tab_stops"></a>1.4. Virtual Tab Stops</h3>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
@@ -334,10 +334,10 @@ It is completely up to your personal preference. Which of the following styles d
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camp_1_only_tabs"><a class="link" href="#_camp_1_only_tabs">2. Camp 1: Only Tabs</a></h2>
+<h2 id="_camp_1_only_tabs"><a class="anchor" href="#_camp_1_only_tabs"></a>2. Camp 1: Only Tabs</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_tabs_for_semantic_indentation"><a class="link" href="#_tabs_for_semantic_indentation">2.1. Tabs for Semantic Indentation</a></h3>
+<h3 id="_tabs_for_semantic_indentation"><a class="anchor" href="#_tabs_for_semantic_indentation"></a>2.1. Tabs for Semantic Indentation</h3>
 <div class="paragraph">
 <p>Alice and Bob are working on the same codebase.
 Having read the above, they decide that from here on out, they will only use <code>&lt;TAB&gt;</code> to indent their code.
@@ -373,7 +373,7 @@ Same file, different appearance&#8201;&#8212;&#8201;that&#8217;s the magic of th
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tabs_for_aesthetic_indentation"><a class="link" href="#_tabs_for_aesthetic_indentation">2.2. Tabs for Aesthetic Indentation</a></h3>
+<h3 id="_tabs_for_aesthetic_indentation"><a class="anchor" href="#_tabs_for_aesthetic_indentation"></a>2.2. Tabs for Aesthetic Indentation</h3>
 <div class="paragraph">
 <p>Unfortunately, Alice and Bob run into a little bit of a wrinkle. Bob checks in the following code:</p>
 </div>
@@ -418,10 +418,10 @@ Unfortunately, Bob had meant to push over those condition lines by four characte
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camp_2_only_spaces"><a class="link" href="#_camp_2_only_spaces">3. Camp 2: Only Spaces</a></h2>
+<h2 id="_camp_2_only_spaces"><a class="anchor" href="#_camp_2_only_spaces"></a>3. Camp 2: Only Spaces</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_spaces_for_aesthetic_indentation"><a class="link" href="#_spaces_for_aesthetic_indentation">3.1. Spaces for Aesthetic Indentation</a></h3>
+<h3 id="_spaces_for_aesthetic_indentation"><a class="anchor" href="#_spaces_for_aesthetic_indentation"></a>3.1. Spaces for Aesthetic Indentation</h3>
 <div class="paragraph">
 <p>Alice&#8217;s and Bob&#8217;s coworker Simplicio&#8203;<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> watches this unfold from a distance.
 He offers them a solution to their problem: &#8220;Just use spaces!&#8221;.
@@ -447,7 +447,7 @@ But Alice isn&#8217;t so sure about Simplicio&#8217;s solution.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_spaces_for_semantic_indentation"><a class="link" href="#_spaces_for_semantic_indentation">3.2. Spaces for Semantic Indentation</a></h3>
+<h3 id="_spaces_for_semantic_indentation"><a class="anchor" href="#_spaces_for_semantic_indentation"></a>3.2. Spaces for Semantic Indentation</h3>
 <div class="quoteblock">
 <blockquote>
 <div class="paragraph">
@@ -472,7 +472,7 @@ It seemed that Simplicio&#8217;s &#8220;solution&#8221; had merely traded one pr
 </div>
 </div>
 <div class="sect1">
-<h2 id="_camp_0_responsibly_mixing_tabs_and_spaces"><a class="link" href="#_camp_0_responsibly_mixing_tabs_and_spaces">4. Camp 0: (Responsibly) Mixing Tabs and Spaces</a></h2>
+<h2 id="_camp_0_responsibly_mixing_tabs_and_spaces"><a class="anchor" href="#_camp_0_responsibly_mixing_tabs_and_spaces"></a>4. Camp 0: (Responsibly) Mixing Tabs and Spaces</h2>
 <div class="sectionbody">
 <div class="quoteblock">
 <blockquote>
@@ -581,13 +581,13 @@ To his dismay, it does:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_editing_in_practice"><a class="link" href="#_editing_in_practice">5. Editing in Practice</a></h2>
+<h2 id="_editing_in_practice"><a class="anchor" href="#_editing_in_practice"></a>5. Editing in Practice</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>So, now that we know the right way to indent our code, how can we actually achieve this style of indentation?</p>
 </div>
 <div class="sect2">
-<h3 id="_the_very_dumb_way"><a class="link" href="#_the_very_dumb_way">5.1. The Very Dumb Way</a></h3>
+<h3 id="_the_very_dumb_way"><a class="anchor" href="#_the_very_dumb_way"></a>5.1. The Very Dumb Way</h3>
 <div class="paragraph">
 <p>Don&#8217;t!
 Just give up!
@@ -599,7 +599,7 @@ That&#8217;s <em>their</em> problem.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_dumb_way"><a class="link" href="#_the_dumb_way">5.2. The Dumb Way</a></h3>
+<h3 id="_the_dumb_way"><a class="anchor" href="#_the_dumb_way"></a>5.2. The Dumb Way</h3>
 <div class="paragraph">
 <p>The &#8220;dumb&#8221; way is to manually indent your own code.
 When you want to increase the scope depth, press <kbd>Tab</kbd> (and make sure your editor is set to insert <code>&lt;TAB&gt;</code> when you do so!).
@@ -609,7 +609,7 @@ Just make sure not to accidentally tell your editor to convert all indentation t
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_smart_way"><a class="link" href="#_the_smart_way">5.3. The Smart Way</a></h3>
+<h3 id="_the_smart_way"><a class="anchor" href="#_the_smart_way"></a>5.3. The Smart Way</h3>
 <div class="paragraph">
 <p>For every programming language, there is almost certainly <em>some</em> auto-formatter that will nicely format your code for you.<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>
 Many languages have several.
@@ -714,7 +714,7 @@ If you&#8217;re lazy, though, you can just post an article online and hope that 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_practical_considerations"><a class="link" href="#_other_practical_considerations">5.4. Other Practical Considerations</a></h3>
+<h3 id="_other_practical_considerations"><a class="anchor" href="#_other_practical_considerations"></a>5.4. Other Practical Considerations</h3>
 <div class="paragraph">
 <p>Thus far, we&#8217;ve been focused primarily on the fact that mixed indentation lets programmers express their indentation width preferences while keeping things tidy.
 But indenting with both <code>&lt;TAB&gt;</code>s and <code>&lt;SPACE&gt;</code>s has other advantages as well:</p>
@@ -767,9 +767,9 @@ If you could shrink the sizes of all your files by 5% for no cost, wouldn&#8217;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_other_thoughts"><a class="link" href="#_other_thoughts">5.5. Other Thoughts</a></h3>
+<h3 id="_other_thoughts"><a class="anchor" href="#_other_thoughts"></a>5.5. Other Thoughts</h3>
 <div class="sect3">
-<h4 id="_no_indentation_at_all"><a class="link" href="#_no_indentation_at_all">No Indentation At All</a></h4>
+<h4 id="_no_indentation_at_all"><a class="anchor" href="#_no_indentation_at_all"></a>No Indentation At All</h4>
 <div class="paragraph">
 <p>An unstated premise of this article was that one&#8217;s editor should faithfully render one&#8217;s files, including whitespace (or the lack thereof).
 However, auto-formatters are able to infer where whitespace belongs so that they can format the file correctly.
@@ -837,7 +837,7 @@ Version control would have to be modified to use semantic diffs instead of line-
 </div>
 </div>
 <div class="sect3">
-<h4 id="_elastic_tabstops"><a class="link" href="#_elastic_tabstops">Elastic Tabstops</a></h4>
+<h4 id="_elastic_tabstops"><a class="anchor" href="#_elastic_tabstops"></a>Elastic Tabstops</h4>
 <div class="paragraph">
 <p>Elastic Tabstops are somewhat tangential to the issue of how to indent properly, but are nonetheless worth mentioning because they&#8217;re another interpretation of the <code>&lt;TAB&gt;</code> character.
 Rather than assign a fixed position for each tab stop, elastic tabstops auto-magically treats each tab as exactly wide as it needs to be for the text to remain aligned, taking into account the text and <code>&lt;TAB&gt;</code>s on surrounding lines.
@@ -849,7 +849,7 @@ I won&#8217;t delve into it, but if you&#8217;re interested you can read more <a
 </div>
 </div>
 <div class="sect1">
-<h2 id="_conclusion"><a class="link" href="#_conclusion">6. Conclusion</a></h2>
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>6. Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When indenting, <code>&lt;TAB&gt;</code>s and <code>&lt;SPACE&gt;</code>s serve different purposes.
@@ -893,7 +893,6 @@ I think it&#8217;s high time that the rest of us do so as well.</p>
 <a href="#_footnoteref_8">8</a>. Where &#8220;needless consistency&#8221; can be taken to mean his own personal preferences. Kudos to Mr. van Rossum for getting the world to adopt his personal preferences on code style as the &#8220;right&#8221; way to write one of the most popular programming languages in the world. Shame on the world for bowing to the whims of a dictator, benevolent or otherwise.
 </div>
 </div>
-<link rel="stylesheet" href="/styles/syntax-theme.css">
 <script>
 	let footnoteBox;
 	let footnoteP;

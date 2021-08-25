@@ -106,8 +106,8 @@
 		--body-bg-color: #080808;
 		--body-text-color: rgb(243, 243, 243);
 		--title-text-color: rgb(226, 226, 226);
-		--link-text-color: #58a2d3;
-		--visited-link-text-color: rgb(187, 99, 214);
+		--link-text-color: #6cc4ff;
+		--visited-link-text-color: rgb(189, 125, 241);
 		--link-focus-text-color: #29c8d3;
 		--github-icon-color: #eee;
 		--header-text-color: #eee;
@@ -252,6 +252,7 @@ a:hover {
 a {
 	text-decoration: underline;
 	text-decoration-style: dotted;
+	text-decoration-thickness: 1px;
 }
 
 /* #toc a {
@@ -515,6 +516,7 @@ a:hover {
 	cursor: pointer;
 	text-decoration: underline;
 	text-decoration-style: solid;
+	text-decoration-thickness: 1.5px;
 }
 
 a:focus {

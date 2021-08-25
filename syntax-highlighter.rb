@@ -1,8 +1,8 @@
 class MyPygmentsAdapter < (Asciidoctor::SyntaxHighlighter.for 'pygments')
 	register_for :pygments
 
-	def docinfo? location
-		true
+	def write_stylesheet? doc
+		false
 	end
 
 	def docinfo location, doc, opts

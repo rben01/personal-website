@@ -7,7 +7,6 @@
 :docinfo: shared-head
 :stylesheet: {basedir}/styles/homepage.css
 :nofooter:
-:sectlinks:
 :linkcss:
 :toc-title: Contents
 :source-highlighter: pygments

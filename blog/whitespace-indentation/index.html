@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.15">
+<meta name="description" content="The correct way to indent is using both tabs and spaces">
+<meta name="author" content="Robert Bennett">
+<link rel="icon" type="image/x-icon" href="../../favicon.ico">
+<title>Against Whitespace-Based Indentation</title>
+<link rel="stylesheet" href="./mixing-whitespace.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/styles/syntax-theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Against Whitespace-Based Indentation</h1>
+<div class="details">
+<span id="author" class="author">Robert Bennett</span><br>
+<span id="email" class="email"><a href="https://github.com/rben01" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01">rben01</a> — Published TBD — <a href="/blog/">Blog index</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel2">
+<li><a href="#_whitespace_based_syntax">1. Whitespace-based syntax</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect2">
+<h3 id="_whitespace_based_syntax"><a class="link" href="#_whitespace_based_syntax">1. Whitespace-based syntax</a></h3>
+<div class="paragraph">
+<p>In the before-times, formatting code was something of an art.
+One is <em>supposed</em> to indent code correctly to make its structure clear to the reader, and in some instances align it to be aesthetically pleasing, but historically this has been laborious.
+So, sometimes people didn&#8217;t do it, or, because they were human, didn&#8217;t do it correctly.
+Guido van Rossum, the creator and benevolent dictator for life (BDFL) of Python, had the bright idea to <em>force</em> programmers to correctly indent their code by making indentation the sole indicator of scope.
+While most languages used braces to delineate scope, with indentation merely a visual aide for humans, Python decided to nix the braces and imbue indentation with semantics.</p>
+</div>
+<div class="paragraph lead">
+<p><strong>This was a terrible decision that has made editing Python code much more difficult than other languages.</strong></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>My concern here is not with the lack of braces per se, but rather with the use of whitespace instead of beginning and ending delimiters (of any kind).
+For instance, Ruby writes if-else statements as <code>if &#8230;&#8203; else &#8230;&#8203; end</code>.
+This is fine; like brace-delimited languages, Ruby does not depend on indentation to interpret this because it has the <code>end</code> keyword.
+For simplicity, I&#8217;ll refer to any kind of non-whitespace delimiters as &#8220;braces&#8221;.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pasting_code"><a class="link" href="#_pasting_code">Pasting Code</a></h4>
+<div class="paragraph">
+<p>When cutting and pasting your own code or copying and pasting code from the internet, it&#8217;s difficult to make sure the indentation of the pasted code matches that of the surrounding code. Some examples of problematic scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The indent level of the copied code and the region you wish to paste it into aren&#8217;t the same.</p>
+</li>
+<li>
+<p>They are the same, but you forgot to copy the leading whitespace of the code and pasted into column 0, so the first line is under-indented.</p>
+</li>
+<li>
+<p>They are the same, and you copied the leading whitespace of the code, but pasted into the rightmost column of the current line instead of into column 0, so now the first line is over-indented.</p>
+</li>
+<li>
+<p>The code you&#8217;re pasting uses tabs when your own code uses spaces, or vice versa.
+(To determine the indentation level, Python simply counts the number of leading whitespace characters on a line, with some limitations on what combinations of whitespace are allowed.)</p>
+</li>
+<li>
+<p>The code you copied off the internet was itself mis-indented&#8201;&#8212;&#8201;a common formatting error due to Markdown&#8217;s four-space-indent syntax for code blocks&#8201;&#8212;&#8201;so now you must correct its indentation yourself.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Therefore, immediately after pasting, it&#8217;s possible that the indentation of the pasted code does not correctly reflect the intended semantics.
+In a brace-delimited language, this would be fine because indentation does not affect the semantics of the code.
+But in Python, copy-pastes have the potential to become exercises in memory and precision&#8201;&#8212;&#8201;after pasting, one must make sure to indent or dedent the pasted code, and <em>only</em> the pasted code, to the correct level.
+If this is not performed correctly, then hopefully the code will cease to compile, but it&#8217;s equally likely that a bug will have been introduced.
+Python has taken a simple, ubiquitous textual operation&#8201;&#8212;&#8201;one which brace-delimited languages make nearly impossible to mess up&#8201;&#8212;&#8201;and made it arduous and error-prone.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_auto_formatters"><a class="link" href="#_auto_formatters">Auto-formatters</a></h4>
+<div class="paragraph">
+<p>Now, one might say, &#8220;It&#8217;s all well and good that brace-delimited languages can withstand poor indentation, but what value does this have if poorly formatted code is forbidden (by company policy, say) from existing in one&#8217;s codebase? Won&#8217;t I still have to correct the formatting manually?&#8221;.
+But we no longer live in the before-times, when code formatting was an art; it has been elevated to a science by auto-formatters, technology that can format our code for us!
+You can give Prettier, a popular JavaScript autoformatter, a try <a href="https://prettier.io/playground/">here</a>.
+The unformatted code on the left side is a mess.
+But the (automatically!) formatted code on the right side looks great.
+(And crucially, as far as a computer is concerned, the two sides are identical.)
+It would take a lot of work to consistently write such well-formatted code.
+If you&#8217;re not happy with how the formatted code looks using the default settings, you can change them in the left panel.</p>
+</div>
+<div class="paragraph">
+<p>What&#8217;s notable is that the code on the left was able to be automatically formatted even though the poor formatting meant its semantics were not clear to a human; all that was required by the auto-formatter was that the code be understandable to a computer.
+And in turn, this means that the human author has free reign to absolutely butcher the layout of their code while writing it because once they&#8217;re done, the autoformatter will swoop in and clean it up for them.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_editing_in_practice"><a class="link" href="#_editing_in_practice">Editing in practice</a></h4>
+<div class="paragraph">
+<p>Here are some examples of where Python&#8217;s use of whitespace-based syntax makes it much harder to edit than brace-delimited languages.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">You place your cursor at the end of the line, delete to the start of the line, and then begin typing.</dt>
+<dd>
+<p>In a brace-delimited language, you can just start typing in column 0, press &#8220;format&#8221;, and the line will be automatically re-indented to the correct column.<br>
+This is not possible in Python because text in column 0 carries semantics with it, so moving it would change the program&#8217;s semantics.
+Python makes it the programmer&#8217;s responsibility to indent the new text to the same level as the old text.</p>
+</dd>
+<dt class="hdlist1">You comment out an <code>if</code> statement in order to execute the code below it unconditionally.</dt>
+<dd>
+<p>In a brace-delimited language, you just comment out the line containing the <code>if</code> (or the lines between the <code>if</code> and the opening brace if the condition spans multiple lines) and the line containing the closing brace.
+If you do this and press &#8220;format&#8221;, all the code inside the former <code>if</code> statement will be automatically dedented to account for the change.
+Of course, because indentation doesn&#8217;t matter, there is no harm in not pressing &#8220;format&#8221;.<br>
+In Python, if you comment out the <code>if</code> line, then you must additionally dedent all of the code that was inside the <code>if</code> statement.
+If you decide to uncomment the <code>if</code> line, then you need to reindent all those same lines again.
+If you miss a line, it&#8217;s a bug.</p>
+</dd>
+<dt class="hdlist1">You are using Vim and you want to delete an entire block.</dt>
+<dd>
+<p>In a brace-delimited languages, this is as easy as typing <code>di{</code> (mnemonic: <code>d</code>elete <code>i</code>nside <code>{</code>}).<br>
+This isn&#8217;t possible in Python because there are no block delimiters.</p>
+</dd>
+<dt class="hdlist1">You wish to comment out an entire block.</dt>
+<dd>
+<p>In a brace-delimited language, you just comment out each line of the block and nothing will break.<br>
+In Python, blocks can&#8217;t be empty, so you have to add <code>pass</code> in place of the block.</p>
+</dd>
+<dt class="hdlist1">Code wrapping</dt>
+<dd>
+<p><a href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length">According to PEP 8</a>, lines should be no longer than 79 characters. This is the justification given:</p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>The default wrapping in most tools disrupts the visual structure of the code, making it more difficult to understand.
+The limits are chosen to avoid wrapping in editors with the window width set to 80, even if the tool places a marker glyph in the final column when wrapping lines.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Yes, if you rely on whitespace to interpret code, then soft wraps will make it impossible to figure out what a given piece of code does.
+In a brace delimited language, you can easily make sense of a wrapped line because the wrapping doesn&#8217;t affect semantics&#8201;&#8212;&#8201;you can just look for matching braces.
+This is especially easy if your editor makes matching braces stand out by highlighting them, coloring them, etc.
+It is much harder to make indentation stand out.</p>
+</div>
+</dd>
+<dt class="hdlist1">You have commented out some code, and now wish to uncomment it.</dt>
+<dd>
+<p>In a brace-delimited language, this is trivial; just uncomment and then autoformat.<br>
+Python has auto-formatters too, the most popular of which are <a href="https://github.com/hhatto/autopep8">autopep8</a>, <a href="https://github.com/google/yapf">yapf</a>, and <a href="https://github.com/psf/black">black</a>.
+By default, auto-formatters will format comments, indenting them to the level of the surrounding code.
+This makes sense when those comments contain ordinary text describing the surrounding code.
+But if those comments contain commented out code, then when it comes time to uncomment that code, you must ensure that the uncommented code gets indented back to the right level.
+In other words, Python forces you to be mindful of leading spaces, <em>even in your comments</em>.<br>
+For instance, suppose we have the following code, but wish to check a different condition.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><pre><span></span><span class="tok-k">if</span> <span class="tok-n">cond1</span><span class="tok-p">:</span>
+    <span class="tok-nb">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">)</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So we comment out line 1 and add a different condition:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><pre><span></span><span class="tok-k">if</span> <span class="tok-n">cond2</span><span class="tok-p">:</span>  <span class="tok-c1"># let&#39;s test out cond2 for now</span>
+<span class="tok-c1"># if cond1:</span>
+    <span class="tok-nb">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">)</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, black will turn that into this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><pre><span></span><span class="tok-k">if</span> <span class="tok-n">cond2</span><span class="tok-p">:</span>  <span class="tok-c1"># let&#39;s test cond2 out for now</span>
+    <span class="tok-c1"># if cond1:</span>
+    <span class="tok-nb">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">)</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And if you want to swap <code>cond1</code> back in, you get this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="python"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><pre><span></span><span class="tok-c1"># if cond2:  # let&#39;s test cond2 out for now</span>
+    <span class="tok-k">if</span> <span class="tok-n">cond1</span><span class="tok-p">:</span>
+    <span class="tok-nb">print</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">)</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>which is not valid code.
+Yes, you can manually dedent line 2, or you could have added the <code>cond2</code> line below <code>cond1</code> instead of above.
+But how much effort and attention should these kinds of simple changes really take?</p>
+</div>
+<div class="paragraph">
+<p>In a brace-delimited language such as JavaScript, that flow would look like this:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You start with this&#8230;&#8203;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><pre><span></span><span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">cond1</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+    <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>You want to test a different condition&#8230;&#8203;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><pre><span></span><span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">cond2</span><span class="tok-p">)</span> <span class="tok-p">{</span>  <span class="tok-c1">// let&#39;s test cond2 out for now</span>
+<span class="tok-c1">// if (cond1) {</span>
+    <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Then you autoformat&#8230;&#8203;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><pre><span></span><span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">cond2</span><span class="tok-p">)</span> <span class="tok-p">{</span>  <span class="tok-c1">// let&#39;s test cond2 out for now</span>
+    <span class="tok-c1">// if (cond1) {</span>
+    <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Then you swap <code>cond1</code> back in and get this&#8230;&#8203;</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><pre><span></span><span class="tok-c1">// if (cond2) {  // let&#39;s test cond2 out for now</span>
+    <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">cond1</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+    <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Then you autoformat again.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="javascript"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><pre><span></span><span class="tok-c1">// if (cond2) {  // let&#39;s test cond2 out for now</span>
+<span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-nx">cond1</span><span class="tok-p">)</span> <span class="tok-p">{</span>
+    <span class="tok-nx">console</span><span class="tok-p">.</span><span class="tok-nx">log</span><span class="tok-p">(</span><span class="tok-s2">&quot;a&quot;</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></td></tr></table></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Success! There&#8217;s no need to fiddle with anything.</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In summary, whitespace-based syntax makes the act of actually writing one&#8217;s code much more difficult than it needs to be.
+While tying semantics to leading indentation may have been beneficial when Python was first released, auto-formatters have obviated this benefit.
+In fact, whitespace-based syntax is a liability because it makes it harder for auto-formatters to do their job.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>There is one kind of whitespace-based syntax that is ok, which is using line breaks to denote the end of a line.
+If, in practice, the editing process made it a natural occurrence to inadvertently end up with several statements on one line, then I would argue that languages should require semicolons at the ends of their lines.
+But, empirically, the editing process does not generally mangle line breaks, so they can be relied upon for semantics.
+(In this regard, newlines are closer to non-whitespace characters than they are to whitespace.)
+Leading whitespace <em>is</em> mangled by the editing process and so it should not be relied upon.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+	let footnoteBox;
+	let footnoteP;
+	const _toc = document.getElementById("toc");
+	const _isMobile = "ontouchstart" in document.documentElement;
+
+	// Apparently, sticking the tooltip in a child div of document.body, instead of in
+	// document.body directly, helps performance.
+	// https://atfzl.com/don-t-attach-tooltips-to-document-body
+	const footnoteHolder = document.createElement("div");
+	document.body.appendChild(footnoteHolder);
+
+	function showFootnoteBoxOnHover(elem) {
+		const FOOTNOTE_BOX_MAX_WIDTH = 400;
+
+		if (footnoteBox === undefined) {
+			footnoteBox = document.createElement("div");
+			footnoteHolder.appendChild(footnoteBox);
+			footnoteBox.classList.add("footnote-box");
+			footnoteBox.addEventListener("mouseleave", () => removeFootnoteBox());
+
+			footnoteP = document.createElement("p");
+			footnoteBox.appendChild(footnoteP);
+
+			footnoteBox.style.zIndex = 9999;
+		}
+
+		// Remove the numbering from this footnote box
+		const footnoteId = elem.getAttribute("href"); // Starts with #
+		const footnoteClone = document
+			.getElementById(footnoteId.substring(1))
+			.cloneNode(true);
+		const footnoteA = footnoteClone.getElementsByTagName("a")[0];
+		footnoteA.remove();
+
+		const footnoteHtml = footnoteClone.innerHTML.replace(/^\s*\.\s*/, "");
+
+		footnoteP.innerHTML = footnoteHtml;
+		footnoteBox.style.right = null;
+		footnoteBox.style.left = "0px";
+		footnoteBox.style.top = "0px";
+
+		const elemRect = elem.getBoundingClientRect();
+		const bodyRect = document.body.getBoundingClientRect();
+
+		footnoteBox.style.display = "block";
+
+		let tx = false;
+		let ty = false;
+
+		if (elemRect.left - FOOTNOTE_BOX_MAX_WIDTH < 10) {
+			const px = -bodyRect.left + 10;
+			footnoteBox.style.left = `${px}px`;
+
+			tx = true;
+		} else {
+			const px = elemRect.left - bodyRect.left + 20;
+			footnoteBox.style.left = `${px}px`;
+		}
+
+		const footnoteRect = footnoteBox.getBoundingClientRect();
+
+		const windowHeight = document.documentElement.clientHeight;
+		if (elemRect.top + footnoteRect.height > windowHeight) {
+			const py = -10 + window.scrollY + windowHeight;
+			footnoteBox.style.top = `${py}px`;
+		} else {
+			const py = elemRect.top - bodyRect.top;
+			footnoteBox.style.top = `${py}px`;
+
+			ty = true;
+		}
+
+		footnoteBox.style.transform = (() => {
+			let transX = tx ? 0 : "-100%";
+			let transY = ty ? 0 : "-100%";
+			return `translate(${transX}, ${transY})`;
+		})();
+
+		// if (elemRect.right + FOOTNOTE_BOX_MAX_WIDTH - 30 > bodyRect.right) {
+		// 	const px = bodyRect.right - (bodyRect.left + bodyRect.width);
+		// 	console.log(bodyRect);
+		// 	footnoteBox.style.left = null;
+		// 	footnoteBox.style.right = `${px}px`;
+		// 	console.log("right");
+		// } else {
+		// 	const px = -10 + elemRect.left - bodyRect.left;
+		// 	footnoteBox.style.right = null;
+		// 	footnoteBox.style.left = `${px}px`;
+		// 	console.log("left");
+		// }
+	}
+
+	function removeFootnoteBox() {
+		if (footnoteBox === undefined) {
+			return;
+		}
+		footnoteBox.style.display = "none";
+	}
+
+	function initializeFootnotes() {
+		const footnotes = document.querySelectorAll(
+			":not(#footnotes) .footnote a.footnote",
+		);
+		const nFootnotes = footnotes.length;
+		for (let i = 0; i < nFootnotes; i++) {
+			const footnote = footnotes[i];
+			footnote.addEventListener("mouseenter", event => {
+				showFootnoteBoxOnHover(footnote);
+			});
+		}
+	}
+
+	if (!_isMobile) {
+		initializeFootnotes();
+	}
+</script>
+</body>
+</html>
