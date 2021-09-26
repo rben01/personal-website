@@ -22,6 +22,8 @@
 :repo-covid: {github-site}/{name-covid}
 :name-trivia: {user}/quarantine-trivia
 :repo-trivia: {github-site}/{name-trivia}
+:name-clgn: {user}/collagen
+:repo-clgn: {github-site}/{name-clgn}
 :favicon: ./favicon.ico
 :resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]
 :resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer^]

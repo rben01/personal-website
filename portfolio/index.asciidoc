@@ -93,8 +93,8 @@ This was predominantly an exercise in tweaking animation paths and timing curves
 * link:https://worldscienceu.com/lessons/4-3-gravity-calabi-yau-manifold/[Calabi-Yau manifold], showing the projection of a Calabi-Yau manifold (a surface ubiquitous in string theory) into three-dimensional space.
 * link:https://worldscienceu.com/lessons/2-3-negative-energy-density-approximate-size-of-the-now-observable-universe-during-inflation/[Inflation in the early universe], showing how rapidly the universe expanded in its first 10^−37^ seconds of existence.
 
-== Blog
+== Blog Posts
 
-Just one blog post for now, but I'm happy enough with both the content and the design to add it here.
+Just one post for now, but I'm happy enough with both the content and the design to add it here.
 
 * link:https://rben01.github.io/blog/mixing-whitespace/[Indenting with Tabs and Spaces]
