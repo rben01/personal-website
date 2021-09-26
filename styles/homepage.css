@@ -721,6 +721,10 @@ a .fa-github {
 	color: var(--github-icon-color);
 }
 
+.repo-link .fa-github {
+	padding-right: 5px;
+}
+
 .admonitionblock td.icon [class^="fa icon-"] {
 	font-size: 1.5em;
 }
@@ -749,7 +753,7 @@ h6 {
 	font-family: var(--header-font);
 	font-weight: 435;
 	font-style: normal;
-	letter-spacing: -0.08ex; /* assumes Rubik header font */
+	letter-spacing: -0.03ex; /* assumes Rubik header font */
 	color: var(--header-text-color);
 	text-rendering: optimizeLegibility;
 	margin-top: 0.75em;
@@ -1273,7 +1277,7 @@ p a > code:hover {
 }
 
 #header {
-	margin-bottom: 2em;
+	margin-bottom: 10px;
 }
 
 #header > h1 {
@@ -1294,10 +1298,6 @@ p a > code:hover {
 
 #header br {
 	display: none;
-}
-
-#header br + span {
-	padding-left: 3px;
 }
 
 #header br + span:before {
