@@ -74,7 +74,7 @@ _Sampling from an arbitrary probability distribution required numeric approximat
 
 === Special Relativity
 
-All special relativity demos are available link:https://worldscienceu.com/courses/special-relativity-world-science-u/[here] -- look for the "Demonstration" lessons.
+All special relativity demos are available link:https://worldscienceu.com/courses/special-relativity-world-science-u/[here] -- look for the "`Demonstration`" lessons.
 None of them get a {demo-marker}.
 
 === Math
@@ -86,7 +86,7 @@ None of them get a {demo-marker}.
 === Other
 
 * {demo-marker} link:https://worldscienceu.com/lessons/2-4-particles-and-fields-demonstration/[World line], demonstrating John Wheeler's concept of the one-electron universe.
-The neat thing in this demo is that if you draw a random world line, a random, nice-looking (i.e., smooth, devoid of kinks) curve is procedurally generated.
+The neat thing in this demo is that if you click "`draw a random world line`", a truly random, nice-looking (i.e., smooth, devoid of kinks) curve is procedurally generated.
 Making this randomly drawn curve look nice was quite challenging.
 * {demo-marker} link:https://worldscienceu.com/lessons/3-4-dynamic-peptide-libraries-for-self-selection-of-binding-ligands/[Chemical dipeptide].
 This was predominantly an exercise in tweaking animation paths and timing curves.
