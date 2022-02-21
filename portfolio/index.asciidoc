@@ -31,7 +31,6 @@ Stay tuned!
 
 === COVID-19 Tracker
 
-
 link:https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker] — [.repo-link]##{repo-covid}[icon:github[]{name-covid}]##
 
 // {repo-covid}[{github-icon-in-link}]{repo-covid}[{name-covid}]
@@ -39,6 +38,10 @@ link:https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker] — [.repo-
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US.
 The data was ingested with {resource-link-pandas} and the graphs and interactivity were built with {resource-link-d3}.
 Last update to the data was in March (due to the data source shutting down), but the site still works fine.
+
+=== Advent of Code
+
+* link:https://rben01.github.io/advent_of_code_2021/docs/advent_of_code_2021.html[Advent of Code 2021 Writeup] — [.repo-link]##{github-site}/{user}/advent_of_code_2021[icon:github[]advent_of_code_2021]##
 
 == Interactive Math and Science Demonstrations
 

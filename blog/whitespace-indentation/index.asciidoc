@@ -1,13 +1,11 @@
-= Against Whitespace-Based Indentation
+= Brackets, Braces, Tabs, and Spaces: The Harms of Whitespace-Based Indentation
 :docdate: TBD
 :basedir: ../..
 include::../blog.asciidoc[]
 :docinfodir: ../
 :docinfo: shared
-:stylesheet: mixing-whitespace.css
-:sectnumlevels: 2
+:stylesheet: whitespace-indentation.css
 :description: The correct way to indent is using both tabs and spaces
-:toc: left
 :cursor: 𝚰
 :experimental:
 

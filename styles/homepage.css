@@ -7,7 +7,7 @@
 	--font-family: "Cabin", "Helvetica Neue", "Helvetica", sans-serif;
 	--header-font: var(--font-family);
 	--mono-font-family: "Iosevka", monospace;
-	--mono-font-size: 0.9em;
+	--mono-font-size: 0.87em;
 	--bold-font-weight: bold;
 	--default-bg-color: white;
 	--default-text-color: black;
@@ -491,7 +491,7 @@ html,
 body {
 	font-size: 22px;
 	word-wrap: break-word;
-	font-variation-settings: "wdth" 85;
+	font-variation-settings: "wdth" 89;
 }
 
 body {
@@ -772,6 +772,21 @@ h6 small {
 	font-size: 60%;
 	color: var(--small-header-text-color);
 	line-height: 0;
+}
+
+/* Hyphenation / word break */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#toc {
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	-webkit-hyphenate-character: "·";
 }
 
 h1 {
@@ -1198,7 +1213,7 @@ pre > code {
 	line-height: 1.5;
 	color: var(--pre-code-text-color);
 	font-family: var(--mono-font-family);
-	font-size: var(--mono-font-size);
+	font-size: 0.9em;
 	font-weight: normal;
 }
 

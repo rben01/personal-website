@@ -8,8 +8,8 @@
 <meta name="description" content="The correct way to indent is using both tabs and spaces">
 <meta name="author" content="Robert Bennett">
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-<title>Against Whitespace-Based Indentation</title>
-<link rel="stylesheet" href="./mixing-whitespace.css">
+<title>Brackets, Braces, Tabs, and Spaces: The Harms of Whitespace-Based Indentation</title>
+<link rel="stylesheet" href="./whitespace-indentation.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/styles/syntax-theme.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
@@ -19,7 +19,7 @@
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Against Whitespace-Based Indentation</h1>
+<h1>Brackets, Braces, Tabs, and Spaces: The Harms of Whitespace-Based Indentation</h1>
 <div class="details">
 <span id="author" class="author">Robert Bennett</span><br>
 <span id="email" class="email"><a href="https://github.com/rben01" class="no-underline"><span class="icon"><i class="fa fa-github"></i></span>&#160;</a><a href="https://github.com/rben01">rben01</a> — Published TBD — <a href="/blog/">Blog index</a></span><br>
@@ -33,7 +33,7 @@
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_whitespace_based_syntax"><a class="link" href="#_whitespace_based_syntax">1. Whitespace-based syntax</a></h3>
+<h3 id="_whitespace_based_syntax"><a class="anchor" href="#_whitespace_based_syntax"></a>1. Whitespace-based syntax</h3>
 <div class="paragraph">
 <p>In the before-times, formatting code was something of an art.
 One is <em>supposed</em> to indent code correctly to make its structure clear to the reader, and in some instances align it to be aesthetically pleasing, but historically this has been laborious.
@@ -55,7 +55,7 @@ For simplicity, I&#8217;ll refer to any kind of non-whitespace delimiters as &#8
 </div>
 </div>
 <div class="sect3">
-<h4 id="_pasting_code"><a class="link" href="#_pasting_code">Pasting Code</a></h4>
+<h4 id="_pasting_code"><a class="anchor" href="#_pasting_code"></a>Pasting Code</h4>
 <div class="paragraph">
 <p>When cutting and pasting your own code or copying and pasting code from the internet, it&#8217;s difficult to make sure the indentation of the pasted code matches that of the surrounding code. Some examples of problematic scenarios:</p>
 </div>
@@ -88,7 +88,7 @@ Python has taken a simple, ubiquitous textual operation&#8201;&#8212;&#8201;one 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_auto_formatters"><a class="link" href="#_auto_formatters">Auto-formatters</a></h4>
+<h4 id="_auto_formatters"><a class="anchor" href="#_auto_formatters"></a>Auto-formatters</h4>
 <div class="paragraph">
 <p>Now, one might say, &#8220;It&#8217;s all well and good that brace-delimited languages can withstand poor indentation, but what value does this have if poorly formatted code is forbidden (by company policy, say) from existing in one&#8217;s codebase? Won&#8217;t I still have to correct the formatting manually?&#8221;.
 But we no longer live in the before-times, when code formatting was an art; it has been elevated to a science by auto-formatters, technology that can format our code for us!
@@ -105,7 +105,7 @@ And in turn, this means that the human author has free reign to absolutely butch
 </div>
 </div>
 <div class="sect3">
-<h4 id="_editing_in_practice"><a class="link" href="#_editing_in_practice">Editing in practice</a></h4>
+<h4 id="_editing_in_practice"><a class="anchor" href="#_editing_in_practice"></a>Editing in practice</h4>
 <div class="paragraph">
 <p>Here are some examples of where Python&#8217;s use of whitespace-based syntax makes it much harder to edit than brace-delimited languages.</p>
 </div>

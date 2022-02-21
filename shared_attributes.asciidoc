@@ -15,6 +15,7 @@
 :pygments-linenums-mode: table
 :icons: font
 :sectnums:
+:sectnumlevels: 2
 :hide-uri-scheme:
 :github-pages-root: https://rben01.github.io
 :url-trivia-page: link:{github-pages-root}/quarantine-trivia
