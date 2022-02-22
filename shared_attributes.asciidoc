@@ -25,6 +25,8 @@
 :repo-trivia: {github-site}/{name-trivia}
 :name-clgn: {user}/collagen
 :repo-clgn: {github-site}/{name-clgn}
+:name-aoc-2021: {user}/advent_of_code_2021
+:repo-aoc-2021: {github-site}/{name-clgn}
 :favicon: ./favicon.ico
 :resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]
 :resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer^]
