@@ -1,12 +1,11 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.0/css/font-awesome.css");
-@import url("/fonts/fonts.css");
 
 /* Variables */
 
 :root {
-	--font-family: "Cabin", "Helvetica Neue", "Helvetica", sans-serif;
+	--font-family: "Iosevka RLTB Sans Web", "Helvetica Neue", "Helvetica", sans-serif;
 	--header-font: var(--font-family);
-	--mono-font-family: "Iosevka", monospace;
+	--mono-font-family: "Iosevka RLTB Mono", monospace;
 	--mono-font-size: 0.87em;
 	--bold-font-weight: bold;
 	--default-bg-color: white;
@@ -489,9 +488,8 @@ details {
 
 html,
 body {
-	font-size: 22px;
+	font-size: 18px;
 	word-wrap: break-word;
-	font-variation-settings: "wdth" 89;
 }
 
 body {
@@ -502,7 +500,7 @@ body {
 	font-family: var(--font-family);
 	font-weight: 400;
 	font-style: normal;
-	line-height: 1.45;
+	line-height: 1.25;
 	position: relative;
 	cursor: auto;
 	/* font-variation-settings: "wght" 300; */
@@ -691,7 +689,7 @@ body {
 p {
 	font-family: inherit;
 	/* font-size: 1.05em; */
-	line-height: 1.5;
+	line-height: 1.3;
 	margin-bottom: 1em;
 	text-rendering: optimizeLegibility;
 }
@@ -1551,8 +1549,25 @@ h6 > a.link:hover {
 	margin-bottom: 1.25em;
 }
 
-:is(.admonitionblock
-		td.content, .exampleblock, .imageblock, .videoblock, .listingblock, .literalblock, .openblock, .paragraph, .quoteblock, .sidebarblock, .tableblock, .verseblock, .dlist, .olist, .ulist, .qlist, .hdlist)
+:is(
+		.admonitionblock td.content,
+		.exampleblock,
+		.imageblock,
+		.videoblock,
+		.listingblock,
+		.literalblock,
+		.openblock,
+		.paragraph,
+		.quoteblock,
+		.sidebarblock,
+		.tableblock,
+		.verseblock,
+		.dlist,
+		.olist,
+		.ulist,
+		.qlist,
+		.hdlist
+	)
 	> .title {
 	text-align: left;
 	font-weight: var(--bold-font-weight);
@@ -2051,6 +2066,10 @@ ul > li p {
 
 .dlist > dl > dd > :is(.ulist, .olist) li {
 	line-height: 1.2;
+}
+
+.dlist > dl > dd > p:first-child {
+	margin-bottom: 0.5em;
 }
 
 /* ol > li > p:first-child,
