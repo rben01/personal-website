@@ -3,10 +3,12 @@
 /* Variables */
 
 :root {
-	--font-family: "Iosevka RLTB Sans Web", "Helvetica Neue", "Helvetica", sans-serif;
+	--font-family: "rotunda-variable", "Source Sans Pro", "Helvetica Neue", "Helvetica",
+		sans-serif;
 	--header-font: var(--font-family);
-	--mono-font-family: "Iosevka RLTB Mono", monospace;
-	--mono-font-size: 0.87em;
+	--mono-font-family: "source-code-pro", monospace;
+	--mono-font-size: 0.81em;
+	--body-letter-spacing: -0.03em;
 	--bold-font-weight: bold;
 	--default-bg-color: white;
 	--default-text-color: black;
@@ -306,6 +308,7 @@ pre,
 samp {
 	font-family: var(--mono-font-family), serif;
 	font-size: var(--mono-font-size);
+	letter-spacing: 0;
 }
 
 kbd {
@@ -490,6 +493,7 @@ html,
 body {
 	font-size: 18px;
 	word-wrap: break-word;
+	letter-spacing: var(--body-letter-spacing);
 }
 
 body {
@@ -843,6 +847,7 @@ code {
 	font-family: var(--mono-font-family);
 	font-size: var(--mono-font-size);
 	color: var(--code-text-color);
+	letter-spacing: 0;
 }
 
 /* Lists */
@@ -902,7 +907,9 @@ ol li ol {
 /* Definition Lists */
 dl dt {
 	margin-bottom: 0.3125em;
-	font-weight: var(--bold-font-weight);
+	/* font-weight: var(--bold-font-weight); */
+	font-weight: 500;
+	/* font-variation-settings: "wght" 500; */
 }
 
 /* Abbreviations */
@@ -1213,6 +1220,7 @@ pre > code {
 	font-family: var(--mono-font-family);
 	font-size: 0.9em;
 	font-weight: normal;
+	letter-spacing: 0;
 }
 
 kbd.keyseq {
