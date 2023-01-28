@@ -4,9 +4,7 @@
 	url = "https://rltb.me"
 
 [[content.sources]]
-	branches = ["v2.0", "v1.0"]
-	start_path = "docs"
-	url = "https://gitlab.com/antora/demo/demo-component-b.git"
+	url = "./docs"
 
 [ui.bundle]
 	snapshot = true
