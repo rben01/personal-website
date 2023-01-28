@@ -1,0 +1,13 @@
+[site]
+	start_page = "component-b::index.adoc"
+	title = "Robert Bennett"
+	url = "https://rltb.me"
+
+[[content.sources]]
+	branches = ["v2.0", "v1.0"]
+	start_path = "docs"
+	url = "https://gitlab.com/antora/demo/demo-component-b.git"
+
+[ui.bundle]
+	snapshot = true
+	url = "https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable"
