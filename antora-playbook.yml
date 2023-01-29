@@ -15,7 +15,7 @@ content:
 
 ui:
   bundle:
-    url: https://github.com/rben01/antora-ui/releases/download/v0.0.3/ui-bundle.zip
+    url: https://github.com/rben01/antora-ui/releases/download/v0.1.0/ui-bundle.zip
     # url: ../Antora Theme
     start_path: src
   supplemental_files:
@@ -46,6 +46,7 @@ antora:
 asciidoc:
   attributes:
     nbsp: ""
+    icons: font
     author: Robert Bennett
     user: rben01
     github-site: link:https://github.com

@@ -4,7 +4,8 @@
 Hi, I'm {github-user}[Robert^].
 I'm a web developer and data analyst based in New York focused on making complex ideas tangible and easily understood.
 My favorite languages for this job are https://julialang.org/community/[Julia^] for ad-hoc analysis and visualization, https://d3js.org/[d3^] and https://vega.github.io[Vega(-Lite)] for building browser-based visualizations, and https://www.rust-lang.org[Rust^] for building long-term data pipelines (thanks to the fantastic https://github.com/pola-rs/polars[Polars] library).
-Outside of work I enjoy {github-user}/collagen[writing^] {github-user}/advent_of_code_2021[more^] {github-user}/advent_of_code_2022[Rust^], reading, and taking photographs.
+
+Outside of work I enjoy {github-user}/collagen[writing^] {github-user}/advent_of_code_2021[more^] {github-user}/advent_of_code_2022[Rust^], reading, taking photographs, and browsing https://fonts.google.com[Google Fonts^].
 
 At left you can navigate to the top-level sections of this site, or use the search bar in the top right.
 

@@ -6,7 +6,8 @@
 		"asciidoc",
 		"markdown",
 		"latex",
-		"plaintext"
+		"plaintext",
+		"html"
 	],
 	"liveServer.settings.port": 5502,
 	"liveServer.settings.wait": 400,
