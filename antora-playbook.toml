@@ -14,7 +14,7 @@
 
 [ui.bundle]
 	snapshot = true
-	url = "https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable"
+	url = "./site-ui/ui-bundle"
 
 [urls]
 	html_extension_style = "drop"
