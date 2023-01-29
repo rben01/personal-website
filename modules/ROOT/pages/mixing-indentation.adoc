@@ -1,5 +1,5 @@
 = Indenting with Tabs and Spaces
-:docdate: 2021-07-20
+:page-docdate: 2021-07-20
 :description: The correct way to indent is using both tabs and spaces
 :cursor: 𝚰
 :experimental:
