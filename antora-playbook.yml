@@ -1,0 +1,25 @@
+site:
+  robots: allow
+  start_page: main::index.adoc
+  title: Robert Bennett
+  url: https://rltb.me
+
+content:
+  sources:
+    - url: ./content/main
+      branches: HEAD
+    - url: ./content/blog
+      branches: HEAD
+
+ui:
+  bundle:
+    url: ./site-ui
+    start_path: src
+  supplemental_files: ./site-ui/static
+
+urls:
+  html_extension_style: drop
+
+antora:
+  extensions:
+    - require: "@antora/lunr-extension"

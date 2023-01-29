@@ -14,7 +14,8 @@
 
 [ui.bundle]
 	snapshot = true
-	url = "./site-ui/ui-bundle"
+	start_path = "src"
+	url = "./site-ui"
 
 [urls]
 	html_extension_style = "drop"

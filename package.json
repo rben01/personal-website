@@ -7,6 +7,6 @@
 		"@antora/lunr-extension": "^1.0.0-alpha.8"
 	},
 	"scripts": {
-		"build": "npx antora antora-playbook.toml"
+		"build": "npx antora --clean antora-playbook.yml"
 	}
 }
