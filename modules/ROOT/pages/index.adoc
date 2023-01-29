@@ -1,5 +1,5 @@
 = Home
-:description: My GitHub Pages home page, linking to my other pages.
+:description: The homepage of https://rltb.me
 
 Hi, I'm {github-user}[Robert^].
 I'm a web developer and data analyst based in New York focused on making complex ideas tangible and easily understood.
