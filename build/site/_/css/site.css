@@ -24,7 +24,7 @@
 	--toolbar-bg-color: #f9f9f9;
 	--toolbar-text-color: #444444;
 	--top-bar-bg-color: #0a6bac;
-	--navbar-bg-color: #d5d5d5;
+	--navbar-bg-color: #e5e5e5;
 	--navbar-header-bg-color: #fafafa;
 	--navbar-shadow-color-1: #dedede;
 	--navbar-shadow-color-2: #e1e1e1;
@@ -48,8 +48,9 @@
 	--body-text-color: black;
 	--title-text-color: #111;
 	--link-text-color: #0a6bac;
-	--link-hover-color: #0d77be;
+	--link-hover-color: #2391db;
 	--visited-link-text-color: rgb(124, 58, 156);
+	--visited-link-hover-color: rgb(165, 88, 203);
 	--link-focus-text-color: #229ea7;
 	--github-icon-color: #111;
 	--header-text-color: #111;
@@ -58,7 +59,7 @@
 	--code-text-color: #222;
 	--abbrev-text-color: #222;
 	--abbrev-border-color: #ddd;
-	--blockquote-bg-color: #e0e0e0;
+	--blockquote-bg-color: #f6f6f6;
 	--blockquote-border-color: #ddd;
 	--blockquote-cite-color: #555;
 	--blockquote-text-color: #262628;
@@ -111,6 +112,7 @@
 	--thumb-border-color: white;
 	--thumb-shadow-color: #ddd;
 	--gist-table-bg-color: white;
+	--admon-text-color: white;
 	--admon-shadow-color: rgba(0, 0, 0, 0.5);
 	--admon-note-icon-color: #217ee7;
 	--admon-tip-shadow-color: rgba(155, 155, 0, 0.8);
@@ -135,7 +137,7 @@
 
 		--default-bg-color: #080808;
 		--default-text-color: white;
-		--doc-text-color: #f1f1f1;
+		--doc-text-color: #fcfcfc;
 		--toolbar-bg-color: #070707;
 		--toolbar-text-color: #cccccc;
 		--top-bar-bg-color: #0967b4;
@@ -165,9 +167,10 @@
 		--link-text-color: #71c2f8;
 		--link-hover-color: #99d6ff;
 		--visited-link-text-color: rgb(189, 125, 241);
+		--visited-link-hover-color: rgb(212, 142, 248);
 		--link-focus-text-color: #29c8d3;
 		--github-icon-color: #eee;
-		--header-text-color: #eee;
+		--header-text-color: #f8f8f8;
 		--small-header-text-color: #a0a0a0;
 		--h-rule-color: rgb(56, 56, 56);
 		--code-text-color: rgb(228, 228, 228);
@@ -270,15 +273,13 @@ body {
 	overflow-wrap: break-word;
 }
 a {
-	transition: all 0.2s ease;
-}
-.doc a {
-	text-decoration-style: dotted;
-	text-decoration-thickness: 1px;
-}
-.doc a:hover {
 	text-decoration: underline;
 	text-decoration-style: solid;
+	color: var(--link-text-color);
+	transition: all 0.2s ease;
+}
+a:visited {
+	color: var(--visited-link-text-color);
 }
 a:active {
 	background-color: none;
@@ -361,7 +362,7 @@ object[type="image/svg+xml"]:not([width]) {
 	left: 0;
 	width: 100%;
 	font-size: 0.94444rem;
-	z-index: 1;
+	z-index: 9;
 	visibility: hidden;
 }
 @media screen and (min-width: 769px) {
@@ -386,6 +387,7 @@ object[type="image/svg+xml"]:not([width]) {
 	position: relative;
 	top: 2.5rem;
 	height: calc(100vh - 6rem);
+	z-index: 9;
 }
 @media screen and (min-width: 769px) {
 	.nav {
@@ -407,6 +409,7 @@ object[type="image/svg+xml"]:not([width]) {
 	display: flex;
 	flex-direction: column;
 	height: inherit;
+	z-index: inherit;
 }
 html.is-clipped--nav {
 	overflow-y: hidden;
@@ -439,6 +442,7 @@ html.is-clipped--nav {
 	color: var(--navbar-title-color);
 	font-size: inherit;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	margin: 0;
 	padding: 0.25em 0 0.125em;
 }
@@ -481,6 +485,7 @@ html.is-clipped--nav {
 .is-current-page > .nav-link,
 .is-current-page > .nav-text {
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 }
 .nav-panel-explore {
 	background: var(--navbar-header-bg-color);
@@ -491,6 +496,7 @@ html.is-clipped--nav {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: inherit;
 }
 .nav-panel-explore:not(:first-child) {
 	top: auto;
@@ -565,6 +571,7 @@ html.is-clipped--nav {
 }
 .nav-panel-explore .component .title {
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 }
 .nav-panel-explore .versions {
 	display: flex;
@@ -589,6 +596,7 @@ html.is-clipped--nav {
 	border-color: currentColor;
 	opacity: 0.9;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 }
 @media screen and (max-width: 1023.5px) {
 	aside.toc.sidebar {
@@ -630,7 +638,7 @@ html.is-clipped--nav {
 	justify-content: flex-start;
 	position: sticky;
 	top: 3.5rem;
-	z-index: 2;
+	z-index: 20;
 }
 .toolbar a {
 	color: inherit;
@@ -776,6 +784,7 @@ a + .breadcrumbs {
 	color: var(--toc-title-color);
 	font-size: 0.88889rem;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	line-height: 1.3;
 	margin: 0 -0.5px;
 	padding-bottom: 0.25rem;
@@ -874,6 +883,7 @@ a + .breadcrumbs {
 .doc h6 {
 	color: var(--header-text-color);
 	font-weight: 400;
+	font-variation-settings: "wght" 400;
 	hyphens: none;
 	line-height: 1.3;
 	margin: 1rem 0 0;
@@ -912,6 +922,7 @@ a + .breadcrumbs {
 .doc h3:not(.discrete),
 .doc h4:not(.discrete) {
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 }
 .doc h1 .anchor,
 .doc h2 .anchor,
@@ -926,6 +937,7 @@ a + .breadcrumbs {
 	visibility: hidden;
 	font-size: 0.8em;
 	font-weight: 400;
+	font-variation-settings: "wght" 400;
 	padding-top: 0.05em;
 }
 .doc h1 .anchor::before,
@@ -950,10 +962,21 @@ a + .breadcrumbs {
 }
 .doc a {
 	color: var(--link-text-color);
+	text-decoration-style: dotted;
+	text-decoration-thickness: 1px;
+}
+.doc a:visited {
+	color: var(--visited-link-text-color);
+}
+.doc a:visited:hover {
+	color: var(--visited-link-hover-color);
 }
 .doc a:hover {
+	text-decoration: underline;
+	text-decoration-style: solid;
 	color: var(--link-hover-color);
 }
+
 .doc a.bare {
 	hyphens: none;
 }
@@ -1032,6 +1055,9 @@ a + .breadcrumbs {
 .doc details,
 .doc hr {
 	margin: 1rem 0 0;
+}
+.doc dd .listingblock {
+	margin: 0 0 1rem;
 }
 .doc table.tableblock {
 	font-size: 0.83333rem;
@@ -1142,6 +1168,7 @@ a + .breadcrumbs {
 	table-layout: fixed;
 	position: relative;
 	width: 100%;
+	border-collapse: separate;
 }
 .doc .admonitionblock td.content {
 	padding: 1rem 1rem 0.75rem;
@@ -1149,7 +1176,7 @@ a + .breadcrumbs {
 	width: 100%;
 	overflow-wrap: break-word;
 	border-radius: 5px;
-	border: 5px solid var(--admonition-border-color);
+	border: 3px solid var(--admonition-border-color);
 }
 .doc .admonitionblock .icon {
 	position: absolute;
@@ -1160,29 +1187,30 @@ a + .breadcrumbs {
 	height: 1.25rem;
 	line-height: 1;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	text-transform: uppercase;
 	border-radius: 0.45rem;
 	transform: translate(-0.5rem, -50%);
 }
 .doc .admonitionblock.caution .icon {
 	background-color: var(--admon-caution-icon-color);
-	color: var(--default-text-color);
+	color: var(--admon-text-color);
 }
 .doc .admonitionblock.important .icon {
 	background-color: var(--admon-important-icon-color);
-	color: var(--default-text-color);
+	color: var(--admon-text-color);
 }
 .doc .admonitionblock.note .icon {
 	background-color: var(--admon-note-icon-color);
-	color: var(--default-text-color);
+	color: var(--admon-text-color);
 }
 .doc .admonitionblock.tip .icon {
 	background-color: var(--admon-tip-icon-color);
-	color: var(--default-text-color);
+	color: var(--admon-text-color);
 }
 .doc .admonitionblock.warning .icon {
 	background-color: var(--admon-warning-icon-color);
-	color: var(--default-text-color);
+	color: var(--admon-text-color);
 }
 .doc .admonitionblock .icon i {
 	display: inline-flex;
@@ -1365,6 +1393,7 @@ a + .breadcrumbs {
 	font-size: 0.88889rem;
 	font-style: italic;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	hyphens: none;
 	letter-spacing: 0.01em;
 	padding-bottom: 0.075rem;
@@ -1376,6 +1405,7 @@ a + .breadcrumbs {
 .doc .ulist .title {
 	font-style: italic;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	margin-bottom: 0.25rem;
 }
 .doc .imageblock .title {
@@ -1453,6 +1483,7 @@ a + .breadcrumbs {
 .doc .sidebarblock > .content > .title {
 	font-size: 1.25rem;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	line-height: 1.3;
 	margin-bottom: -0.3em;
 	text-align: center;
@@ -1580,6 +1611,7 @@ a + .breadcrumbs {
 }
 .doc td.hdlist1 {
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	padding-right: 0.25rem;
 }
 .doc td.hdlist2 {
@@ -1636,7 +1668,7 @@ a + .breadcrumbs {
 }
 .doc kbd {
 	display: inline-block;
-	font-size: 0.66667rem;
+	font-size: 0.8em;
 	background: var(--kbd-not-keyseq-bg-color);
 	border: 1px solid var(--kbd-not-keyseq-border-color);
 	border-radius: 0.25em;
@@ -1645,7 +1677,7 @@ a + .breadcrumbs {
 	padding: 0.25em 0.5em;
 	vertical-align: text-bottom;
 	white-space: nowrap;
-	color: var(--default-bg-color);
+	color: var(--kbd-not-keyseq-text-color);
 }
 .doc .keyseq,
 .doc kbd {
@@ -1671,6 +1703,7 @@ a + .breadcrumbs {
 	content: "\203a";
 	font-size: 1.1em;
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	line-height: 0.90909;
 }
 .doc :not(pre).nowrap {
@@ -1704,6 +1737,24 @@ a + .breadcrumbs {
 	margin-left: -2em;
 	text-align: right;
 	width: 1.5em;
+}
+.footnote-box {
+	position: absolute;
+	block-size: fit-content;
+	background-color: var(--table-head-foot-bg-color);
+	border: 1px solid var(--example-text-color);
+	border-radius: 2px;
+	box-shadow: 0 0 10px 1px var(--default-bg-color);
+	padding: 10px 15px;
+	width: fit-content;
+	min-width: 300px;
+	max-width: 400px;
+}
+.footnote-box > p {
+	font-size: 85%;
+	line-height: 1.3;
+	word-wrap: break-word;
+	margin: 0;
 }
 nav.pagination {
 	border-top: 1px solid var(-toc-left-border-color);
@@ -1740,6 +1791,7 @@ nav.pagination .next::before {
 }
 nav.pagination a {
 	font-weight: 500;
+	font-variation-settings: "wght" 500;
 	line-height: 1.3;
 	position: relative;
 }
@@ -1747,6 +1799,7 @@ nav.pagination a::after,
 nav.pagination a::before {
 	color: var(--page-version-missing-text-color);
 	font-weight: 400;
+	font-variation-settings: "wght" 400;
 	font-size: 1.5em;
 	line-height: 0.75;
 	position: absolute;
@@ -1774,7 +1827,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 4;
+	z-index: 30;
 }
 .navbar a {
 	text-decoration: none;
@@ -1788,6 +1841,7 @@ body {
 	color: var(--default-text-color);
 }
 .navbar-brand .navbar-item:first-child {
+	color: white;
 	align-self: center;
 	padding: 0;
 	font-size: 1.22222rem;
@@ -1807,6 +1861,10 @@ body {
 	flex: auto;
 	justify-content: flex-end;
 }
+/* .nav slightly raises specificity */
+.navbar #search-field {
+	margin-right: 0.5rem;
+}
 #search-input {
 	color: var(--search-text-color);
 	font-family: inherit;
@@ -1816,6 +1874,10 @@ body {
 	border-radius: 0.1em;
 	line-height: 1.5;
 	padding: 0 0.25em;
+}
+.navbar #search-input {
+	/* top is slightly bigger to account for Rotunda font being slightly offset from bottom */
+	padding: 0.35em 0.25em 0.15em;
 }
 #search-input:disabled {
 	background-color: var(--search-border-color);
@@ -1960,6 +2022,9 @@ body {
 	}
 }
 @media screen and (min-width: 1024px) {
+	.navbar #search-field {
+		margin-right: unset;
+	}
 	.navbar-burger {
 		display: none;
 	}

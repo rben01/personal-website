@@ -28,11 +28,6 @@
             <input id="search-input" type="text" placeholder="Search this site">
           </div>
         </div>
-      <button class="navbar-burger" data-target="topbar-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -130,6 +125,123 @@ The data was ingested with <a href="https://pandas.pydata.org" target="_blank" r
 	<script src="../_/js/vendor/lunr.js"></script>
 <script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
 <script async src="../search-index.js"></script>
+<script>
+	let footnoteBox;
+	let footnoteP;
+	const _toc = document.getElementById("toc");
+	const _isMobile = "ontouchstart" in document.documentElement;
+
+	// Apparently, sticking the tooltip in a child div of document.body, instead of in
+	// document.body directly, helps performance.
+	// https://atfzl.com/don-t-attach-tooltips-to-document-body
+	const footnoteHolder = document.createElement("div");
+	document.body.appendChild(footnoteHolder);
+
+	function showFootnoteBoxOnHover(elem) {
+		const FOOTNOTE_BOX_MAX_WIDTH = 400;
+
+		if (footnoteBox === undefined) {
+			footnoteBox = document.createElement("div");
+			footnoteHolder.appendChild(footnoteBox);
+			footnoteBox.classList.add("footnote-box");
+			footnoteBox.addEventListener("mouseleave", () => removeFootnoteBox());
+
+			footnoteP = document.createElement("p");
+			footnoteBox.appendChild(footnoteP);
+
+			footnoteBox.style.zIndex = 9999;
+		}
+
+		// Remove the numbering from this footnote box
+		const footnoteId = elem.getAttribute("href"); // Starts with #
+		const footnoteClone = document
+			.getElementById(footnoteId.substring(1))
+			.cloneNode(true);
+		const footnoteA = footnoteClone.getElementsByTagName("a")[0];
+		footnoteA.remove();
+
+		const footnoteHtml = footnoteClone.innerHTML.replace(/^\s*\.\s*/, "");
+
+		footnoteP.innerHTML = footnoteHtml;
+		footnoteBox.style.right = null;
+		footnoteBox.style.left = "0px";
+		footnoteBox.style.top = "0px";
+
+		const elemRect = elem.getBoundingClientRect();
+		const bodyRect = document.body.getBoundingClientRect();
+
+		footnoteBox.style.display = "block";
+
+		let tx = false;
+		let ty = false;
+
+		if (elemRect.left - FOOTNOTE_BOX_MAX_WIDTH < 10) {
+			const px = -bodyRect.left + 10;
+			footnoteBox.style.left = `${px}px`;
+
+			tx = true;
+		} else {
+			const px = elemRect.left - bodyRect.left + 20;
+			footnoteBox.style.left = `${px}px`;
+		}
+
+		const footnoteRect = footnoteBox.getBoundingClientRect();
+
+		const windowHeight = document.documentElement.clientHeight;
+		if (elemRect.top + footnoteRect.height > windowHeight) {
+			const py = -10 + window.scrollY + windowHeight;
+			footnoteBox.style.top = `${py}px`;
+		} else {
+			const py = elemRect.top - bodyRect.top;
+			footnoteBox.style.top = `${py}px`;
+
+			ty = true;
+		}
+
+		footnoteBox.style.transform = (() => {
+			let transX = tx ? 0 : "-100%";
+			let transY = ty ? 0 : "-100%";
+			return `translate(${transX}, ${transY})`;
+		})();
+
+		// if (elemRect.right + FOOTNOTE_BOX_MAX_WIDTH - 30 > bodyRect.right) {
+		// 	const px = bodyRect.right - (bodyRect.left + bodyRect.width);
+		// 	console.log(bodyRect);
+		// 	footnoteBox.style.left = null;
+		// 	footnoteBox.style.right = `${px}px`;
+		// 	console.log("right");
+		// } else {
+		// 	const px = -10 + elemRect.left - bodyRect.left;
+		// 	footnoteBox.style.right = null;
+		// 	footnoteBox.style.left = `${px}px`;
+		// 	console.log("left");
+		// }
+	}
+
+	function removeFootnoteBox() {
+		if (footnoteBox === undefined) {
+			return;
+		}
+		footnoteBox.style.display = "none";
+	}
+
+	function initializeFootnotes() {
+		const footnotes = document.querySelectorAll(
+			":not(#footnotes) .footnote a.footnote",
+		);
+		const nFootnotes = footnotes.length;
+		for (let i = 0; i < nFootnotes; i++) {
+			const footnote = footnotes[i];
+			footnote.addEventListener("mouseenter", event => {
+				showFootnoteBoxOnHover(footnote);
+			});
+		}
+	}
+
+	if (!_isMobile) {
+		initializeFootnotes();
+	}
+</script>
 </body>
 
 </html>
