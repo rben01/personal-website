@@ -1,5 +1,0 @@
-= Blog Index
-
-At left you can see list of all of my blog posts.
-(Yes, there's just one for now.
-I've got some more in the works.)
