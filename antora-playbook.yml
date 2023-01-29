@@ -15,9 +15,10 @@ content:
 
 ui:
   bundle:
-    url: ./site-ui
+    url: ../Antora Theme
     start_path: src
-  supplemental_files: ./site-ui/static
+  supplemental_files:
+    - ./site-ui/static
 
 urls:
   html_extension_style: drop
