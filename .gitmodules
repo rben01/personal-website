@@ -1,9 +1,0 @@
-[submodule "modules/blog"]
-	path = modules/blog
-	url = ./modules/blog
-[submodule "modules/home"]
-	path = modules/home
-	url = ./modules/home/
-[submodule "modules/projects"]
-	path = modules/projects
-	url = ./modules/projects/
