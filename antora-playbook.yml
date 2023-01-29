@@ -15,7 +15,7 @@ content:
 
 ui:
   bundle:
-    url: ../Antora Theme
+    url: https://github.com/rben01/antora-ui/releases/download/v0.0.2/ui-bundle.zip
     start_path: src
   supplemental_files:
     - path: about.txt
