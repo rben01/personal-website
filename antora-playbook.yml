@@ -10,6 +10,8 @@ content:
       branches: HEAD
     - url: ./content/blog
       branches: HEAD
+    - url: ./content/projects
+      branches: HEAD
 
 ui:
   bundle:
