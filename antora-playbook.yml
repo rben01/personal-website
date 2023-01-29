@@ -23,3 +23,14 @@ urls:
 antora:
   extensions:
     - require: "@antora/lunr-extension"
+
+asciidoc:
+  attributes:
+    author: Robert Bennett
+    user: rben01
+    github-site: link:https://github.com
+    github-user: "{github-site}/{user}"
+    github-icon-in-link: icon:github[]{nbsp},role="no-underline"
+    email: pass:a,q[[.repo-link]##{github-user}[icon:github[]{user}]##]
+    hide-uri-scheme:
+    url-trivia-page: link:{github-pages-root}/quarantine-trivia
