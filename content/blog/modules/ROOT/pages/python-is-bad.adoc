@@ -1,0 +1,264 @@
+= When It Comes to Ditching Python, Now is Better than Never
+:docdate: 2021-07-20
+:description: Why I've given up on Python
+:source-language: python
+:cursor: 𝚰
+
+
+[.lead]
+And never is _not_ better than right now.
+
+== Python's Popularity
+
+While I will do my best to never use Python in another project of mine, there's no doubt that it is generally well liked.
+In link:https://insights.stackoverflow.com/survey/2020#technology[Stack Overflow's 2020 Developer Survey], Python was the #4 most popular language/technology among all developers, a remarkable feat for a language that has zero presence on the web (the top three languages/technologies were JavaScript, HTML/CSS, and SQL).
+In addition, Python was the #3 most "`loved`" language (developers who are using it wish to continue to do so) and the #1 most "`wanted`" language (developers who are not yet using it wish to start).
+For Python to be so popular, it clearly must have gotten a lot right.
+
+This article discusses why I aim to never use Python again; despite everything right with Python, there is too much wrong with it to continue using it.
+It's not that Python has gotten worse (with the exception of link:https://www.python.org/dev/peps/pep-0635/[PEP 635 -- Structural Pattern Matching], an unmitigated disaster), but that the universe of other languages has gotten better while Python has stood still.
+In light of this, the first key result from that survey -- "`After a consistent rise over the last five years, Python fell from second last year to third this year on the list of most loved technologies...`" -- is not surprising.
+
+== What Python Does Right
+
+Even though it declined in popularity last year, Python is still massively popular.
+It's not hard to find praise for Python online, but I'll summarize what I think are its greatest strengths here.
+
+=== Abstraction
+Python operates at a level of abstraction that allows programmers to focus on the problem at hand while ignoring the implementation details of both computers and Python itself.
+
+* Python is link:https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)[garbage collected] and handles memory management for you.
+* Everything, including functions and types, is an object and can be referenced and passed around freely.
+The `obj.attr` syntax is how you access _anything's_ attribute, regardless of what kind of object `obj` actually is.
+For instance, you don't need to use `obj::attr` in the event that `obj` is a type, namespace, module, etc.
+* Iteration "`just works`".
+(I think this was a bigger deal in the early 1990's when Python was first released; now we take simple iteration for granted.
+But I wouldn't be surprised if that's because Python showed that there was a right way to do it, which everyone subsequently copied.)
+* Importing packages "`just works`" and the imported module acts like any other Python object.
+Heck, you can even `link:https://xkcd.com/353/[import antigravity]`.
+* The relation between syntax and methods is clear and extendable to your own types.
+If you want to be able to add your objects together as in `x + y`, just define `+__add__(self, other)+`.
+Compare this to, say, Java, in which `+` may only be used on the primitive numeric types, e.g., even though `BigInteger` feels like a regular number, it must use `x.add(y)` because it is a "`real`" type.
+
+=== Package ecosystem
+There is a Python package for everything.
+As long as performance is not an issue, you will never need to leave the Python ecosystem.
+The standard library is huge (a.k.a. "`link:https://www.python.org/dev/peps/pep-0206/#batteries-included-philosophy[batteries] link:https://www.python.org/about/success/wordstream[included]`"), so for simple scripts you likely don't even need to install external packages.
+
+=== Huge community and wide support
+Python has been around forever and has been used a ton.
+On Stack Overflow, there are currently 1,756,625 questions with the `link:https://stackoverflow.com/questions/tagged/python?tab=Newest[python]` tag.
+For comparison, there are 361,664 questions tagged with `link:https://stackoverflow.com/questions/tagged/c?tab=Newest[C]`, 731,016 tagged with `link:https://stackoverflow.com/questions/tagged/c%2b%2b?tab=Newest[C++]`, 1,787,947 tagged with `link:https://stackoverflow.com/questions/tagged/java?tab=Newest[Java]`, and 2,242,203 tagged with `link:https://stackoverflow.com/questions/tagged/javascript?tab=Newest[JavaScript]`.
+If you have a Python question, chances are that it's been asked and answered already.
+In addition, it is nearly guaranteed that your editor/IDE has superb Python support.
+
+=== It's interpreted and has a REPL
+It's very handy to be able to [.no-wrap]##(re-)##evaluate code on the fly.
+Combined with introspection, this lets you explore unfamiliar territory quickly.
+
+[sidebar]
+Before I get into the next section, it's important to recognize that from a technological standpoint, Python is amazing.
+A language that's easy to write, easy to reason about, and can call down to C when performance is important?
+Without a doubt, it is one of the modern marvels of (software) engineering.
+
+== What Python Does Wrong
+
+But, for all the good ideas present in Python, many of which have percolated into the wider world of programming languages, it is saddled with too many bad ideas for me to continue using it.
+Of course, practicality dictates that Python is not going anywhere anytime soon; it has been used in countless projects, and the principle of "`if it ain't broke, don't fix it`" holds.
+But if you can avoid using Python for future work, you should.
+
+Here is why.
+
+=== Package management
+Pip, Python's built-in link:https://packaging.python.org/guides/tool-recommendations/[package installer], is notoriously fickle and confusing to use.
+Common questions include:
+
+* Should you use `pip install` or `python3 -m pip install`?
+* (When) should you use `sudo` with `pip`? How about the `--user` flag?
+* (When) is there a difference between `pip` and `pip3`?
+* How important is it to know about `setuptools`? `distutils`?
+
+In addition to installing packages, it is also important to be able to manage Python link:https://realpython.com/python-virtual-environments-a-primer/[virtual environments].
+Python's official docs recommend that you use `link:https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment[virtualenv]` for this, and if the Python ecosystem worked correctly, this would be the end of the story.
+[sidebar]
+--
+To add to the confusion, the name of the package is `virtualenv` if you're on Python 3.2 or older, but `venv` in Python 3.3 and newer, and it comes bundled with Python 3.3 and newer, but for Python 3.2 or older you need to run [.code-allow-wrap]`python3 -m pip install --user virtualenv`.
+At least that answers two of the questions above!
+
+To see the chaos that is the Python package management ecosystem, visit link:https://packaging.python.org/key_projects/[this page].
+Note that this only covers those tools that conform to the link:https://packaging.python.org/specifications/[PyPA specifications]!
+--
+In the void that Python has left, several third-party projects for managing packages and environments have been developed, each with their own pros, cons, and instructions. In general, they are not interoperable, so you have to pick one and hope it serves your needs. Below is a list of the most popular ones with descriptions taken from their home pages.
+
+* link:https://docs.conda.io/en/latest/[Conda]
++
+[quote]
+--
+Conda quickly installs, runs and updates packages and their dependencies.
+Conda easily creates, saves, loads and switches between environments on your local computer.
+It was created for Python programs, but it can package and distribute software for any language.
+--
++
+One of the first Python package managers that really took off, especially among data scientists, it's well-supported by third-party software such as IDEs.
+It is completely separate from Python's package ecosystem -- it hosts packages in its own repository separate from link:https://pypi.org[PyPI], the repo used by pip.
+This means it tends not to have the more niche Python packages.
+To add to the confusion, though, conda _can_ use pip to install packages from PyPI packages, but installing from Conda's repo is preferred.
+
+* link:https://pipenv.pypa.io/en/latest/[Pipenv]
++
+[quote]
+--
+Pipenv is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. Pipenv is primarily meant to provide users and developers of applications with an easy method to setup a working environment.
+--
++
+Rather than reinvent the wheel, Pipenv automates the use of Python's builtin package management tools.
+
+
+* link:https://pypi.org/project/virtualenvwrapper/[virtualenvwrapper]
++
+[quote]
+--
+virtualenvwrapper is a set of extensions to Ian Bicking’s link:http://pypi.python.org/pypi/virtualenv[virtualenv] tool.
+The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
+--
++
+For some reason `virtualenv` needs a wrapper? Go figure.
+
+* link:https://python-poetry.org/[Poetry]
++
+[quote]
+--
+[horizontal.table-row.table-row-borders]
+Develop:: Poetry comes with all the tools you might need to manage your projects in a deterministic way.
+Build:: Easily *build* and *package* your projects with a single command.
+Publish:: Make your work known by *publishing* it to PyPI.
+Track:: Having an insight of your project's dependencies is just one command away.
+Dependency resolver:: Poetry comes with an *exhaustive* dependency resolver, which will always find a *solution* if it exists.
+Isolation:: Poetry either uses your configured virtualenvs or creates its own to always be *isolated* from your system.
+Intuitive CLI:: Poetry's commands are *intuitive* and easy to use, with sensible defaults while still being configurable.
+--
++
+Before I swore off Python, this was the package manager I used (after getting tired of Conda's dependency solver taking ages to finish).
+It worked great, although it took some finagling to get it to work with VS Code.
+That's one of the issues with having a million tools that do the same thing -- whether the tool you want to use will be well-supported by others is a matter of luck.
+
+Evidently, Python has not done a good enough job at package management to stave off competing projects.
+While Python cannot be blamed for not getting package and environment management correct at the outset, it very much _can_ be blamed for letting it get to this point and continuing to drop the ball on this front.
+Compare this to link:https://www.rust-lang.org[Rust], which has a single package and environment manager, link:https://doc.rust-lang.org/cargo/index.html[Cargo], which is so good that nobody has bothered trying to make a better one. Java has two or three predominant package managers, Ruby has a single one,
+
+I'll wrap up this section with a quote from Python's link:https://packaging.python.org/overview/#packaging-applications[own docs]:
+[quote]
+Packaging in Python has a bit of a reputation for being a bumpy ride.
+This impression is mostly a byproduct of Python’s versatility.
+Once you understand the natural boundaries between each packaging solution, you begin to realize that the varied landscape is a small price Python programmers pay for using one of the most balanced, flexible languages available.
+
+I don't know, I'm not buying it.
+
+=== Python breaks its own rules.
+
+Python has two style guides: link:https://www.python.org/dev/peps/pep-0008/[PEP 8 -- Style Guide for Python Code], which deals with stylistic choices when literally writing code, and link:https://www.python.org/dev/peps/pep-0020/[PEP 20 -- The Zen of Python], which deals with how best to design an entire program, predominantly from a logic standpoint.
+Together, these form _the_ definitive guide to how best use Python to accomplish one's goals while maintaining consistency with the greater Python ecosystem.
+
+Here is the text of PEP 20, which you can print in a Python REPL with `import this`.
+
+[listing]
+--
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+--
+
+
+In theory, these principles are great.
+In practice, Python breaks most of them and encourages you to do the same.
+"`Pythonic`" code is not necessarily code that is easy to read.
+Contrary to the notion that Python is beginner-friendly, understanding Pythonic code often requires familiarity with both Python and the codebase you're reading.
+What follows are several examples of these issues.
+
+==== Names
+
+Function names::
+link:https://www.python.org/dev/peps/pep-0008/#function-and-variable-names[According to PEP 8], "`Function [and variable and method] names should be lowercase, with words separated by underscores as necessary to improve readability. Variable names follow the same convention as function names.`"
+Yet _several_ of Python's built-in function names do not separate words with underscores: `isinstance`, `classmethod`/`staticmethod`, `setattr`, and `str.startswith` come to mind.
+Even as recently as version 3.9, Python introduced new methods that broke this rule, `str.removeprefix` and `str.removesuffix`.
+
+Class/type names::
+link:https://www.python.org/dev/peps/pep-0008/#class-names[According to PEP 8], "`class names should normally use the CapWords convention.`"
+Of course, Python's own built-in classes such as `int`, `float`, `str`, `list`, and `dict` are exempt from this.
+The PEP says that "`there is a separate convention for builtin names`"; it makes no attempt to justify this decision.
+Some classes that ship with the Python standard library, but which are not builtins, are written in all lowercase while others are written as CapWords, such as `collections.namedtuple` and `collections.deque` and `collections.Counter` and `colletions.ChainMap`.
+
+Constant names::
+link:https://www.python.org/dev/peps/pep-0008/#constants[According to PEP 8], "`Constants are usually defined on a module level and written in all capital letters with underscores separating words. Examples include `MAX_OVERFLOW` and `TOTAL`.`"
+Not only do `True`, `False`, and `None` break this rule, but they're written in CapWords, the style of class names instead of the more sensible all lowercase, the style of variable names.
+
+
+==== "`Explicit is better than implicit`"
+
+Yet Python link:https://www.python.org/dev/peps/pep-0008/#programming-recommendations[encourages] you to "`use the fact that empty sequences are false`":
+[source,python]
+--
+# Correct:
+if not seq:
+if seq:
+
+# Wrong:
+if len(seq):
+if not len(seq):
+--
+This doesn't seem very explicit to me.
+If I expect `seq` to be a sequence, then I should signal to other readers that that is my intention, as `if seq` would also treat `0` and `None` as false whereas `len(0)` and `len(None)` would both be both runtime errors.
+Furthermore, treating non-Boolean values as Booleans is the height of implicitness; being explicit would mean typing `if len(seq) == 0`, `if x == 0`, `if x is None`, etc.
+These all specify exactly the condition I am looking for in the most explicit way possible, yet their use is discouraged by Python's own docs.
+
+You are also encouraged to check if a variable is `None` with `if x is None` instead of `if x == None`.
+Implicit in this is the knowledge that `NoneType` is a singleton type -- that all instances of `NoneType` refer to the same object, called `None`, of which there is only one.
+Checking for equality with `is` instead of `==` is almost always the wrong thing to do, yet here Python tells us it's right, relying on implicit knowledge to justify that decision.
+
+Another example of this is that `raise MyException` is legal, even though `MyException` is of type `type`, not `Exception`.
+Why is this?
+It's because passing a type to `raise` will instantiate an instance of that type link:https://docs.python.org/3/reference/simple_stmts.html#the-raise-statement[by calling the type's constructor with no arguments].
+Not very explicit, and all to save a pair of parentheses.
+[sidebar]
+--
+If the real motivation behind this decision is to be able to defer the instantiation of the exception until it is definitely needed in case the exception is expensive to construct, then one could ask why not allow any callable to be ``raise``d -- why must it be a (callable) subtype of `Exception`?
+`lambda: MyException()` seems much more explicit to me.
+--
+
+==== Footguns
+
+PEP 20 (implicitly!) prohibits link:https://en.wiktionary.org/wiki/footgun[footguns].
+
+Consider the following code. What do you think it will print?
+
+[source,python]
+--
+L = [(lambda: i) for i in range(5)]
+print([f() for f in L])
+--
+
+[example%collapsible,title="Click to reveal answer"]
+It will print `[4, 4, 4, 4, 4]`.
+
+
+The ``i``s in the comprehension are captured by the ``lambda``s, survive beyond the lifetime of the comprehension, and are only resolved when actually calling `f()`.
+At that time, they all resolve to 4 -- even though the comprehension doesn't exist anymore!
+How many rules does _this_ break?

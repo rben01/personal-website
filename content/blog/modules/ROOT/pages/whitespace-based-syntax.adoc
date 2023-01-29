@@ -1,0 +1,201 @@
+= Brackets, Braces, Tabs, and Spaces: The Harms of Whitespace-Based Syntax
+:docdate: TBD
+:description: The correct way to indent is using both tabs and spaces
+:cursor: 𝚰
+:experimental:
+
+
+== Whitespace-based syntax
+In the before-times, formatting code was something of an art.
+One is _supposed_ to indent code correctly to make its structure clear to the reader, and in some instances align it to be aesthetically pleasing, but historically this has been laborious.
+So, sometimes people didn't do it, or, because they were human, didn't do it correctly.
+Guido van Rossum, the creator and benevolent dictator for life (BDFL) of Python, had the bright idea to _force_ programmers to correctly indent their code by making indentation the sole indicator of scope.
+While most languages used braces to delineate scope, with indentation merely a visual aide for humans, Python decided to nix the braces and imbue indentation with semantics.
+
+[.lead]
+*This was a terrible decision that has made editing Python code much more difficult than other languages.*
+
+[sidebar]
+--
+My concern here is not with the lack of braces per se, but rather with the use of whitespace instead of beginning and ending delimiters (of any kind).
+For instance, Ruby writes if-else statements as `if ... else ... end`.
+This is fine; like brace-delimited languages, Ruby does not depend on indentation to interpret this because it has the `end` keyword.
+For simplicity, I'll refer to any kind of non-whitespace delimiters as "`braces`".
+--
+
+=== Pasting Code
+When cutting and pasting your own code or copying and pasting code from the internet, it's difficult to make sure the indentation of the pasted code matches that of the surrounding code. Some examples of problematic scenarios:
+
+* The indent level of the copied code and the region you wish to paste it into aren't the same.
+* They are the same, but you forgot to copy the leading whitespace of the code and pasted into column 0, so the first line is under-indented.
+* They are the same, and you copied the leading whitespace of the code, but pasted into the rightmost column of the current line instead of into column 0, so now the first line is over-indented.
+* The code you're pasting uses tabs when your own code uses spaces, or vice versa.
+(To determine the indentation level, Python simply counts the number of leading whitespace characters on a line, with some limitations on what combinations of whitespace are allowed.)
+* The code you copied off the internet was itself mis-indented -- a common formatting error due to Markdown's four-space-indent syntax for code blocks -- so now you must correct its indentation yourself.
+
+Therefore, immediately after pasting, it's possible that the indentation of the pasted code does not correctly reflect the intended semantics.
+In a brace-delimited language, this would be fine because indentation does not affect the semantics of the code.
+But in Python, copy-pastes have the potential to become exercises in memory and precision -- after pasting, one must make sure to indent or dedent the pasted code, and _only_ the pasted code, to the correct level.
+If this is not performed correctly, then hopefully the code will cease to compile, but it's equally likely that a bug will have been introduced.
+Python has taken a simple, ubiquitous textual operation -- one which brace-delimited languages make nearly impossible to mess up -- and made it arduous and error-prone.
+
+=== Auto-formatters
+Now, one might say, "`It's all well and good that brace-delimited languages can withstand poor indentation, but what value does this have if poorly formatted code is forbidden (by company policy, say) from existing in one's codebase? Won't I still have to correct the formatting manually?`".
+But we no longer live in the before-times, when code formatting was an art; it has been elevated to a science by auto-formatters, technology that can format our code for us!
+You can give Prettier, a popular JavaScript autoformatter, a try link:https://prettier.io/playground/[here].
+The unformatted code on the left side is a mess.
+But the (automatically!) formatted code on the right side looks great.
+(And crucially, as far as a computer is concerned, the two sides are identical.)
+It would take a lot of work to consistently write such well-formatted code.
+If you're not happy with how the formatted code looks using the default settings, you can change them in the left panel.
+
+What's notable is that the code on the left was able to be automatically formatted even though the poor formatting meant its semantics were not clear to a human; all that was required by the auto-formatter was that the code be understandable to a computer.
+And in turn, this means that the human author has free reign to absolutely butcher the layout of their code while writing it because once they're done, the autoformatter will swoop in and clean it up for them.
+
+=== Editing in practice
+Here are some examples of where Python's use of whitespace-based syntax makes it much harder to edit than brace-delimited languages.
+
+You place your cursor at the end of the line, delete to the start of the line, and then begin typing.::
+In a brace-delimited language, you can just start typing in column 0, press "`format`", and the line will be automatically re-indented to the correct column. +
+This is not possible in Python because text in column 0 carries semantics with it, so moving it would change the program's semantics.
+Python makes it the programmer's responsibility to indent the new text to the same level as the old text.
+
+You comment out an `if` statement in order to execute the code below it unconditionally.::
+In a brace-delimited language, you just comment out the line containing the `if` (or the lines between the `if` and the opening brace if the condition spans multiple lines) and the line containing the closing brace.
+If you do this and press "`format`", all the code inside the former `if` statement will be automatically dedented to account for the change.
+Of course, because indentation doesn't matter, there is no harm in not pressing "`format`". +
+In Python, if you comment out the `if` line, then you must additionally dedent all of the code that was inside the `if` statement.
+If you decide to uncomment the `if` line, then you need to reindent all those same lines again.
+If you miss a line, it's a bug.
+
+You are using Vim and you want to delete an entire block.::
+In a brace-delimited languages, this is as easy as typing `di{` (mnemonic: ``d``elete ``i``nside ``{``}). +
+This isn't possible in Python because there are no block delimiters.
+
+You wish to comment out an entire block.::
+In a brace-delimited language, you just comment out each line of the block and nothing will break. +
+In Python, blocks can't be empty, so you have to add `pass` in place of the block.
+
+Code wrapping::
+link:https://www.python.org/dev/peps/pep-0008/#maximum-line-length[According to PEP 8], lines should be no longer than 79 characters. This is the justification given:
++
+[quote]
+--
+The default wrapping in most tools disrupts the visual structure of the code, making it more difficult to understand.
+The limits are chosen to avoid wrapping in editors with the window width set to 80, even if the tool places a marker glyph in the final column when wrapping lines.
+--
++
+Yes, if you rely on whitespace to interpret code, then soft wraps will make it impossible to figure out what a given piece of code does.
+In a brace delimited language, you can easily make sense of a wrapped line because the wrapping doesn't affect semantics -- you can just look for matching braces.
+This is especially easy if your editor makes matching braces stand out by highlighting them, coloring them, etc.
+It is much harder to make indentation stand out.
+
+
+You have commented out some code, and now wish to uncomment it.::
+In a brace-delimited language, this is trivial; just uncomment and then autoformat. +
+Python has auto-formatters too, the most popular of which are link:https://github.com/hhatto/autopep8[autopep8], link:https://github.com/google/yapf[yapf], and link:https://github.com/psf/black[black].
+By default, auto-formatters will format comments, indenting them to the level of the surrounding code.
+This makes sense when those comments contain ordinary text describing the surrounding code.
+But if those comments contain commented out code, then when it comes time to uncomment that code, you must ensure that the uncommented code gets indented back to the right level.
+In other words, Python forces you to be mindful of leading spaces, _even in your comments_. +
+For instance, suppose we have the following code, but wish to check a different condition.
++
+[source,python,linenums]
+----
+if cond1:
+    print("a")
+----
++
+So we comment out line 1 and add a different condition:
++
+[source,python,linenums]
+----
+if cond2:  # let's test out cond2 for now
+# if cond1:
+    print("a")
+----
++
+Now, black will turn that into this:
++
+[source,python,linenums]
+----
+if cond2:  # let's test cond2 out for now
+    # if cond1:
+    print("a")
+----
++
+And if you want to swap `cond1` back in, you get this:
++
+[source,python,linenums]
+----
+# if cond2:  # let's test cond2 out for now
+    if cond1:
+    print("a")
+----
++
+which is not valid code.
+Yes, you can manually dedent line 2, or you could have added the `cond2` line below `cond1` instead of above.
+But how much effort and attention should these kinds of simple changes really take?
++
+In a brace-delimited language such as JavaScript, that flow would look like this:
++
+. You start with this...
++
+[source,javascript,linenums]
+----
+if (cond1) {
+    console.log("a");
+}
+----
++
+. You want to test a different condition...
++
+[source,javascript,linenums]
+----
+if (cond2) {  // let's test cond2 out for now
+// if (cond1) {
+    console.log("a");
+}
+----
+. Then you autoformat...
++
+[source,javascript,linenums]
+----
+if (cond2) {  // let's test cond2 out for now
+    // if (cond1) {
+    console.log("a");
+}
+----
+. Then you swap `cond1` back in and get this...
++
+[source,javascript,linenums]
+----
+// if (cond2) {  // let's test cond2 out for now
+    if (cond1) {
+    console.log("a");
+}
+----
+. Then you autoformat again.
++
+[source,javascript,linenums]
+----
+// if (cond2) {  // let's test cond2 out for now
+if (cond1) {
+    console.log("a");
+}
+----
+. Success! There's no need to fiddle with anything.
+
+
+In summary, whitespace-based syntax makes the act of actually writing one's code much more difficult than it needs to be.
+While tying semantics to leading indentation may have been beneficial when Python was first released, auto-formatters have obviated this benefit.
+In fact, whitespace-based syntax is a liability because it makes it harder for auto-formatters to do their job.
+
+[sidebar]
+--
+There is one kind of whitespace-based syntax that is ok, which is using line breaks to denote the end of a line.
+If, in practice, the editing process made it a natural occurrence to inadvertently end up with several statements on one line, then I would argue that languages should require semicolons at the ends of their lines.
+But, empirically, the editing process does not generally mangle line breaks, so they can be relied upon for semantics.
+(In this regard, newlines are closer to non-whitespace characters than they are to whitespace.)
+Leading whitespace _is_ mangled by the editing process and so it should not be relied upon.
+--

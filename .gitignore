@@ -1,2 +1,8 @@
+# note to self: in order to `git add` subfolders that are themselves git repos, you need
+# to do `git update-index --add path/to/file` for each file you want to add (although
+# adding just one file seems to be enough to get VSCode's git UI to see the rest of the
+# files in the subfolder repo, so adding subsequent files in that repo is easy).
+# ^ not really a .gitignore comment, but a git-related comment, so here it shall live.
+
 .DS_Store
 node_modules
