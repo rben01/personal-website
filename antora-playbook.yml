@@ -1,12 +1,12 @@
 site:
   robots: allow
-  start_page: main::index.adoc
+  start_page: home::index.adoc
   title: Robert Bennett
   url: https://rltb.me
 
 content:
   sources:
-    - url: ./content/main
+    - url: ./content/home
       branches: HEAD
     - url: ./content/blog
       branches: HEAD
@@ -28,11 +28,10 @@ antora:
 
 asciidoc:
   attributes:
+    nbsp: ""
     author: Robert Bennett
     user: rben01
     github-site: link:https://github.com
     github-user: "{github-site}/{user}"
-    github-icon-in-link: icon:github[]{nbsp},role="no-underline"
+    github-icon-in-link: icon:github[]&#xa0;,role="no-underline"
     email: pass:a,q[[.repo-link]##{github-user}[icon:github[]{user}]##]
-    hide-uri-scheme:
-    url-trivia-page: link:{github-pages-root}/quarantine-trivia

@@ -1,0 +1,44 @@
+:author: Robert Bennett
+:user: rben01
+:github-site: link:https://github.com
+:github-user: {github-site}/{user}
+:github-icon-in-link: icon:github[]{nbsp},role="no-underline"
+:email: pass:a,q[[.repo-link]##{github-user}[icon:github[]{user}]##]
+:docinfo: shared-head
+:stylesheet: {basedir}/styles/homepage.css
+:nofooter:
+:linkcss:
+:toc-title: Contents
+:source-highlighter: pygments
+:rouge-linenums-mode: table
+:pygments-style: default
+:pygments-linenums-mode: table
+:icons: font
+:sectnums:
+:sectnumlevels: 2
+:hide-uri-scheme:
+:github-pages-root: https://rben01.github.io
+:url-trivia-page: link:{github-pages-root}/quarantine-trivia
+:name-covid: {user}/covid19
+:repo-covid: {github-site}/{name-covid}
+:name-trivia: {user}/quarantine-trivia
+:repo-trivia: {github-site}/{name-trivia}
+:name-clgn: {user}/collagen
+:repo-clgn: {github-site}/{name-clgn}
+:name-aoc-2021: {user}/advent_of_code_2021
+:repo-aoc-2021: {github-site}/{name-clgn}
+:favicon: ./favicon.ico
+:resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]
+:resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer^]
+:resource-link-pandas: link:https://pandas.pydata.org[Pandas^]
+:resource-link-matplotlib: link:https://matplotlib.org[Matplotlib^]
+:resource-link-bokeh: link:https://bokeh.org[Bokeh^]
+:resource-link-d3: link:https://d3js.org[d3^]
+:resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg^]
+:resource-link-latex: link:https://www.latex-project.org[LaTeX^]
+:resource-link-threejs: link:https://threejs.org/[Three.js^]
+// Homepage.css is based off adoc-rubygems
+// Good favicon fonts (Amiri currently in use):
+// [f"https://favicon.io/favicon-generator/?t=rb&ff={font_name}&fs=120&fc=%23011&b=rounded&bc=%23FFF"
+//  for font_name in ["Amiri", "Asar", "Habibi"]
+// ]

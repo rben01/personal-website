@@ -44,7 +44,23 @@
   data-version="" >
   <aside class="nav">
     <div class="panels">
-            <div class="nav-panel-explore is-active" data-panel="explore">
+        <div class="nav-panel-menu is-active" data-panel="menu">
+    <nav class="nav-menu">
+        <h3 class="title"><a href="./">Blog</a></h3>
+        <ul class="nav-list">
+      <li class="nav-item" data-depth="0">
+            <button class="nav-item-toggle"></button>
+            <span class="nav-text">2022</span>
+          <ul class="nav-list">
+      <li class="nav-item is-current-page" data-depth="1">
+            <a class="nav-link" href="mixing-indentation">Indenting with Tabs and Spaces</a>
+              </li>
+  </ul>
+      </li>
+  </ul>
+    </nav>
+  </div>
+      <div class="nav-panel-explore" data-panel="explore">
     <div class="context">
       <span class="title">Blog</span>
       <span class="version">default</span>
@@ -82,7 +98,13 @@
 	<main class="article">
   <div class="toolbar" role="navigation">
   <button class="nav-toggle"></button>
+    <a href="../home/" class="home-link"></a>
   <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+          <li><a href="./">Blog</a></li>
+        <li>2022</li>
+        <li><a href="mixing-indentation">Indenting with Tabs and Spaces</a></li>
+    </ul>
 </nav>
   </div>
   <div class="content">

@@ -44,7 +44,23 @@
   data-version="" >
   <aside class="nav">
     <div class="panels">
-            <div class="nav-panel-explore is-active" data-panel="explore">
+        <div class="nav-panel-menu is-active" data-panel="menu">
+    <nav class="nav-menu">
+        <h3 class="title"><a href="./">Blog</a></h3>
+        <ul class="nav-list">
+      <li class="nav-item" data-depth="0">
+            <button class="nav-item-toggle"></button>
+            <span class="nav-text">2022</span>
+          <ul class="nav-list">
+      <li class="nav-item" data-depth="1">
+            <a class="nav-link" href="mixing-indentation">Indenting with Tabs and Spaces</a>
+              </li>
+  </ul>
+      </li>
+  </ul>
+    </nav>
+  </div>
+      <div class="nav-panel-explore" data-panel="explore">
     <div class="context">
       <span class="title">Blog</span>
       <span class="version">default</span>
@@ -82,7 +98,12 @@
 	<main class="article">
   <div class="toolbar" role="navigation">
   <button class="nav-toggle"></button>
+    <a href="../home/" class="home-link"></a>
   <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+          <li><a href="./">Blog</a></li>
+        <li><a href="python-is-bad">When It Comes to Ditching Python, Now is Better than Never</a></li>
+    </ul>
 </nav>
   </div>
   <div class="content">
@@ -92,27 +113,7 @@
 </aside>
       <article class="doc">
 		<h1 class="page">When It Comes to Ditching Python, Now is Better than Never</h1>
-	<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_pythons_popularity">Python&#8217;s Popularity</a></li>
-<li><a href="#_what_python_does_right">What Python Does Right</a>
-<ul class="sectlevel2">
-<li><a href="#_abstraction">Abstraction</a></li>
-<li><a href="#_package_ecosystem">Package ecosystem</a></li>
-<li><a href="#_huge_community_and_wide_support">Huge community and wide support</a></li>
-<li><a href="#_its_interpreted_and_has_a_repl">It&#8217;s interpreted and has a REPL</a></li>
-</ul>
-</li>
-<li><a href="#_what_python_does_wrong">What Python Does Wrong</a>
-<ul class="sectlevel2">
-<li><a href="#_package_management">Package management</a></li>
-<li><a href="#_python_breaks_its_own_rules">Python breaks its own rules.</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div id="preamble">
+	<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>And never is <em>not</em> better than right now.</p>
