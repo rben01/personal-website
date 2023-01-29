@@ -1,0 +1,6 @@
+name: blog
+version: ~
+title: Blog
+
+nav:
+  - modules/ROOT/nav.adoc
