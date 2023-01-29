@@ -14,6 +14,7 @@
 		"asciidoc": "asciidoctor -r ./syntax-highlighter $dir$fileName",
 	},
 	"cSpell.words": [
+		"adoc",
 		"formatter's",
 		"Gofmt",
 		"Iosevka",

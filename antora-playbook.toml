@@ -1,11 +1,20 @@
 [site]
-	start_page = "component-b::index.adoc"
+	robots = "allow"
+	start_page = "main::index.adoc"
 	title = "Robert Bennett"
 	url = "https://rltb.me"
 
 [[content.sources]]
-	url = "./docs"
+	branches = "HEAD"
+	url = "./all_pages/main"
+
+[[content.sources]]
+	branches = "HEAD"
+	url = "./all_pages/blog"
 
 [ui.bundle]
 	snapshot = true
 	url = "https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable"
+
+[urls]
+	html_extension_style = "drop"
