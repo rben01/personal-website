@@ -6,11 +6,11 @@
 
 [[content.sources]]
 	branches = "HEAD"
-	url = "./all_pages/main"
+	url = "./content/main"
 
 [[content.sources]]
 	branches = "HEAD"
-	url = "./all_pages/blog"
+	url = "./content/blog"
 
 [ui.bundle]
 	snapshot = true
@@ -18,3 +18,6 @@
 
 [urls]
 	html_extension_style = "drop"
+
+[[antora.extensions]]
+	require = '@antora/lunr-extension'
