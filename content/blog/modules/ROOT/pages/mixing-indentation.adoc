@@ -1,6 +1,7 @@
 = Indenting with Tabs and Spaces
 :page-docdate: 2021-07-20
-:description: The correct way to indent is using both tabs and spaces
+:page-description: The correct way to indent is using both tabs and spaces
+:page-keywords: indentation, spaces, tabs, editing
 :cursor: 𝚰
 :experimental:
 :tk: kbd:[Tab]
@@ -546,23 +547,23 @@ For every programming language, there is almost certainly _some_ auto-formatter 
 Many languages have several.
 Here are some examples:
 
-Python::
-* link:https://github.com/psf/black[black]
-* link:https://github.com/hhatto/autopep8[autopep8]
-* link:https://github.com/google/yapf[yapf]
+* Python
+** link:https://github.com/psf/black[black]
+** link:https://github.com/hhatto/autopep8[autopep8]
+** link:https://github.com/google/yapf[yapf]
 
-JavaScript::
-* link:https://prettier.io[Prettier]
-* link:https://www.npmjs.com/package/js-beautify[Beautify]
-* link:https://standardjs.com[JavaScript Standard Style]
+* JavaScript
+** link:https://prettier.io[Prettier]
+** link:https://www.npmjs.com/package/js-beautify[Beautify]
+** link:https://standardjs.com[JavaScript Standard Style]
 
-Others::
+* Others
 +
 [horizontal.table-row]
-Go::: link:https://pkg.go.dev/cmd/gofmt[gofmt]
-Rust::: link:https://github.com/rust-lang/rustfmt[rustfmt]
-Ruby::: link:https://github.com/rubocop/ruby-style-guide[RuboCop]
-Java::: link:https://github.com/google/google-java-format[google-java-format]
+Go:: link:https://pkg.go.dev/cmd/gofmt[gofmt]
+Rust:: link:https://github.com/rust-lang/rustfmt[rustfmt]
+Ruby:: link:https://github.com/rubocop/ruby-style-guide[RuboCop]
+Java:: link:https://github.com/google/google-java-format[google-java-format]
 
 [NOTE]
 ====
@@ -613,8 +614,7 @@ However, auto-formatters are able to infer where whitespace belongs so that they
 Accordingly, it should also be possible for __text editors__ to infer where whitespace belongs.
 This means that it should be possible, in theory, to insert _no_ indentation whatsoever in one's source code, and instead make it the responsibility of the text editor to display the file's (unindented) contents with the correct indentation.
 
-What gets saved is this::
-+
+.What gets saved is this
 [source,javascript,linenums]
 --
 function f(x) {
@@ -626,8 +626,7 @@ console.log(`x wasn't 1; it was ${x}`)
 }
 --
 
-But this is what you see and edit::
-+
+.But this is what you see and edit
 [source,javascript,linenums]
 --
 function f(x) {
