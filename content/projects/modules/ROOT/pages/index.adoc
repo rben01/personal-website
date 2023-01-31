@@ -1,27 +1,54 @@
-= Robert Bennett's Projects
+= Projects
 :description: Highlighted projects of mine.
+:name-covid: {user}/covid19
+:repo-covid: {github-site}/{name-covid}
+:name-trivia: {user}/quarantine-trivia
+:repo-trivia: {github-site}/{name-trivia}
+:name-clgn: {user}/collagen
+:repo-clgn: {github-site}/{name-clgn}
+:name-aoc-2021: {user}/advent_of_code_2021
+:repo-aoc-2021: {github-site}/{name-aoc-2021}
+:name-aoc-2022: {user}/advent_of_code_2022
+:repo-aoc-2022: {github-site}/{name-aoc-2022}
+:resource-link-rust: link:https://www.rust-lang.org[Rust^]
+:resource-link-rust-analyzer: link:https://rust-analyzer.github.io[rust-analyzer^]
+:resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]
+:resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer^]
+:resource-link-pandas: link:https://pandas.pydata.org[Pandas^]
+:resource-link-matplotlib: link:https://matplotlib.org[Matplotlib^]
+:resource-link-bokeh: link:https://bokeh.org[Bokeh^]
+:resource-link-d3: link:https://d3js.org[d3^]
+:resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg^]
+:resource-link-latex: link:https://www.latex-project.org[LaTeX^]
+:resource-link-threejs: link:https://threejs.org/[Three.js^]
 
 [.lead]
 This page is a portal to other GitHub pages of mine:
 
 Collagen: The Collage Generator::
-[.repo-link]##{repo-clgn}[icon:github[]{name-clgn}]##
-+
+[.no-break]##{repo-clgn}[[.github-logo.github-repo-logo]#{blank}#/ {name-clgn}]## +
 Collagen is a program that takes as input a folder containing zero or more image files (`.jpeg`, `.png`, etc.) and a JSON manifest file describing the layout of these images along with SVG components such as shapes and text, and produces as output a single SVG file with all assets embedded.
 
 Advent of Code 2021::
-[.repo-link]##{repo-aoc-2021}[icon:github[]{name-aoc-2021}]##
-+
+[.no-break]##{repo-aoc-2021}[[.github-logo.github-repo-logo]#{blank}#/ {name-aoc-2021}]## +
 https://rben01.github.io/advent_of_code_2021/docs/advent_of_code_2021.html[My solutions] to the 25 https://adventofcode.com/2021[Advent of Code 2021] problems.
-This was fun and challenging and a great way for me to learn Rust.
+This was fun and challenging and a great way for me to learn {resource-link-rust}.
+
+Advent of Code 2022::
+[.no-break]##{repo-aoc-2022}[[.github-logo.github-repo-logo]#{blank}#/ {name-aoc-2022}]## +
+Solutions to the 25 https://adventofcode.com/2022[Advent of Code 2022] problems.
+No write-up yet, just solutions — except for Day 19, which I haven't been able to crack yet.
+Like last year, I wrote the solutions in Rust.
+Unlike last year, both the language and {resource-link-rust-analyzer} have had an additional year to improve, which made the experience even more enjoyable.
 
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
-[.repo-link]##{repo-covid}[icon:github[]{name-covid}]##
-+
+[.no-break]##{repo-covid}[[.github-logo.github-repo-logo]#{blank}#/ {name-covid}]## +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 The data was ingested with {resource-link-pandas}, the graphics were built with {resource-link-d3}, and the site itself was written with {resource-link-asciidoctor}.
 
 {url-trivia-page}[Quarantine Trivia]::
-[.repo-link]##{repo-trivia}[icon:github[]{name-trivia}]##
-+
-A collection of trivia games I put together to give friends something to play while hanging out virtually during the coronavirus pandemic. The games are available {url-trivia-page}[here].
+[.no-break]##{repo-trivia}[[.github-logo.github-repo-logo]#{blank}#/ {name-trivia}]## +
+A collection of trivia games I put together to give friends something to play while hanging out virtually during the coronavirus pandemic.
+The games are available {url-trivia-page}[here].
+Technically, the interesting part of this was coding the process by which the PDFs were made: ingesting a CSV and producing {resource-link-latex}.
+Implementing the necessary flexibility — implementing various page layouts, automatically position elements, automatically deducing the correct way to escape text — was a fun challenge.
