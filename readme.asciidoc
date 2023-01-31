@@ -1,1 +1,3 @@
-include::index.asciidoc[]
+= Readme
+
+This repo hosts my website <https://rltb.me>, which is built with <https://antora.org>.
