@@ -21,33 +21,34 @@
 :resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg^]
 :resource-link-latex: link:https://www.latex-project.org[LaTeX^]
 :resource-link-threejs: link:https://threejs.org/[Three.js^]
+:github-logo-role: .site-logo.github-logo.github-repo-logo
 
 [.lead]
 This page is a portal to other GitHub pages of mine:
 
 Collagen: The Collage Generator::
-[.no-break]##{repo-clgn}[[.github-logo.github-repo-logo]#{blank}#/ {name-clgn}]## +
+[.no-break]##{repo-clgn}[[{github-logo-role}]#{blank}#/ {name-clgn}]## +
 Collagen is a program that takes as input a folder containing zero or more image files (`.jpeg`, `.png`, etc.) and a JSON manifest file describing the layout of these images along with SVG components such as shapes and text, and produces as output a single SVG file with all assets embedded.
 
 Advent of Code 2021::
-[.no-break]##{repo-aoc-2021}[[.github-logo.github-repo-logo]#{blank}#/ {name-aoc-2021}]## +
+[.no-break]##{repo-aoc-2021}[[{github-logo-role}]#{blank}#/ {name-aoc-2021}]## +
 https://rben01.github.io/advent_of_code_2021/docs/advent_of_code_2021.html[My solutions] to the 25 https://adventofcode.com/2021[Advent of Code 2021] problems.
 This was fun and challenging and a great way for me to learn {resource-link-rust}.
 
 Advent of Code 2022::
-[.no-break]##{repo-aoc-2022}[[.github-logo.github-repo-logo]#{blank}#/ {name-aoc-2022}]## +
+[.no-break]##{repo-aoc-2022}[[{github-logo-role}]#{blank}#/ {name-aoc-2022}]## +
 Solutions to the 25 https://adventofcode.com/2022[Advent of Code 2022] problems.
 No write-up yet, just solutions — except for Day 19, which I haven't been able to crack yet.
 Like last year, I wrote the solutions in Rust.
 Unlike last year, both the language and {resource-link-rust-analyzer} have had an additional year to improve, which made the experience even more enjoyable.
 
 https://rben01.github.io/covid19/[COVID-19/Coronavirus Tracker]::
-[.no-break]##{repo-covid}[[.github-logo.github-repo-logo]#{blank}#/ {name-covid}]## +
+[.no-break]##{repo-covid}[[{github-logo-role}]#{blank}#/ {name-covid}]## +
 A collection of graphs displaying how coronavirus has spread throughout the world and in particular throughout the US. +
 The data was ingested with {resource-link-pandas}, the graphics were built with {resource-link-d3}, and the site itself was written with {resource-link-asciidoctor}.
 
 {url-trivia-page}[Quarantine Trivia]::
-[.no-break]##{repo-trivia}[[.github-logo.github-repo-logo]#{blank}#/ {name-trivia}]## +
+[.no-break]##{repo-trivia}[[{github-logo-role}]#{blank}#/ {name-trivia}]## +
 A collection of trivia games I put together to give friends something to play while hanging out virtually during the coronavirus pandemic.
 The games are available {url-trivia-page}[here].
 Technically, the interesting part of this was coding the process by which the PDFs were made: ingesting a CSV and producing {resource-link-latex}.
