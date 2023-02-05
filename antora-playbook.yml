@@ -1,16 +1,15 @@
 site:
   robots: allow
-  start_page: home::index.adoc
   title: Robert Bennett
   url: /
 
 content:
   sources:
-    - url: ./content/home
-      branches: HEAD
-    - url: ./content/blog
-      branches: HEAD
-    - url: ./content/projects
+    - url: ./content
+      start_paths:
+        - home
+        - blog
+        - projects
       branches: HEAD
 
 ui:
