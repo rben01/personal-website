@@ -1,6 +1,6 @@
-name: blog
+name: articles
 version: ~
-title: Blog
+title: Articles
 
 nav:
   - modules/ROOT/nav.adoc

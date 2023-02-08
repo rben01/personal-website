@@ -8,7 +8,7 @@ content:
     - url: ./content
       start_paths:
         - home
-        - blog
+        - articles
         - projects
       branches: HEAD
 
@@ -44,11 +44,34 @@ antora:
 
 asciidoc:
   attributes:
-    nbsp: ""
     icons: font
     author: Robert Bennett
     user: rben01
-    github-site: link:https://github.com
+    github-site: https://github.com
     github-user: "{github-site}/{user}"
-    github-icon-in-link: icon:github[]&#xa0;,role="no-underline"
     email: pass:a,q[[.repo-link]##{github-user}[icon:github[]{user}]##]
+    github-icon-in-link: icon:github[]&#xa0;,role="no-underline"
+    github-pages-base-url: https://rben01.github.io/
+    name-covid: "{user}/covid19"
+    repo-covid: "{github-site}/{name-covid}"
+    name-trivia: "{user}/quarantine-trivia"
+    repo-trivia: "{github-site}/{name-trivia}"
+    name-clgn: "{user}/collagen"
+    repo-clgn: "{github-site}/{name-clgn}"
+    name-aoc-2021: "{user}/advent_of_code_2021"
+    repo-aoc-2021: "{github-site}/{name-aoc-2021}"
+    name-aoc-2022: "{user}/advent_of_code_2022"
+    repo-aoc-2022: "{github-site}/{name-aoc-2022}"
+    resource-link-rust: link:https://www.rust-lang.org[Rust^]
+    resource-link-rust-analyzer: link:https://rust-analyzer.github.io[rust-analyzer^]
+    resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]
+    resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer^]
+    resource-link-pandas: link:https://pandas.pydata.org[Pandas^]
+    resource-link-matplotlib: link:https://matplotlib.org[Matplotlib^]
+    resource-link-bokeh: link:https://bokeh.org[Bokeh^]
+    resource-link-d3: link:https://d3js.org[d3^]
+    resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg^]
+    resource-link-latex: link:https://www.latex-project.org[LaTeX^]
+    resource-link-threejs: link:https://threejs.org/[Three.js^]
+    github-logo-role: .site-logo.github-logo.github-repo-logo
+    url-trivia-page: "{github-pages-base-url}/quarantine-trivia"
