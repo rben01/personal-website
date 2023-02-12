@@ -209,7 +209,7 @@ For instance, if tab stops are set to multiples of eight characters, then the fo
 
 
 
-[source,text,subs={code-tabstop-example-subs}]
+[source,subs={code-tabstop-example-subs}]
 --
 {tabstop-8}{tabstop-8}
 {tab-8}{tab-8}
@@ -222,7 +222,7 @@ abcd{tab-4}xyz{tab-5}
 In this example, we chose a tab width of eight characters.
 This decision was arbitrary; let's see what happens if we'd instead chosen a tab width of four characters.
 
-[source,text,subs={code-tabstop-example-subs}]
+[source,subs={code-tabstop-example-subs}]
 --
 {tabstop-4}{tabstop-4}
 {tab-4}{tab-4}
@@ -236,7 +236,7 @@ abc[.lies-on-tab-char]##d##xyz{tab-1-code}
 Looks good, although in the last row we ran out of space between the columns.
 What about a width of two characters?
 
-[source,text,subs={code-tabstop-example-subs}]
+[source,subs={code-tabstop-example-subs}]
 --
 {tabstop-2}{tabstop-2}{tabstop-2}{tabstop-2}
 {tab-2}{tab-2}
