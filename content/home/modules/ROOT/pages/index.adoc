@@ -9,7 +9,7 @@ Functionality-wise everything works, but please excuse the lack of content while
 
 Hi, I'm {github-user}[Robert].
 I'm a web developer and data analyst based in New York focused on making complex ideas tangible and easily understood.
-My favorite languages for this job are {resource-link-rust} for building long-term data pipelines, thanks to the fantastic {resource-link-polars} library; {resource-link-d3} and {resource-link-vega-lite-combined} for building browser-based visualizations; and {resource-link-julia}, for ad-hoc analysis and visualization.
+My favorite languages for this job are {resource-link-rust} for building long-term data pipelines, thanks to the fantastic {resource-link-polars-rs} library; {resource-link-d3} and {resource-link-vega-lite-combined} for building browser-based visualizations; and {resource-link-julia}, for ad-hoc analysis and visualization.
 
 Outside of work I enjoy {github-user}/collagen[writing] {github-user}/advent_of_code_2021[more] {github-user}/advent_of_code_2022[Rust], reading, taking photographs, and browsing https://fonts.google.com[Google Fonts].
 

@@ -44,6 +44,7 @@ antora:
 
 asciidoc:
   attributes:
+    hide-uri-scheme: true
     icons: font
     author: Robert Bennett
     user: rben01
