@@ -1,24 +1,3 @@
 name: projects
 version: ~
 title: Projects
-
-asciidoc:
-  attributes:
-    name-covid: "{user}/covid19"
-    repo-covid: "{github-site}/{name-covid}"
-    name-trivia: "{user}/quarantine-trivia"
-    repo-trivia: "{github-site}/{name-trivia}"
-    name-clgn: "{user}/collagen"
-    repo-clgn: "{github-site}/{name-clgn}"
-    name-aoc-2021: "{user}/advent_of_code_2021"
-    repo-aoc-2021: "{github-site}/{name-clgn}"
-    url-trivia-page: "{github-site}/quarantine-trivia"
-    resource-link-asciidoctor: link:https://asciidoctor.org[AsciiDoctor^]
-    resource-link-beamer: link:https://ctan.org/pkg/beamer[beamer^]
-    resource-link-pandas: link:https://pandas.pydata.org[Pandas^]
-    resource-link-matplotlib: link:https://matplotlib.org[Matplotlib^]
-    resource-link-bokeh: link:https://bokeh.org[Bokeh^]
-    resource-link-d3: link:https://d3js.org[d3^]
-    resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg^]
-    resource-link-latex: link:https://www.latex-project.org[LaTeX^]
-    resource-link-threejs: link:https://threejs.org/[Three.js^]

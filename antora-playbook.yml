@@ -15,8 +15,8 @@ content:
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-    url: https://github.com/rben01/antora-ui/releases/download/v0.5.1/ui-bundle.zip
-    # url: ../Antora Theme/src
+    # url: https://github.com/rben01/antora-ui/releases/download/v0.5.1/ui-bundle.zip
+    url: ../Antora Theme/src
   supplemental_files:
     - path: about.txt
       contents: ./static/about.txt
@@ -51,7 +51,7 @@ asciidoc:
     github-user: "{github-site}/{user}"
     email: pass:a,q[[.repo-link]##{github-user}[icon:github[]{user}]##]
     github-icon-in-link: icon:github[]&#xa0;,role="no-underline"
-    github-pages-base-url: https://rben01.github.io/
+    github-pages-base-url: https://rben01.github.io
     name-covid: "{user}/covid19"
     repo-covid: "{github-site}/{name-covid}"
     name-trivia: "{user}/quarantine-trivia"
