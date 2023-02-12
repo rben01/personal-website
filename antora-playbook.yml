@@ -15,7 +15,7 @@ content:
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-    url: https://github.com/rben01/antora-ui/releases/download/v0.6.0/ui-bundle.zip
+    url: https://github.com/rben01/antora-ui/releases/latest/download/ui-bundle.zip
     # url: ../Antora Theme/src
   supplemental_files:
     - path: about.txt
@@ -71,7 +71,7 @@ asciidoc:
     resource-link-pandas: link:https://pandas.pydata.org[Pandas]
     resource-link-matplotlib: link:https://matplotlib.org[Matplotlib]
     resource-link-bokeh: link:https://bokeh.org[Bokeh]
-    resource-link-d3: link:https://d3js.org[d3]
+    resource-link-d3: link:https://d3js.org[D3]
     resource-link-vega-lite-combined: link:https://vega.github.io[Vega(-Lite)]
     resource-link-ffmpeg: link:https://ffmpeg.org[ffmpeg]
     resource-link-latex: link:https://www.latex-project.org[LaTeX]
