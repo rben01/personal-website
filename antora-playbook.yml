@@ -15,25 +15,8 @@ content:
 ui:
   bundle:
     # url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
-    url: https://github.com/rben01/antora-ui/releases/latest/download/ui-bundle.zip
-    # url: ../Antora Theme/src
-  supplemental_files:
-    - path: about.txt
-      contents: ./static/about.txt
-    - path: android-chrome-192x192.png
-      contents: ./static/android-chrome-192x192.png
-    - path: android-chrome-512x512.png
-      contents: ./static/android-chrome-512x512.png
-    - path: apple-touch-icon.png
-      contents: ./static/apple-touch-icon.png
-    - path: favicon-16x16.png
-      contents: ./static/favicon-16x16.png
-    - path: favicon-32x32.png
-      contents: ./static/favicon-32x32.png
-    - path: favicon.ico
-      contents: ./static/favicon.ico
-    - path: site.webmanifest
-      contents: ./static/site.webmanifest
+    # url: https://github.com/rben01/antora-ui/releases/latest/download/ui-bundle.zip
+    url: ../Antora Theme/src
 
 urls:
   html_extension_style: drop
