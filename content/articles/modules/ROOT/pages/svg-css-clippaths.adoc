@@ -229,7 +229,7 @@ For instance, to draw a path that references the center of the element, you woul
 
 [NOTE]
 --
-It can get confusing going back and forth between SVG and CSS, as SVG elements have many attributes that are also valid CSS properties.
+[#svg-css-attribute-note]#It# can get confusing going back and forth between SVG and CSS, as SVG elements have many attributes that are also valid CSS properties.
 For instance, `<circle stroke-width="3"></circle>` is a valid SVG shape (or it would be if we also included `cx`, `cy`, and `r`), but so is `<circle></circle>` with accompanying CSS `circle { stroke-width: 3; }`.
 Throughout this article, unless otherwise specified, `clip-path` will always refer to the CSS property, not the SVG attribute.
 For a list of other properties that can be used as both, see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation[here].
@@ -602,7 +602,7 @@ If we want our arrow to be half-size, we'll scale it by half of 1/512, or 1/1024
 ----
 <svg>
 <clipPath id="arrow-4" clipPathUnits="objectBoundingBox">
-<path transform="translate(.5 .5) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+	<path transform="translate(.5 .5) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
 </clipPath>
 </svg>
 ----
@@ -624,10 +624,10 @@ Since, like scaling transformations, rotations are always applies about the orig
 ----
 <svg>
 <clipPath id="four-arrows" clipPathUnits="objectBoundingBox">
-<path transform="translate(.25 .25) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
-<path transform="translate(.75 .25) rotate(90) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
-<path transform="translate(.75 .75) rotate(180) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
-<path transform="translate(.25 .75) rotate(270) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+	<path transform="translate(.25 .25) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+	<path transform="translate(.75 .25) rotate(90) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+	<path transform="translate(.75 .75) rotate(180) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+	<path transform="translate(.25 .75) rotate(270) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
 </clipPath>
 </svg>
 ----
@@ -729,6 +729,38 @@ image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped 
 
 It works!
 
+[appendix]
+== Other CSS Attributes
+
+As we mentioned <<svg-css-attribute-note,above>>, many attributes of SVG elements can also be styled using a CSS property.
+`transform` was one such attribute.
+Throughout this article, I wrote `d="same home path"` and `d="same arrow path"` several times.
+Of course, in the source for this page, those paths are actually written out in full each time.
+To avoid repeating myself, shouldn't I have just used a CSS `d` attribute to apply these path strings everywhere they were used?
+
+First, we would need to check that `d` is indeed a https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation[presentation attribute] (not every attribute is).
+And it is!
+
+In all browsers, that is, https://caniuse.com/mdn-svg_elements_path_d_path[except Safari].
+Unfortunately, this was enough to force me to write out the path strings in full each time.
+Once Safari supports using `d` as a presentation attribute, the "`right`" way to do the four-rotated-arrows `<clipPath>` would be this:
+[source,html]
+----
+<style>
+#four-arrows > path {
+	d: path("same arrow path");
+}
+</style>
+<svg>
+<clipPath id="four-arrows" clipPathUnits="objectBoundingBox">
+	<path transform="translate(.25 .25) scale(0.0009765625) translate(-192 -256)" />
+	<path transform="translate(.75 .25) rotate(90) scale(0.0009765625) translate(-192 -256)" />
+	<path transform="translate(.75 .75) rotate(180) scale(0.0009765625) translate(-192 -256)" />
+	<path transform="translate(.25 .75) rotate(270) scale(0.0009765625) translate(-192 -256)" />
+</clipPath>
+</svg>
+
+----
 
 [appendix]
 == Matrices
