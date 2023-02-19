@@ -28,6 +28,7 @@ antora:
 
 asciidoc:
   attributes:
+    page-dont-link-homepage-in-header: true
     hide-uri-scheme: true
     icons: font
     author: Robert Bennett
@@ -63,3 +64,6 @@ asciidoc:
     resource-link-threejs: link:https://threejs.org/[Three.js]
     github-logo-role: .site-logo.github-logo.github-repo-logo
     url-trivia-page: "{github-pages-base-url}/quarantine-trivia"
+
+runtime:
+  fetch: true
