@@ -29,6 +29,7 @@ antora:
 asciidoc:
   attributes:
     page-dont-link-homepage-in-header: true
+    page-link-resume-in-header: true
     hide-uri-scheme: true
     icons: font
     author: Robert Bennett
