@@ -730,7 +730,7 @@ image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped 
 It works!
 
 [appendix]
-== Other CSS Attributes
+== `d`: SVG Attribute or CSS Property?
 
 As we mentioned <<svg-css-attribute-note,above>>, many attributes of SVG elements can also be styled using a CSS property.
 `transform` was one such attribute.
