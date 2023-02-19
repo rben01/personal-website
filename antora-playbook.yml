@@ -42,9 +42,9 @@ asciidoc:
     repo-trivia: "{github-site}/{name-trivia}"
     name-clgn: "{user}/collagen"
     repo-clgn: "{github-site}/{name-clgn}"
-    name-aoc-2021: "{user}/advent_of_code_2021"
+    name-aoc-2021: "{user}/advent-of-code-2021"
     repo-aoc-2021: "{github-site}/{name-aoc-2021}"
-    name-aoc-2022: "{user}/advent_of_code_2022"
+    name-aoc-2022: "{user}/advent-of-code-2022"
     repo-aoc-2022: "{github-site}/{name-aoc-2022}"
     resource-link-rust: link:https://www.rust-lang.org[Rust]
     resource-link-rust-analyzer: link:https://rust-analyzer.github.io[rust-analyzer]
