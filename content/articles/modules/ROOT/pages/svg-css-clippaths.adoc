@@ -549,7 +549,7 @@ To make the translations really explicit, we can even split them up:
 transform="translate(.5 .5) scale(1/max(w, h)) translate(-w/2 -h/2) translate(-x -y)"
 ----
 
-In English:
+In English (remember, the functions are applied right to left):
 
 . Translate the SVG so that its upper left corner is at `(0, 0)`.
 . Then, translate it so that its center is at the origin.
