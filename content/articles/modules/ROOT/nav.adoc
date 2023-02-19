@@ -1,5 +1,8 @@
 .2023
 - xref:svg-css-clippaths.adoc[]
 
+.2022
+- xref:advent-of-code-2021.adoc[]
+
 .2021
 - xref:mixing-indentation.adoc[]

@@ -1,0 +1,3 @@
+= Advent of Code 2021
+
+The write-ups of my solutions to the 25 https://adventofcode.com/2021[Advent of Code 2021] problems can be found https://rben01.github.io/advent-of-code-2021/[here^].
