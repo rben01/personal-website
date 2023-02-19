@@ -618,7 +618,7 @@ image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped 
 To go even further, suppose we wanted a `<clipPath>` consisting of four copies of the arrow, each of which clips one of the corners of the original image and is rotated 90° from the previous one.
 Rather than scale the ``<path>``s down to 1×1, we'll scale them down to 0.5×0.5.
 And instead of translating them to `(0.5, 0.5)`, we'll translate them to `(0.5±0.25, 0.5±0.25)`.
-Since, like scaling transformations, rotations are always applies about the origin, we to apply the rotation _before_ the final translation so that the shapes are rotated about their center.
+Since, like scaling transformations, rotations are always applies about the origin, we apply the rotation _before_ the final translation so that the shapes are rotated about their center.
 
 [source,svg]
 ----
