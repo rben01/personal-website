@@ -4,7 +4,8 @@
 :page-docdate: 2023-02-17
 :page-description: It's easy to fearlessly use any SVG path as a CSS clip-path
 :page-keywords: svg, css, style, tricks
-:img-url: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/767px-The_Earth_seen_from_Apollo_17.jpg
+:img-url: svg-css-clippath/tiling.svg
+:img-alt-text: A Penrose tiling made of blue and yellow rhombus-shaped tiles. The blue tiles are wider and the yellow tiles are narrower.
 
 ++++
 <svg id="-shapes-svg" width="0" height="0">
@@ -45,14 +46,16 @@
 <style>
 :root {
 	--any-svg-clippath-bg-color-1: transparent;
-	--any-svg-clippath-bg-color-2: #ddd;
-	--dimmed-earth-brightness: .3;
+	--any-svg-clippath-bg-color-2: #eee;
+	--dimmed-earth-brightness: .7;
+	--dimmed-earth-opacity: .3;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
 		--any-svg-clippath-bg-color-1: transparent;
-		--any-svg-clippath-bg-color-2: #223355;
-		--dimmed-earth-brightness: .2;
+		--any-svg-clippath-bg-color-2: #222;
+		--dimmed-earth-brightness: .6;
+		--dimmed-earth-opacity: .4;
 	}
 }
 #-shapes-svg {
@@ -70,9 +73,11 @@
 .-with-bg > p {
 	position: relative
 }
+.-dim {
+	background-color: var(--default-bg-color);
+}
 .-dim > img {
-	filter: grayscale(100%)  brightness(var(--dimmed-earth-brightness)) ;
-	clip-path: circle(44.5% at center);
+	filter: grayscale(100%) opacity(var(--dimmed-earth-opacity)) brightness(var(--dimmed-earth-brightness)) ;
 }
 .-pos-abs {
 	position: absolute;
@@ -83,9 +88,6 @@
 .-pos-abs.-half-image {
 	/* half of (image's width + column gap) */
 	transform: translateX(65px);
-}
-.-half-image.-dim {
-	clip-path: ellipse(89% 44.5% at 100% 50%);
 }
 .-clipped {
 	clip-path: url(#icon-home-filled);
@@ -124,21 +126,21 @@
 .-clipped img {
 	object-fit: cover;
 }
-.-marble {
+.-clipped-img {
 	display: inline-block;
 	width: 200px;
 	height: 200px;
 }
-.-marble.-arrow {
+.-clipped-img.-arrow {
 	height: 100px;
 	aspect-ratio: 384 / 512;
 	width: revert;
 }
-.-marble.-arrow,
+.-clipped-img.-arrow,
 #circles-svg {
 	border: 2px dashed var(--default-text-color);
 }
-.-marble.-arrow path {
+.-clipped-img.-arrow path {
 	fill: var(--default-text-color);
 }
 .-half-image {
@@ -166,6 +168,7 @@ body .doc .image.-half-image img {
 
 [.lead]
 This article describes a general-purpose method to turn just about any SVG into a `<clipPath>` that will correctly clip arbitrary HTML elements.
+I found this technique helpful when building this very site, as setting the `clip-path` on a `display: block` or `display: inline-block` element is a great way to easily include icons on a page.
 
 == Clipping Paths
 
@@ -175,12 +178,12 @@ The https://developer.mozilla.org/en-US/docs/web/css/clip-path[`clip-path`] prop
 It allows using a https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape[shape] to specify a _clipping region_ for the given HTML element: a region outside of which the element is not drawn.
 In other words, the clipping region is like a mask{empty}footnote:[But not to be confused with an "`actual`" https://developer.mozilla.org/en-US/docs/web/css/mask[CSS mask], which acts like a translucent film covering the background image.
 It's possible for parts of the background image to show through only partially, which is not the case for ``clip-path``s.] that only lets through portions of the background within the region's interior (or equivalently, that blocks the portions of the background outside of the region).
-For instance, here is https://en.wikipedia.org/wiki/The_Blue_Marble[_The Blue Marble_], followed by the same image with a "`home`" icon as its clipping path (the checkerboard background is to aid viewing by showing exactly where the boundary of each image is):
+For instance, here is an image of a https://en.wikipedia.org/wiki/Penrose_tiling[Penrose tiling] created with the Penrose tiling generator at https://misc.0o0o.org/penrose, followed by the same image with a "`home`" icon as its clipping path:
 
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,,link=https://en.wikipedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg,window=_blank,role="-marble"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped"]
+image:{img-url}[{img-alt-text},window=_blank,role="-clipped-img"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped"]
 ====
 
 [NOTE]
@@ -192,13 +195,13 @@ The portion outside the clipping region just appears transparent.
 
 
 Note how the clipping region is centered over the image and fills the entire space; we'll come back to this later.
-For now, let's just confirm this fact by overlaying the clipped image on a dimmed copy of the original with the black corners of the background removed:
+For now, let's just confirm this fact by overlaying the clipped image on a dimmed copy of the original.
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped"]
 ====
-From now on, we'll always show our clipped images overlaid on a dimmed planet Earth.
+From now on, we'll always show our clipped images overlaid on a dimmed copy of the full image.
 
 Valid ``clip-path``s are in approximately one-to-one correspondence with shapes in SVG: you can clip with circles, polygons, paths, and more:
 
@@ -215,7 +218,6 @@ clip-path: path(
 
 Thankfully, unlike their SVG counterparts, these ``clip-path`` shapes understand dimensions written in CSS units and even some special keywords.
 So it's easy to write, say, "`clip this element with an ellipse that extends precisely to its horizontal and vertical edges`": it's just `clip-path: ellipse(50% 50% at center)`.
-In fact, the black background of _The Blue Marble_ was removed with `clip-path: circle(44.5% at center)`.
 Couldn't be easier.
 
 
@@ -291,10 +293,10 @@ We'll talk more about `viewBox` below.]) dimensions 100×100...
 </svg>
 ----
 
-and we try to use it as the `clip-path` of our _The Blue Marble_, which has dimensions 200×200, using the following CSS...
+and we try to use it as the `clip-path` of our Penrose tiling, which has dimensions 200×200, using the following CSS...
 [source,css]
 ----
-.blue-marble {
+.penrose-tiling {
 	clip-path: url(#icon-home-100x100);
 }
 ----
@@ -302,12 +304,12 @@ then we end up with this:
 
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-wrong"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-wrong"]
 ====
 
 This time, the clipping region does not take up the entire image; it exists entirely within the 100×100 region in the upper left because the width and height of the ``<clipPath>``’s `<path>` were both 100.
-So, how can we fix this to achieve what we saw above, in which the house covered the whole _Blue Marble_?
+So, how can we fix this to achieve what we saw above?
 How can we get the clipping region to span the entire 200×200 image?
 
 
@@ -319,12 +321,12 @@ So, our `<clipPath>`, which only existed in the square from `(0, 0)` to `(100, 1
 
 The other choice for `clipPathUnits` is `objectBoundingBox`, which assumes that the `<clipPath>` occupies a merely 1×1 square, which is then stretched or compressed in both dimensions so that it has the same dimensions as the element it is clipping.
 
-Let's add `clipPathUnits="objectBoundingBox"` to our `<clipPath>` above and use it to clip _The Blue Marble_ again.
+Let's add `clipPathUnits="objectBoundingBox"` to our `<clipPath>` above and use it to clip our image again.
 
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-scaled-wrong"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-scaled-wrong"]
 ====
 
 But that's just the background.
@@ -332,7 +334,7 @@ Where'd our clipped image go?
 
 As mentioned, `objectBoundingBox` _assumes_ that the `<clipPath>` occupies a merely 1×1 square.
 But our `<clipPath>` _actually_ still occupies a 100×100 square and, crucially, does not include anything in its upper left 1×1 corner.
-In other words, our `<clipPath>` completely missed _The Blue Marble_; the region it would expose is way, way down to the bottom right.footnote:[The image is 200×200, and the `<clipPath>` is 100×100, so the entire region it's attempting to clip is 20,000×20,000.
+In other words, our `<clipPath>` completely missed the image; the region it would expose is way, way down to the bottom right.footnote:[The image is 200×200, and the `<clipPath>` is 100×100, so the entire region it's attempting to clip is 20,000×20,000.
 The diagonal that forms the left part of the house's roof is well beyond the edges of the screen, let alone the image we want to clip.]
 We have to figure out how to get our ``<clipPath>``’s `<path>` down into a 1×1 square.
 
@@ -346,8 +348,8 @@ All we have to do is add ``transform: scale(.01)`` to the `<path>` (not to the `
 This is precisely how the original clipped image in this article, shown again below, was created.
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped"]
 ====
 
 For completeness, here is the final SVG.
@@ -379,12 +381,12 @@ Putting them all in the same SVG is fine, like so:
 ====
 
 For _images_ that aren't square, the `<clipPath>` scales separately in each dimension.
-Here's just the left half of _The Blue Marble_, and next to it is what happens when we use the house to clip just that half (which is now twice as tall as it is wide).
+Here's just the left half of our image, and next to it is what happens when we use the house to clip just that half (which is now twice as tall as it is wide).
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -half-image"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -half-image -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -half-image"]
+image:{img-url}[{img-alt-text},role="-clipped-img -half-image"]
+image:{img-url}[{img-alt-text},role="-clipped-img -half-image -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -half-image"]
 ====
 
 But what happens when it's the _``<clipPath>``_ that isn't square?
@@ -419,28 +421,31 @@ Here is the `arrow-up` icon from https://fontawesome.com/[Font Awesome], which i
 </svg>
 ----
 
+[sidebar]
+====
 Now is a good time to talk about the SVG's `viewBox` attribute.
-If you imagine the shapes in the SVG lying in the infinite Cartesian plane, the `vieBox` tells us what rectangle in the plane to restrict our attention to; nothing outside this rectangle is drawn.
+If you imagine the SVG's contents lying in the infinite Cartesian plane, the `vieBox` tells us what rectangle in the plane to restrict our attention to; nothing outside this rectangle is drawn.
 (In a sense, the `viewBox` is like the `clip-path` of whole SVG, which would otherwise be infinitely large.)
 ``viewBox``es take the form of `"x y w h"`, where `x` is the x-position of the rectangle's upper left corner, `y` is that corner's y-position, and `w` and `h` are the rectangle's width and height, respectively.
 The `arrow-up` SVG has its origin at `(x, y) = (0, 0)` and has a width of 384 and a height of 512.
+====
 
 NOTE: I've drawn a border around the arrow to show its dimensions; the border isn't part of the icon itself.
 
 ====
 ++++
 <div class="halign-center -with-bg">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="-marble -arrow"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="-clipped-img -arrow"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
 </div>
 ++++
 ====
 
 How do we use this as a `clip-path`?
-What we'd like to achieve is an arrow-shaped clipping region the same size as, and centered on, _The Blue Marble_, as shown below.
+What we'd like to achieve is an arrow-shaped clipping region the same size as, and centered on the image, as shown below.
 ====
 [.halign-center.-with-bg.-fixed-height]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-arrow-3"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-3"]
 ====
 
 So, how do we make this happen?
@@ -463,8 +468,8 @@ Let's try our `transform` trick from above; maybe it'll still work here.
 
 ====
 [.halign-center.-with-bg.-fixed-height]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-arrow-2"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-2"]
 
 ====
 
@@ -485,8 +490,8 @@ Here's what that would look like, with `transform: scale(0.0026041667 0.00195312
 
 ====
 [.halign-center.-with-bg.-fixed-height]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-arrow-4 -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-4 -pos-abs"]
 
 ====
 Yech.
@@ -582,8 +587,8 @@ The original SVG had its upper left corner at `(0, 0)`, so we don't need to hand
 Which, as expected, leads to this:
 ====
 [.halign-center.-with-bg.-fixed-height]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-arrow-3 -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-3 -pos-abs"]
 ====
 
 Success!
@@ -610,8 +615,8 @@ If we want our arrow to be half-size, we'll scale it by half of 1/512, or 1/1024
 This gets us
 ====
 [.halign-center.-with-bg.-fixed-height]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-arrow-5 -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-5 -pos-abs"]
 ====
 
 
@@ -634,8 +639,8 @@ Since, like scaling transformations, rotations are always applies about the orig
 
 ====
 [.halign-center.-with-bg.-fixed-height]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-four-arrows -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-four-arrows -pos-abs"]
 ====
 
 
@@ -723,8 +728,8 @@ This results in
 
 ====
 [.halign-center.-with-bg]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -pos-abs -dim"]
-image:{img-url}[_The Blue Marble_ clipped by a home icon,role="-marble -clipped -clipped-four-circles"]
+image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-four-circles"]
 ====
 
 It works!
