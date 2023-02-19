@@ -154,6 +154,7 @@ body .doc .image.-half-image img {
 .halign-center.-with-bg > p {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 	column-gap: 30px;
 }
