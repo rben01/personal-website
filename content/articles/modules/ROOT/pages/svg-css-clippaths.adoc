@@ -9,32 +9,35 @@
 
 ++++
 <svg id="-shapes-svg" width="0" height="0">
-<clipPath id="icon-home-filled-noscale">
-<path	d="M 50.019531 11.074219 C 49.423735 11.074219 48.827938 11.286976 48.353516 11.710938 L 47.027344 12.896484 L 19.773438 37.251953 L 9.7910156 46.171875 A 2.5 2.5 0 0 0 9.59375 49.701172 A 2.5 2.5 0 0 0 13.123047 49.900391 L 18.9375 44.705078 L 18.919922 86.458984 C 18.918981 87.8404 20.038505 88.9608 21.419922 88.960938 L 42.925781 88.960938 C 44.305672 88.960801 45.424565 87.842781 45.425781 86.462891 L 45.449219 63.794922 L 54.552734 63.794922 L 54.574219 86.462891 C 54.575419 87.842781 55.694328 88.960801 57.074219 88.960938 L 78.619141 88.960938 C 79.999031 88.960801 81.117925 87.842781 81.119141 86.462891 L 81.138672 44.738281 L 86.916016 49.900391 A 2.5 2.5 0 0 0 90.445312 49.701172 A 2.5 2.5 0 0 0 90.248047 46.171875 L 80.314453 37.296875 L 80.306641 37.287109 L 80.304688 37.287109 L 74.972656 32.521484 L 74.972656 16.6875 C 74.972518 15.306846 73.85331 14.187638 72.472656 14.1875 L 63.814453 14.1875 C 62.4338 14.187638 61.314591 15.306846 61.314453 16.6875 L 61.314453 16.8125 L 61.314453 20.316406 L 55.660156 15.263672 L 51.685547 11.710938 C 51.211125 11.286976 50.615327 11.074219 50.019531 11.074219 z " />
+<clipPath id="icon-star" clipPathUnits="objectBoundingBox">
+<path transform="translate(.5 .5) scale(.01) translate(-50 -50)" d="M50 3.537337A46.461724 46.461724 0 003.5393625 49.997973a46.461724 46.461724 0 0046.4606395 46.46469 46.461724 46.461724 0 0046.460635-46.46469A46.461724 46.461724 0 0050 3.537337Zm0 10.908081 10.450199 21.171887 23.364033 3.395617L66.90509 55.492533l3.991259 23.270846-20.896347-10.985077-20.900406 10.985077 3.991255-23.270846-16.905089-16.479629 23.364035-3.395602Z"/>
 </clipPath>
-<clipPath id="icon-home-filled-scale-wrong" clipPathUnits="objectBoundingBox">
-<path	d="M 50.019531 11.074219 C 49.423735 11.074219 48.827938 11.286976 48.353516 11.710938 L 47.027344 12.896484 L 19.773438 37.251953 L 9.7910156 46.171875 A 2.5 2.5 0 0 0 9.59375 49.701172 A 2.5 2.5 0 0 0 13.123047 49.900391 L 18.9375 44.705078 L 18.919922 86.458984 C 18.918981 87.8404 20.038505 88.9608 21.419922 88.960938 L 42.925781 88.960938 C 44.305672 88.960801 45.424565 87.842781 45.425781 86.462891 L 45.449219 63.794922 L 54.552734 63.794922 L 54.574219 86.462891 C 54.575419 87.842781 55.694328 88.960801 57.074219 88.960938 L 78.619141 88.960938 C 79.999031 88.960801 81.117925 87.842781 81.119141 86.462891 L 81.138672 44.738281 L 86.916016 49.900391 A 2.5 2.5 0 0 0 90.445312 49.701172 A 2.5 2.5 0 0 0 90.248047 46.171875 L 80.314453 37.296875 L 80.306641 37.287109 L 80.304688 37.287109 L 74.972656 32.521484 L 74.972656 16.6875 C 74.972518 15.306846 73.85331 14.187638 72.472656 14.1875 L 63.814453 14.1875 C 62.4338 14.187638 61.314591 15.306846 61.314453 16.6875 L 61.314453 16.8125 L 61.314453 20.316406 L 55.660156 15.263672 L 51.685547 11.710938 C 51.211125 11.286976 50.615327 11.074219 50.019531 11.074219 z " />
+<clipPath id="icon-star-no-scale" clipPathUnits="userSpaceOnUse">
+<path d="M50 3.537337A46.461724 46.461724 0 003.5393625 49.997973a46.461724 46.461724 0 0046.4606395 46.46469 46.461724 46.461724 0 0046.460635-46.46469A46.461724 46.461724 0 0050 3.537337Zm0 10.908081 10.450199 21.171887 23.364033 3.395617L66.90509 55.492533l3.991259 23.270846-20.896347-10.985077-20.900406 10.985077 3.991255-23.270846-16.905089-16.479629 23.364035-3.395602Z"/>
+</clipPath>
+<clipPath id="icon-star-scaled-wrong" clipPathUnits="objectBoundingBox">
+<path d="M50 3.537337A46.461724 46.461724 0 003.5393625 49.997973a46.461724 46.461724 0 0046.4606395 46.46469 46.461724 46.461724 0 0046.460635-46.46469A46.461724 46.461724 0 0050 3.537337Zm0 10.908081 10.450199 21.171887 23.364033 3.395617L66.90509 55.492533l3.991259 23.270846-20.896347-10.985077-20.900406 10.985077 3.991255-23.270846-16.905089-16.479629 23.364035-3.395602Z"/>
 </clipPath>
 <clipPath id="arrow-1">
-<path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+<path d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="arrow-2" clipPathUnits="objectBoundingBox">
-<path transform="scale(0.001953125)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+<path transform="scale(0.0625)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="arrow-3" clipPathUnits="objectBoundingBox">
-<path transform="translate(.5 .5) scale(0.001953125) translate(-192 -256)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+<path transform="translate(.5 .5) scale(0.0625) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="arrow-4" clipPathUnits="objectBoundingBox">
-<path transform="scale(0.0026041667 0.001953125)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+<path transform="scale(0.1 0.0625)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="arrow-5" clipPathUnits="objectBoundingBox">
-<path transform="translate(.5 .5) scale(0.0009765625) translate(-192 -256)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+<path transform="translate(.5 .5) scale(0.03125) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="four-arrows" clipPathUnits="objectBoundingBox">
-<path transform="translate(.25 .25) scale(0.0009765625) translate(-192 -256)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
-<path transform="translate(.75 .25) rotate(90) scale(0.0009765625) translate(-192 -256)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
-<path transform="translate(.75 .75) rotate(180) scale(0.0009765625) translate(-192 -256)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
-<path transform="translate(.25 .75) rotate(270) scale(0.0009765625) translate(-192 -256)" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+<path transform="translate(.25 .25) scale(0.03125) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
+<path transform="translate(.75 .25) rotate(90) scale(0.03125) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
+<path transform="translate(.75 .75) rotate(180) scale(0.03125) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
+<path transform="translate(.25 .75) rotate(270) scale(0.03125) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="four-circles" clipPathUnits="objectBoundingBox">
 	<circle cx="0" cy="-65" r="5"></circle> <!-- Top circle -->
@@ -48,7 +51,7 @@
 	--any-svg-clippath-bg-color-1: transparent;
 	--any-svg-clippath-bg-color-2: #eee;
 	--dimmed-earth-brightness: .7;
-	--dimmed-earth-opacity: .3;
+	--dimmed-earth-opacity: .25;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -90,14 +93,14 @@
 	transform: translateX(65px);
 }
 .-clipped {
-	clip-path: url(#icon-home-filled);
+	clip-path: url(#icon-star);
 	display: inline-block;
 }
 .-clipped.-clipped-wrong {
-	clip-path: url(#icon-home-filled-noscale)
+	clip-path: url(#icon-star-no-scale)
 }
 .-clipped.-clipped-scaled-wrong {
-	clip-path: url(#icon-home-filled-scale-wrong)
+	clip-path: url(#icon-star-scaled-wrong)
 }
 .-clipped.-clipped-arrow-1 {
 	clip-path: url(#arrow-1);
@@ -133,7 +136,7 @@
 }
 .-clipped-img.-arrow {
 	height: 100px;
-	aspect-ratio: 384 / 512;
+	aspect-ratio: 32 / 48;
 	width: revert;
 }
 .-clipped-img.-arrow,
@@ -168,7 +171,11 @@ body .doc .image.-half-image img {
 
 [.lead]
 This article describes a general-purpose method to turn just about any SVG into a `<clipPath>` that will correctly clip arbitrary HTML elements.
-I found this technique helpful when building this very site, as setting the `clip-path` on a `display: block` or `display: inline-block` element is a great way to easily include icons on a page.
+I found this technique helpful when building this very site, as setting the `clip-path` on a `display: block` or `display: inline-block` element is an easy way to include icons on a page.footnote:[
+This is much easier than sprinkling SVGs and `<use>` elements throughout the page, as ``<use>``s are quite tricky to style because they live in a https://developer.mozilla.org/en-US/docs/web/web_components/using_shadow_dom[shadow DOM].
+Styling an element with a `clip-path` is as easy as setting its `background-color`, assuming you just want a single-colored icon, which is often the case.
+If you need multi-colored icons, you can overlay elements and apply separate ``background-color``s and ``clip-path``s to each.
+Animating the icon's color is then as simple as animating its ``background-color``.]
 
 == Clipping Paths
 
@@ -178,8 +185,8 @@ The https://developer.mozilla.org/en-US/docs/web/css/clip-path[`clip-path`] prop
 It allows using a https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape[shape] to specify a _clipping region_ for the given HTML element: a region outside of which the element is not drawn.
 In other words, the clipping region is like a mask{empty}footnote:[But not to be confused with an "`actual`" https://developer.mozilla.org/en-US/docs/web/css/mask[CSS mask], which acts like a translucent film covering the background image.
 It's possible for parts of the background image to show through only partially, which is not the case for ``clip-path``s.] that only lets through portions of the background within the region's interior (or equivalently, that blocks the portions of the background outside of the region).
-For instance, here is an image of a https://en.wikipedia.org/wiki/Penrose_tiling[Penrose tiling] created with the Penrose tiling generator at https://misc.0o0o.org/penrose, followed by the same image with a "`home`" icon as its clipping path:
-
+For instance, here is a 200×200 image of a https://en.wikipedia.org/wiki/Penrose_tiling[Penrose tiling] created with the Penrose tiling generator at https://misc.0o0o.org/penrose, followed by the same image with a circled-star icon as its clipping path.
+[#original-image]
 ====
 [.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},window=_blank,role="-clipped-img"]
@@ -190,9 +197,8 @@ image:{img-url}[{img-alt-text},role="-clipped-img -clipped"]
 ====
 Regardless of what portion of the image lies inside the clipping region, the image itself still takes up the full amount of space it normally would.
 Clipping doesn't affect the size of elements or how they're laid out, just what portion of them we actually see.
-The portion outside the clipping region just appears transparent.
+The portion outside the clipping region appears transparent, but it's still there.
 ====
-
 
 Note how the clipping region is centered over the image and fills the entire space; we'll come back to this later.
 For now, let's just confirm this fact by overlaying the clipped image on a dimmed copy of the original.
@@ -222,9 +228,9 @@ Couldn't be easier.
 
 
 That is, unless you're using `clip-path: path(...)`, which takes a good old-fashioned https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths[SVG path string], which does _not_ support these fancy CSS units.
-In addition to using a somewhat arcane syntax{empty}footnote:[Here's a valid path string: `a.25.25 0 01-.25-.25`. The `a` stands for "`arc from here`"; a number can only have a single decimal point, so you don't need a space between the _two_ consecutive decimal numbers `.25,.25` in `.25.25`; no integer except `0` itself will start with a `0`, so `0 01` is `0,0,1`; and there's only one sensible way to parse `-.25-.25`, which is `-.25,-.25`, since numbers that have a minus sign must begin with it.
-Of the seven arguments to `a`, two are boolean flags, and _must_ be written as integers, not floats.],
-SVG paths must be written in terms of unit-less numbers, which specify the location of their path's elements, such as a line, an arc, or a Bezier curve, in absolute units on the Cartesian plane.
+Not only do SVG paths use a somewhat arcane syntax, but they also must be written in terms of unit-less numbers, which specify the location of their path's elements, such as a line, an arc, or a Bezier curve, in absolute units on the Cartesian plane.
+This is counter to other numbers in CSS, which almost universally require units — `1px`, `2em`, `3rem`, `4vw`, etc.footnote:[Except for 0; 0 is 0 is 0 regardless of the units.]
+
 Therefore, if you want to use a path to clip an element, you must know the dimensions of the element.
 For instance, to draw a path that references the center of the element, you would need to know the width and height of the element and then divide them by 2 yourself.
 `50%` just isn't available in `path(...)`.
@@ -233,7 +239,7 @@ For instance, to draw a path that references the center of the element, you woul
 --
 [#svg-css-attribute-note]#It# can get confusing going back and forth between SVG and CSS, as SVG elements have many attributes that are also valid CSS properties.
 For instance, `<circle stroke-width="3"></circle>` is a valid SVG shape (or it would be if we also included `cx`, `cy`, and `r`), but so is `<circle></circle>` with accompanying CSS `circle { stroke-width: 3; }`.
-Throughout this article, unless otherwise specified, `clip-path` will always refer to the CSS property, not the SVG attribute.
+Throughout this article, unless otherwise specified, `clip-path` will always refer to the CSS property applied to an HTML element, not the SVG attribute.
 For a list of other properties that can be used as both, see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation[here].
 --
 
@@ -244,60 +250,36 @@ This looks up the https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipP
 The `<clipPath>` itself is not drawn in the SVG; it is merely referenced by other shapes or HTML elements, who use it as their `clip-path`.
 
 But ``<clipPath>``s are still SVG elements, so they are drawn in absolute coordinates.
-This means that if we have the following SVG path — a house-shaped `<clipPath>` similar to the one used above — which has (implicit{empty}footnote:[How do I know?
-Because the SVG it came from had `viewBox="0 0 100 100"`.
-We'll talk more about `viewBox` below.]) dimensions 100×100...
-[source,svg]
+Here is the source code of the circled-star `<clipPath>` we've been using.
+
+.Circled-star SVG{empty}footnote:[Which, among other things, demonstrates just how permissive (to put it charitably) the parsing of SVG path strings is. For instance,`0046.4606395` means `0 0 46.4606395` and  `0050` means `0 0 50`. Of the seven numbers after `A` and `a`, three are boolean flags and _must_ be written as integers (0 or 1), not floats (0.0 or 1.0).]
+[source,svg,role="wrap"]
 ----
-<svg>
-<clipPath id="icon-home-100x100">
-	<path
-		d="M 50.019531 11.074219
-		   C 49.423735 11.074219 48.827938 11.286976 48.353516 11.710938
-			L 47.027344 12.896484
-			L 19.773438 37.251953
-			L 9.7910156 46.171875
-			A 2.5 2.5 0 0 0 9.59375 49.701172
-			A 2.5 2.5 0 0 0 13.123047 49.900391
-			L 18.9375 44.705078
-			L 18.919922 86.458984
-			C 18.918981 87.8404 20.038505 88.9608 21.419922 88.960938
-			L 42.925781 88.960938
-			C 44.305672 88.960801 45.424565 87.842781 45.425781 86.462891
-			L 45.449219 63.794922
-			L 54.552734 63.794922
-			L 54.574219 86.462891
-			C 54.575419 87.842781 55.694328 88.960801 57.074219 88.960938
-			L 78.619141 88.960938
-			C 79.999031 88.960801 81.117925 87.842781 81.119141 86.462891
-			L 81.138672 44.738281
-			L 86.916016 49.900391
-			A 2.5 2.5 0 0 0 90.445312 49.701172
-			A 2.5 2.5 0 0 0 90.248047 46.171875
-			L 80.314453 37.296875
-			L 80.306641 37.287109
-			L 80.304688 37.287109
-			L 74.972656 32.521484
-			L 74.972656 16.6875
-			C 74.972518 15.306846 73.85331 14.187638 72.472656 14.1875
-			L 63.814453 14.1875
-			C 62.4338 14.187638 61.314591 15.306846 61.314453 16.6875
-			L 61.314453 16.8125
-			L 61.314453 20.316406
-			L 55.660156 15.263672
-			L 51.685547 11.710938
-			C 51.211125 11.286976 50.615327 11.074219 50.019531 11.074219
-			z "
-	/>
-</clipPath>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 3.537337A46.461724 46.461724 0 003.5393625 49.997973a46.461724 46.461724 0 0046.4606395 46.46469 46.461724 46.461724 0 0046.460635-46.46469A46.461724 46.461724 0 0050 3.537337Zm0 10.908081 10.450199 21.171887 23.364033 3.395617L66.90509 55.492533l3.991259 23.270846-20.896347-10.985077-20.900406 10.985077 3.991255-23.270846-16.905089-16.479629 23.364035-3.395602Z"/>
 </svg>
 ----
 
-and we try to use it as the `clip-path` of our Penrose tiling, which has dimensions 200×200, using the following CSS...
+As we can tell from the `viewBox` (but more on that later), the dimensions of this icon are 100×100.
+So, if we tried to tried to naively convert it to a `<clipPath>`, as shown below...
+
+.Circled-star, as a `<clipPath>` (but not actually)
+[source,svg,role="wrap"]
+----
+<svg xmlns="http://www.w3.org/2000/svg"> <1>
+<clipPath id="clippath-circled-star">
+<path d="M50 3.537337A46.461724 46.461724 0 003.5393625 49.997973a46.461724 46.461724 0 0046.4606395 46.46469 46.461724 46.461724 0 0046.460635-46.46469A46.461724 46.461724 0 0050 3.537337Zm0 10.908081 10.450199 21.171887 23.364033 3.395617L66.90509 55.492533l3.991259 23.270846-20.896347-10.985077-20.900406 10.985077 3.991255-23.270846-16.905089-16.479629 23.364035-3.395602Z"/>
+</path>
+</clipPath>
+</svg>
+----
+<1> This SVG's elements aren't actually going to be rendered anywhere, so `viewBox` isn't needed anymore.
+
+...and we use it as the `clip-path` of our Penrose tiling, which has dimensions 200×200, using the following CSS...
 [source,css]
 ----
 .penrose-tiling {
-	clip-path: url(#icon-home-100x100);
+	clip-path: url(#clippath-circled-star);
 }
 ----
 then we end up with this:
@@ -308,7 +290,8 @@ image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
 image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-wrong"]
 ====
 
-This time, the clipping region does not take up the entire image; it exists entirely within the 100×100 region in the upper left because the width and height of the ``<clipPath>``’s `<path>` were both 100.
+This time, the clipping region does not take up the entire image; it exists entirely within the 100×100 region in the upper left because the width and height of the ``<clipPath>``’s `<path>` were both 100.footnote:[Technically, nothing says that a `<path>` actually has to fit in its SVG's `viewBox`.
+But parts of the SVG outside the `viewBox` won't be rendered, so the `<path>` _should_ fit.]
 So, how can we fix this to achieve what we saw above?
 How can we get the clipping region to span the entire 200×200 image?
 
@@ -317,7 +300,7 @@ How can we get the clipping region to span the entire 200×200 image?
 
 Very helpfully, `<clipPath>` has an attribute, `clipPathUnits`, that lets us specify exactly what the units of the `<clipPath>` represent.
 The default value, `userSpaceOnUse`, leads to the behavior we just saw: it assumes the `<clipPath>` and the HTML element it is clipping use the same coordinate system.
-So, our `<clipPath>`, which only existed in the square from `(0, 0)` to `(100, 100)`, created a clipping region that only exposed the home-shaped part of the image in that same upper-left square.
+So, our `<clipPath>`, which only existed in the square from `(0, 0)` to `(100, 100)`, created a clipping region that only exposed the part of the image in that same upper-left square.
 
 The other choice for `clipPathUnits` is `objectBoundingBox`, which assumes that the `<clipPath>` occupies a merely 1×1 square, which is then stretched or compressed in both dimensions so that it has the same dimensions as the element it is clipping.
 
@@ -333,9 +316,9 @@ But that's just the background.
 Where'd our clipped image go?
 
 As mentioned, `objectBoundingBox` _assumes_ that the `<clipPath>` occupies a merely 1×1 square.
-But our `<clipPath>` _actually_ still occupies a 100×100 square and, crucially, does not include anything in its upper left 1×1 corner.
-In other words, our `<clipPath>` completely missed the image; the region it would expose is way, way down to the bottom right.footnote:[The image is 200×200, and the `<clipPath>` is 100×100, so the entire region it's attempting to clip is 20,000×20,000.
-The diagonal that forms the left part of the house's roof is well beyond the edges of the screen, let alone the image we want to clip.]
+But our `<clipPath>` _actually_ still occupies a 100×100 square, and it was stretched so that the top-left unit square fills the 200×200 image — a factor of 200.
+This means the entire `<clipPath>` was blown up to 20,000×20,000!
+It completely missed the image; the region it would expose is way, way down to the bottom right.
 We have to figure out how to get our ``<clipPath>``’s `<path>` down into a 1×1 square.
 
 == Transforming ``<clipPath>``s
@@ -345,12 +328,7 @@ But this would be tedious and would make it hard to just use any old SVG icon as
 Thankfully, there is a very easy way to transform SVG elements, which is... https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform[the `transform` attribute].
 [#linear-transformation]#`transform`# applies a https://en.wikipedia.org/wiki/Linear_map[linear transformation] to an element, and scaling by a factor of 1/100 is a linear transformation, so we're good.
 All we have to do is add ``transform: scale(.01)`` to the `<path>` (not to the `<clipPath>`!), and we get a lovely 1×1 `<clipPath>` which clips as we expect.
-This is precisely how the original clipped image in this article, shown again below, was created.
-====
-[.halign-center.-with-bg]
-image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
-image:{img-url}[{img-alt-text},role="-clipped-img -clipped"]
-====
+This is precisely how the <<original-image,original clipped image>> in this article was created.
 
 For completeness, here is the final SVG.
 (In case you're copy-pasting this somewhere, note that we've changed the `id` of the `<clipPath>`.)
@@ -358,8 +336,8 @@ For completeness, here is the final SVG.
 [source,svg]
 ----
 <svg>
-<clipPath id="icon-home-1x1" clipPathUnits="objectBoundingBox">
-	<path transform="scale(.01)" d="same home path" />
+<clipPath id="clippath-circled-star-1x1" clipPathUnits="objectBoundingBox">
+	<path transform="scale(.01)" d="same circled-star path" />
 </clipPath>
 </svg>
 ----
@@ -381,7 +359,7 @@ Putting them all in the same SVG is fine, like so:
 ====
 
 For _images_ that aren't square, the `<clipPath>` scales separately in each dimension.
-Here's just the left half of our image, and next to it is what happens when we use the house to clip just that half (which is now twice as tall as it is wide).
+Here's just the left half of our image, and next to it is what happens when we use the circled star to clip just that half (which is now twice as tall as it is wide).
 ====
 [.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -half-image"]
@@ -397,45 +375,41 @@ So far we've been taking advantage of a very nice property of our `<clipPath>`: 
 This meant that if the original path was centered in its 100×100 bounding box, then the clipping region would also be centered in the element it was clipping.
 
 But what if it weren't square?
-Here is the `arrow-up` icon from https://fontawesome.com/[Font Awesome], which is taller (512) than it is wide (384):
-[source,svg]
+Here is an up-arrow icon that which is taller (16) than it is wide (10):
+[source,svg,role="wrap"]
 ----
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-<!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-<path
-	d="M214.6 41.4
-	   c-12.5-12.5-32.8-12.5-45.3 0
-	   l-160 160
-	   c-12.5 12.5-12.5 32.8 0 45.3
-	   s32.8 12.5 45.3 0
-	   L160 141.2
-	   V448
-	   c0 17.7 14.3 32 32 32
-	   s32-14.3 32-32
-	   V141.2
-	   L329.4 246.6
-	   c12.5 12.5 32.8 12.5 45.3 0
-	   s12.5-32.8 0-45.3
-	   l-160-160
-	   z" />
+<svg viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </svg>
 ----
 
-[sidebar]
-====
 Now is a good time to talk about the SVG's `viewBox` attribute.
 If you imagine the SVG's contents lying in the infinite Cartesian plane, the `vieBox` tells us what rectangle in the plane to restrict our attention to; nothing outside this rectangle is drawn.
-(In a sense, the `viewBox` is like the `clip-path` of whole SVG, which would otherwise be infinitely large.)
+(In a sense, the `viewBox` is like a rectangular `clip-path` of the whole SVG, which would otherwise be infinitely large and almost entirely empty.)
 ``viewBox``es take the form of `"x y w h"`, where `x` is the x-position of the rectangle's upper left corner, `y` is that corner's y-position, and `w` and `h` are the rectangle's width and height, respectively.
-The `arrow-up` SVG has its origin at `(x, y) = (0, 0)` and has a width of 384 and a height of 512.
+The up-arrow SVG has its origin at `(x, y) = (0, 0)` and has a width of 10 and a height of 16.
+
+[sidebar]
 ====
+SVGs also can have `width` and `height` attributes, but these are unrelated to `viewBox`; they merely dictate to the program displaying the SVG what the dimensions of the rendered SVG should be, in pixels on the screen.
+They do _not_ affect the region of the SVG that is rendered.
+If an SVG has `viewBox="0 0 10 16" width="20" height="64"`, then
+
+. It will be first be rendered in a 10×16 rectangle
+. Then its width will be scaled by a factor of 2 to achieve a final width of 20
+. Then its height will be scaled by a factor of 4 to achieve a final height of 64
+====
+
+Anyway, here's that up-arrow icon.
 
 NOTE: I've drawn a border around the arrow to show its dimensions; the border isn't part of the icon itself.
 
 ====
 ++++
 <div class="halign-center -with-bg">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="-clipped-img -arrow"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+<svg viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" class="-clipped-img -arrow">
+<path d="M4.990885 1.8584614a.81151495.81151495 0 0 0-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 0 0 .0919202 1.1436149.8114338.8114338 0 0 0 1.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 0 0 .8114339.811433.8114338.8114338 0 0 0 .8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 0 0 1.1442485.090018.8114338.8114338 0 0 0 .090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 0 0-.618085-.2840014Z" />
+</svg>
 </div>
 ++++
 ====
@@ -456,14 +430,14 @@ Let's try our `transform` trick from above; maybe it'll still work here.
 <svg>
 <clipPath id="arrow-1" clipPathUnits="objectBoundingBox">
 	<path
-		transform="scale(0.001953125)" <!--1--><!--2-->
-		d="same home path"
+		transform="scale(0.0625)" <!--1--><!--2-->
+		d="same circled-star path"
 	/>
 </clipPath>
 </svg>
 ----
-<1> 0.001953125 = 1/512, which gets our shape with dimensions 384×512 to lie entirely in a 1×1 square.
-<2> Unfortunately, SVG doesn't let you write out the scale factor as a literal division like `1 / 512`, so you've got to plug the division into a calculator and write out the resulting decimal number.
+<1> 0.0625 = 1/16, which gets our shape with dimensions 10×16 to lie entirely in a 1×1 square.
+<2> Unfortunately, SVG doesn't let you write out the scale factor as a literal division like `1 / 16`, so you've got to plug the division into a calculator and write out the resulting decimal number.
 
 
 ====
@@ -473,20 +447,20 @@ image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-2"]
 
 ====
 
-This is close, but not quite right — it isn't centered!
-Eyeballing, it looks like it only covers the left three-quarters of the image.
+This is close, but not quite right — it isn't centered.
+Eyeballing, it looks like it only covers the left five-eighths of the image.
 Hmm.
 
 _Why_ isn't it centered?
-Well, the original icon had a width of 384 and a height of 512.
-When we scaled it by 1/512 = 0.001953125, we made sure the new _height_ went from 0 to 1.
-But the new _width_ also got divided by 512, which means that it only goes from 0 to 384/512 = 0.75, which indeed is not all the way over to 1.
-That's why the arrow above only seems to cover the left three-quarters of the image — its maximum x-coordinate is only 0.75.
+Well, the original icon had a width of 10 and a height of 16.
+When we scaled it by 1/16 = 0.0625, we made sure the new _height_ went from 0 to 1.
+But the new _width_ also got divided by 16, which means that it only goes from 0 to 10/16 = 5/8 = 0.625, which indeed is not all the way over to 1.
+That's why the arrow above only seems to cover the left five-eighths of the image — its maximum x-coordinate is only 5/8.
 
 So what can we do about this?
 A bad solution would be to scale the width and height separately.
 While this would get the ``<clipPath>``’s `<path>` to have dimensions 1×1, it would not preserve the original aspect ratio, and so we'd be using a fundamentally different shape.
-Here's what that would look like, with `transform: scale(0.0026041667 0.001953125)` (1/384 = 0.0026041667).
+Here's what that would look like, with `transform: scale(0.1 0.625)`.
 
 ====
 [.halign-center.-with-bg.-fixed-height]
@@ -500,11 +474,11 @@ Yech.
 
 What we need to do is translate our correctly-scaled-down `<path>` so that it's centered in the 1×1 box.
 But how much do we need to translate it by?
-After scaling it down, its left edge was at 0 and its right edge was at 0.75, so we need to shift it to the right by (1 - 0.75)/2, or 0.125.
+After scaling it down, its left edge was at 0 and its right edge was at 5/8, so we need to shift it to the right by (1 - 5/8)/2, or 3/16 = 0.1875.
 If an arbitrary shape's upper left corner is at `(x, y) = (0, 0)` and the shape has width `w` and height `h`, then its center is at `(w/2, h/2)`.
-Assuming https://en.wikipedia.org/wiki/Without_loss_of_generality[without loss of generality] `w < h`, after scaling it down by `1/h` the center would end up at `(w/(2*h), 1/2)`.
+Assuming https://en.wikipedia.org/wiki/Without_loss_of_generality[without loss of generality] that `w < h`, after scaling it down by `1/h` the center would end up at `(w/(2*h), 1/2)`.
 The translation that moves this point to `(0.5, 0.5)` would be `(0.5-w/(2*h), 0)`, or `((1-w/h)/2, 0)`, which is indeed what we found above.
-So the correct transformation to apply to the `<path>` would be `transform: translate(.125 0) scale(0.001953125)` -- that's "scale by 1/512, then translate `x` and `y` by 0.125 and 0, respectively".footnote:[The individual transformations in a `transform` are applied right to left, not left to right.
+So the correct transformation to apply to the `<path>` would be `transform: translate(0.1875 0) scale(0.0625)` -- that's "`scale by 1/16, then translate `x` and `y` by 3/16 and 0, respectively`".footnote:[The individual transformations in a `transform` are applied right to left, not left to right.
 This seems backwards until you consider transformations as left-multiplication of some element: `translate(...) * scale(...) * element`.
 Since we only know how to apply a transformation to an element, not another transformation, this must be parenthesized as `translate(...) * (scale(...) * element)`, from which it follows that `translate(...) scale(...)` (we've dropped the explicit asterisk now) must represent a `scale(...)` followed by a `translate(...)`.
 Naturally, this right-to-left reading follows the mathematical rules of https://en.wikipedia.org/wiki/Transformation_matrix#Composing_and_inverting_transformations[composing linear transformations].]
@@ -538,7 +512,7 @@ Then translating it to the correct final position would simply be `translate(.5 
 But how can we get the shape to be centered at the origin?
 
 Easy: we simply apply `translate(-(x+w/2) -(y+h/2))` first!
-This moves the shape's center to the origin of the coordinate system.
+This moves the shape's center to the origin of the coordinate system, which means the "`scale origin`", which is always the actual origin, now corresponds to the object's center, which is exactly the point about which we would like to scale.
 So, to scale our `<path>` correctly, we simply need the following:
 
 [source,svg]
@@ -546,7 +520,7 @@ So, to scale our `<path>` correctly, we simply need the following:
 transform="translate(.5 .5) scale(1/max(w, h)) translate(-(x+w/2) -(y+h/2))"
 ----
 IMPORTANT: Remember, you actually have to do these divisions out to get a decimal number.
-You can't literally write e.g., `1 / 512`.
+You can't literally write e.g., `1 / 16`.
 
 To make the translations really explicit, we can even split them up:
 [source,svg]
@@ -562,7 +536,7 @@ In English (remember, the functions are applied right to left):
 . Then, translate it so that its center is at `(0.5, 0.5)`, the center of a 1×1 square.
 
 Why is this better?
-To start, we've got only one calculation we might need a calculator for, and that's `1/max(w, h)`; `w/h` and `h/w` are just gone altogether.
+To start, we've got only one calculation we might need a calculator for, and that's `1/max(w, h)`; `w/h` is just gone altogether.
 In addition, if, say, `w` changes, it's trivial to update `translate(-w/2 -h/2)` with the new value of `w/2`, and if `w < h` remains the same then that's the only change you have to make at all.
 Finally, this `transform` is self-documenting in two ways.
 First, you have the original `viewBox` of the `<path>` written out in `translate(-w/2 -h/2) translate(-x -y)`.
@@ -574,15 +548,15 @@ Putting it all together, then:
 <svg>
 <clipPath id="arrow-2" clipPathUnits="objectBoundingBox">
 	<path
-		transform="translate(.5 .5) scale(0.001953125) translate(-192 -256)" <!--1-->
+		transform="translate(.5 .5) scale(0.0625) translate(-5 -8)" <!--1-->
 		d="same arrow path"
 	/>
 </clipPath>
 </svg>
 ----
-<1> Negative one-half of 384 and 512, respectively.
-We know, then, that 0.001953125 must be the reciprocal of the larger of 384 and 512.
-The original SVG had its upper left corner at `(0, 0)`, so we don't need to handle that in this case.
+<1> Negative one-half of 10 and 16, respectively.
+We know, then, that 0.0625 must be the reciprocal of the larger of 10 and 16.
+The original SVG had its upper left corner at `(0, 0)`, so we don't need to handle that here.
 
 Which, as expected, leads to this:
 ====
@@ -601,13 +575,13 @@ But we can use this same technique to apply more exotic transformations to `<cli
 
 A simple next step would be to have our `<clipPath>` remain centered, but be smaller than its full size.
 This is easy to do: we just change the scale from `1/h` to something smaller.
-If we want our arrow to be half-size, we'll scale it by half of 1/512, or 1/1024 = 0.0009765625.
+If we want our arrow to be half-size, we'll scale it by half of 1/16, or 1/32 = 0.03125.
 
 [source,svg]
 ----
 <svg>
-<clipPath id="arrow-4" clipPathUnits="objectBoundingBox">
-	<path transform="translate(.5 .5) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+<clipPath id="arrow-half" clipPathUnits="objectBoundingBox">
+	<path transform="translate(.5 .5) scale(0.03125) translate(-5 -8)" d="same arrow path" />
 </clipPath>
 </svg>
 ----
@@ -629,10 +603,10 @@ Since, like scaling transformations, rotations are always applies about the orig
 ----
 <svg>
 <clipPath id="four-arrows" clipPathUnits="objectBoundingBox">
-	<path transform="translate(.25 .25) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
-	<path transform="translate(.75 .25) rotate(90) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
-	<path transform="translate(.75 .75) rotate(180) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
-	<path transform="translate(.25 .75) rotate(270) scale(0.0009765625) translate(-192 -256)" d="same arrow path" />
+	<path transform="translate(.25 .25) scale(0.03125) translate(-5 -8)" d="same arrow path" />
+	<path transform="translate(.75 .25) rotate(90) scale(0.03125) translate(-5 -8)" d="same arrow path" />
+	<path transform="translate(.75 .75) rotate(180) scale(0.03125) translate(-5 -8)" d="same arrow path" />
+	<path transform="translate(.25 .75) rotate(270) scale(0.03125) translate(-5 -8)" d="same arrow path" />
 </clipPath>
 </svg>
 ----
@@ -702,7 +676,7 @@ Again, I'll draw a border around the SVG.
 To turn these four circles into a `<clipPath>`, we'll just follow the instructions above.
 The `viewBox` is `"-25 -100 50 100"`, so the initial translation is `translate(-25 -50) translate(25 100)`, or `translate(0 50)`.
 The largest dimension is the height, 100.
-So, the transformation we need is (in CSS syntax, since that's how I'll apply it):
+So, the transformation we need is (in CSS syntax, since that's how it happens to actually be applied on this page):
 [source,css]
 ----
 #four-circles > circle {
@@ -739,7 +713,7 @@ It works!
 
 As we mentioned <<svg-css-attribute-note,above>>, many attributes of SVG elements can also be styled using a CSS property.
 `transform` was one such attribute.
-Throughout this article, I wrote `d="same home path"` and `d="same arrow path"` several times.
+Throughout this article, I wrote `d="same circled-star path"` and `d="same arrow path"` several times.
 Of course, in the source for this page, those paths are actually written out in full each time.
 To avoid repeating myself, shouldn't I have just used a CSS `d` attribute to apply these path strings everywhere they were used?
 
@@ -758,10 +732,10 @@ Once Safari supports using `d` as a presentation attribute, the "`right`" way to
 </style>
 <svg>
 <clipPath id="four-arrows" clipPathUnits="objectBoundingBox">
-	<path transform="translate(.25 .25) scale(0.0009765625) translate(-192 -256)" />
-	<path transform="translate(.75 .25) rotate(90) scale(0.0009765625) translate(-192 -256)" />
-	<path transform="translate(.75 .75) rotate(180) scale(0.0009765625) translate(-192 -256)" />
-	<path transform="translate(.25 .75) rotate(270) scale(0.0009765625) translate(-192 -256)" />
+	<path transform="translate(.25 .25) scale(0.03125) translate(-5 -8)" />
+	<path transform="translate(.75 .25) rotate(90) scale(0.03125) translate(-5 -8)" />
+	<path transform="translate(.75 .75) rotate(180) scale(0.03125) translate(-5 -8)" />
+	<path transform="translate(.25 .75) rotate(270) scale(0.03125) translate(-5 -8)" />
 </clipPath>
 </svg>
 
