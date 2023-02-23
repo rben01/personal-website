@@ -50,8 +50,8 @@
 :root {
 	--any-svg-clippath-bg-color-1: transparent;
 	--any-svg-clippath-bg-color-2: #eee;
-	--dimmed-earth-brightness: .7;
-	--dimmed-earth-opacity: .25;
+	--dimmed-earth-brightness: 1;
+	--dimmed-earth-opacity: .2;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -80,7 +80,7 @@
 	background-color: var(--default-bg-color);
 }
 .-dim > img {
-	filter: grayscale(50%) opacity(var(--dimmed-earth-opacity)) brightness(var(--dimmed-earth-brightness)) ;
+	filter: grayscale(0%) opacity(var(--dimmed-earth-opacity)) brightness(var(--dimmed-earth-brightness)) ;
 }
 .-pos-abs {
 	position: absolute;

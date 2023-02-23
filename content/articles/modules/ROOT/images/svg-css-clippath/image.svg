@@ -17,5 +17,5 @@
 		<linearGradient xlink:href="#a" id="b" x1="200" y1="200" x2="0" y2="0"
 			gradientUnits="userSpaceOnUse" spreadMethod="pad" />
 	</defs>
-	<path style="mix-blend-mode:normal" fill="url(#b)" d="M0 0h200v200H0z" />
+	<path mix-blend-mode="normal" fill="url(#b)" d="M0 0h200v200H0z" />
 </svg>
