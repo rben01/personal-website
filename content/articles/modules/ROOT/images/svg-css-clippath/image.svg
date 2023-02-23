@@ -1,94 +1,21 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-	<style>
-		#circles > circle {
-		clip-path: url(#q2);
-		}
-	</style>
-	<clipPath id="q2">
-		<path d="M0 0h100v100h-100z" />
-	</clipPath>
-	<clipPath id="q4">
-		<path d="M100 100h100v100h-100z" />
-	</clipPath>
-	<path fill="#fc0"
-		d="M0 100h100v100H0z" />
-	<circle cx="50" cy="150" r="60" />
-	<circle cx="50" cy="150" r="50" fill="#fc0" />
-	<circle cx="50" cy="150" r="40" />
-	<path fill="#58ee41"
-		d="M100 0h100v100H100z" />
-	<path
-		d="M100 0h12.5v12.5H100zm12.5 12.5H125V25h-12.5zM100 25h12.5v12.5H100zm12.5 12.5H125V50h-12.5zM100 50h12.5v12.5H100zm12.5 12.5H125V75h-12.5zM100 75h12.5v12.5H100zm25-75h12.5v12.5H125zm0 25h12.5v12.5H125zm0 25h12.5v12.5H125zm0 25h12.5v12.5H125zm12.5-62.5H150V25h-12.5zm0 25H150V50h-12.5zm0 25H150V75h-12.5zM150 0h12.5v12.5H150zm0 25h12.5v12.5H150zm0 25h12.5v12.5H150zm0 25h12.5v12.5H150zm12.5-62.5H175V25h-12.5zm0 25H175V50h-12.5zm0 25H175V75h-12.5zM175 0h12.5v12.5H175zm0 25h12.5v12.5H175zm0 25h12.5v12.5H175zm0 25h12.5v12.5H175zm12.5-12.5H200V75h-12.5zm0-25H200V50h-12.5zm0-25H200V25h-12.5z" />
-	<circle cx="50" cy="150" fill="#fc0" r="30" />
-	<circle cx="50" cy="150" r="20" />
-	<circle cx="50" cy="150" r="10" fill="#fc0" />
-	<path fill="#0055d4"
-		d="M0 0h100v100H0z" />
-	<g id="circles">
-		<circle cx="16.695448" cy="12.946847" r="4.2964087"
-			fill="#fff" />
-		<circle cx="34.345772" cy="17.172886" r="4.2964087"
-			fill="#fff" />
-		<circle cx="53.515503" cy="11.581713" r="4.2964087"
-			fill="#fff" />
-		<circle cx="85.065689" cy="9.5848665" r="4.2964087"
-			fill="#fff" />
-		<circle cx="69.090904" cy="26.757751" r="4.2964087"
-			fill="#fff" />
-		<circle cx="86.663162" cy="33.547031" r="4.2964087"
-			fill="#fff" />
-		<circle cx="77.877037" cy="53.914871" r="4.2964087"
-			fill="#fff" />
-		<circle cx="87.461906" cy="69.889648" r="4.2964087"
-			fill="#fff" />
-		<circle cx="84.266953" cy="86.263794" r="4.2964087"
-			fill="#fff" />
-		<circle cx="65.895958" cy="71.487129" r="4.2964087"
-			fill="#fff" />
-		<circle cx="31.150816" cy="51.119286" r="4.2964087"
-			fill="#fff" />
-		<circle cx="1.9358606" cy="55.415695" r="4.2964087"
-			fill="#fff" />
-		<circle cx="34.345772" cy="-7.6e-7" r="4.2964087"
-			fill="#fff" />
-		<circle cx="71.453865" cy="1.531154" r="4.2964087"
-			fill="#fff" />
-		<circle cx="97.48349" cy="17.863466" r="4.2964087"
-			fill="#fff" />
-		<circle cx="97.48349" cy="53.590397" r="4.2964087"
-			fill="#fff" />
-		<circle cx="70.943481" cy="99.014641" r="4.2964087"
-			fill="#fff" />
-		<circle cx="35.216549" cy="99.014641" r="4.2964087"
-			fill="#fff" />
-		<circle cx="3.0623078" cy="95.952332" r="4.2964087"
-			fill="#fff" />
-		<circle cx=".51038522" cy="17.863462" r="4.2964087"
-			fill="#fff" />
-		<circle cx="13.179191" cy="37.940094" r="4.2964087"
-			fill="#fff" />
-		<circle cx="39.537571" cy="32.748295" r="4.2964087"
-			fill="#fff" />
-		<circle cx="61.103519" cy="41.933792" r="4.2964087"
-			fill="#fff" />
-		<circle cx="66.694695" cy="89.05938" r="4.2964087"
-			fill="#fff" />
-		<circle cx="43.930637" cy="86.263794" r="4.2964087"
-			fill="#fff" />
-		<circle cx="19.169731" cy="89.05938" r="4.2964087"
-			fill="#fff" />
-		<circle cx="13.977929" cy="72.685234" r="4.2964087"
-			fill="#fff" />
-		<circle cx="33.9464" cy="71.087753" r="4.2964087"
-			fill="#fff" />
-		<circle cx="53.116135" cy="57.109829" r="4.2964087"
-			fill="#fff" />
-	</g>
-	<path fill="#d40000"
-		d="M100 100h100v100H100z" />
-	<path clip-path="url(#q4)"
-		d="m100 125 25-25 25 25 25-25 25 25m-100 25 25-25 25 25 25-25 25 25m-100 25 25-25 25 25 25-25 25 25M99.999998 200 125 175l25 25 25-25 25 25"
-		fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
-	<path
-		d="M112.5 87.5H125V100h-12.5zm25 0H150V100h-12.5zm25 0H175V100h-12.5zm25 0H200V100h-12.5z" />
+<svg viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="a">
+			<stop offset="0" stop-color="#f1f9bf" />
+			<stop offset=".1" stop-color="#dbf1b4" />
+			<stop offset=".2" stop-color="#b7e3b6" />
+			<stop offset=".3" stop-color="#87d0bb" />
+			<stop offset=".4" stop-color="#59bec0" />
+			<stop offset=".5" stop-color="#35a8c2" />
+			<stop offset=".6" stop-color="#238bbb" />
+			<stop offset=".7" stop-color="#2168ad" />
+			<stop offset=".8" stop-color="#23489c" />
+			<stop offset=".9" stop-color="#1b2f81" />
+			<stop offset="1" stop-color="#081d58" />
+		</linearGradient>
+		<linearGradient xlink:href="#a" id="b" x1="200" y1="200" x2="0" y2="0"
+			gradientUnits="userSpaceOnUse" spreadMethod="pad" />
+	</defs>
+	<path style="mix-blend-mode:normal" fill="url(#b)" d="M0 0h200v200H0z" />
 </svg>

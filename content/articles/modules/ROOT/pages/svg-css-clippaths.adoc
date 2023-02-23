@@ -57,8 +57,8 @@
 	:root {
 		--any-svg-clippath-bg-color-1: transparent;
 		--any-svg-clippath-bg-color-2: #222;
-		--dimmed-earth-brightness: .8;
-		--dimmed-earth-opacity: .15;
+		--dimmed-earth-brightness: .9;
+		--dimmed-earth-opacity: .2;
 	}
 }
 #-shapes-svg {
@@ -80,7 +80,7 @@
 	background-color: var(--default-bg-color);
 }
 .-dim > img {
-	filter: grayscale(100%) opacity(var(--dimmed-earth-opacity)) brightness(var(--dimmed-earth-brightness)) ;
+	filter: grayscale(50%) opacity(var(--dimmed-earth-opacity)) brightness(var(--dimmed-earth-brightness)) ;
 }
 .-pos-abs {
 	position: absolute;
@@ -93,34 +93,36 @@
 	transform: translateX(65px);
 }
 .-clipped {
-	clip-path: url(#icon-star);
 	display: inline-block;
 }
-.-clipped.-clipped-wrong {
+.-clipped > img {
+	clip-path: url(#icon-star);
+}
+.-clipped.-clipped-wrong > img {
 	clip-path: url(#icon-star-no-scale)
 }
-.-clipped.-clipped-scaled-wrong {
+.-clipped.-clipped-scaled-wrong > img {
 	clip-path: url(#icon-star-scaled-wrong)
 }
-.-clipped.-clipped-arrow-1 {
+.-clipped.-clipped-arrow-1 > img {
 	clip-path: url(#arrow-1);
 }
-.-clipped.-clipped-arrow-2 {
+.-clipped.-clipped-arrow-2 > img {
 	clip-path: url(#arrow-2);
 }
-.-clipped.-clipped-arrow-3 {
+.-clipped.-clipped-arrow-3 > img {
 	clip-path: url(#arrow-3);
 }
-.-clipped.-clipped-arrow-4 {
+.-clipped.-clipped-arrow-4 > img {
 	clip-path: url(#arrow-4);
 }
-.-clipped.-clipped-arrow-5 {
+.-clipped.-clipped-arrow-5 > img {
 	clip-path: url(#arrow-5);
 }
-.-clipped.-clipped-four-arrows {
+.-clipped.-clipped-four-arrows > img {
 	clip-path: url(#four-arrows);
 }
-.-clipped.-clipped-four-circles {
+.-clipped.-clipped-four-circles > img {
 	clip-path: url(#four-circles);
 }
 #four-circles circle {
@@ -139,6 +141,7 @@
 	aspect-ratio: 32 / 48;
 	width: revert;
 }
+.-has-border .-clipped-img:not(.-no-border),
 .-clipped-img.-arrow,
 #circles-svg {
 	border: 2px dashed var(--default-text-color);
@@ -362,7 +365,7 @@ For _images_ that aren't square, the `<clipPath>` scales separately in each dime
 Here's just the left half of our image, and next to it is what happens when we use the circled star to clip just that half (which is now twice as tall as it is wide).
 ====
 [.halign-center.-with-bg]
-image:{img-url}[{img-alt-text},role="-clipped-img -half-image"]
+image:{img-url}[{img-alt-text},role="-clipped-img -half-image -no-border"]
 image:{img-url}[{img-alt-text},role="-clipped-img -half-image -pos-abs -dim"]
 image:{img-url}[{img-alt-text},role="-clipped-img -clipped -half-image"]
 ====
@@ -401,8 +404,7 @@ If an SVG has `viewBox="0 0 10 16" width="20" height="64"`, then
 ====
 
 Anyway, here's that up-arrow icon.
-
-NOTE: I've drawn a border around the arrow to show its dimensions; the border isn't part of the icon itself.
+(The border is just a guide; it's not actually part of the icon.)
 
 ====
 ++++
@@ -417,7 +419,7 @@ NOTE: I've drawn a border around the arrow to show its dimensions; the border is
 How do we use this as a `clip-path`?
 What we'd like to achieve is an arrow-shaped clipping region the same size as, and centered on the image, as shown below.
 ====
-[.halign-center.-with-bg.-fixed-height]
+[.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
 image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-3"]
 ====
@@ -441,7 +443,7 @@ Let's try our `transform` trick from above; maybe it'll still work here.
 
 
 ====
-[.halign-center.-with-bg.-fixed-height]
+[.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
 image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-2"]
 
@@ -463,9 +465,9 @@ While this would get the ``<clipPath>``’s `<path>` to have dimensions 1×1, it
 Here's what that would look like, with `transform: scale(0.1 0.625)`.
 
 ====
-[.halign-center.-with-bg.-fixed-height]
+[.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
-image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-4 -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-4"]
 
 ====
 Yech.
@@ -560,9 +562,9 @@ The original SVG had its upper left corner at `(0, 0)`, so we don't need to hand
 
 Which, as expected, leads to this:
 ====
-[.halign-center.-with-bg.-fixed-height]
+[.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
-image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-3 -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-3"]
 ====
 
 Success!
@@ -588,9 +590,9 @@ If we want our arrow to be half-size, we'll scale it by half of 1/16, or 1/32 = 
 
 This gets us
 ====
-[.halign-center.-with-bg.-fixed-height]
+[.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
-image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-5 -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-arrow-5"]
 ====
 
 
@@ -612,9 +614,9 @@ Since, like scaling transformations, rotations are always applies about the orig
 ----
 
 ====
-[.halign-center.-with-bg.-fixed-height]
+[.halign-center.-with-bg]
 image:{img-url}[{img-alt-text},role="-clipped-img -pos-abs -dim"]
-image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-four-arrows -pos-abs"]
+image:{img-url}[{img-alt-text},role="-clipped-img -clipped -clipped-four-arrows"]
 ====
 
 
