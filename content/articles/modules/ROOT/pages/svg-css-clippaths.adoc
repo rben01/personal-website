@@ -4,8 +4,8 @@
 :page-docdate: 2023-02-17
 :page-description: It's easy to fearlessly use any SVG path as a CSS clip-path
 :page-keywords: svg, css, style, tricks
-:img-url: svg-css-clippath/tiling.svg
-:img-alt-text: A Penrose tiling made of blue and yellow rhombus-shaped tiles. The blue tiles are wider and the yellow tiles are narrower.
+:img-url: svg-css-clippath/image.svg
+:img-alt-text: A square image divided into four regions in the top left, top right, bottom left, and bottom right. The top left is a blue background with white polka dots. The top right a green and black checkerboard pattern. The bottom left is yellow and black concentric circles. The bottom right is white horizontal zig-zagging lines on a red background.
 
 ++++
 <svg id="-shapes-svg" width="0" height="0">
@@ -40,10 +40,10 @@
 <path transform="translate(.25 .75) rotate(270) scale(0.03125) translate(-5 -8)" d="M4.990885 1.8584614a.81151495.81151495 0 00-.6168162.2852696L.56793697 6.6167599a.8114338.8114338 0 00.0919202 1.1436149.8114338.8114338 0 001.14361473-.091921L4.1883263 4.865838v8.464269a.8114338.8114338 0 00.8114339.811433.8114338.8114338 0 00.8114338-.811433V4.8772487L8.1966825 7.669722a.8114338.8114338 0 001.1442485.090018.8114338.8114338 0 00.090019-1.1442482l-3.82198-4.473029a.81151495.81151495 0 00-.618085-.2840014Z" />
 </clipPath>
 <clipPath id="four-circles" clipPathUnits="objectBoundingBox">
-	<circle cx="0" cy="-65" r="5"></circle> <!-- Top circle -->
-	<circle cx="0" cy="-35" r="5"></circle> <!-- Bottom -->
-	<circle cx="-15" cy="-50" r="5"></circle> <!-- Left -->
-	<circle cx="15" cy="-50" r="5"></circle> <!-- Right -->
+	<circle cx="0" cy="-65" r="6"></circle> <!-- Top circle -->
+	<circle cx="0" cy="-35" r="6"></circle> <!-- Bottom -->
+	<circle cx="-15" cy="-50" r="6"></circle> <!-- Left -->
+	<circle cx="15" cy="-50" r="6"></circle> <!-- Right -->
 </clipPath>
 </svg>
 <style>
@@ -185,7 +185,7 @@ The https://developer.mozilla.org/en-US/docs/web/css/clip-path[`clip-path`] prop
 It allows using a https://developer.mozilla.org/en-US/docs/Web/CSS/basic-shape[shape] to specify a _clipping region_ for the given HTML element: a region outside of which the element is not drawn.
 In other words, the clipping region is like a mask{empty}footnote:[But not to be confused with an "`actual`" https://developer.mozilla.org/en-US/docs/web/css/mask[CSS mask], which acts like a translucent film covering the background image.
 It's possible for parts of the background image to show through only partially, which is not the case for ``clip-path``s.] that only lets through portions of the background within the region's interior (or equivalently, that blocks the portions of the background outside of the region).
-For instance, here is a 200×200 image of a https://en.wikipedia.org/wiki/Penrose_tiling[Penrose tiling] created with the Penrose tiling generator at https://misc.0o0o.org/penrose, followed by the same image with a circled-star icon as its clipping path.
+For instance, here is a 200×200 image, followed by the same image with a circled-star icon as its clipping path.
 [#original-image]
 ====
 [.halign-center.-with-bg]
@@ -275,10 +275,10 @@ So, if we tried to tried to naively convert it to a `<clipPath>`, as shown below
 ----
 <1> This SVG's elements aren't actually going to be rendered anywhere, so `viewBox` isn't needed anymore.
 
-...and we use it as the `clip-path` of our Penrose tiling, which has dimensions 200×200, using the following CSS...
+...and we use it as the `clip-path` of our image, which has dimensions 200×200, using the following CSS...
 [source,css]
 ----
-.penrose-tiling {
+.image {
 	clip-path: url(#clippath-circled-star);
 }
 ----
@@ -649,10 +649,10 @@ So, suppose we had the following SVG, which contains four circles equally spaced
 ----
 <!-- Origin at (x, y) = (-25, -100), dimensions (w, h) = (50, 100) -->
 <svg viewBox="-25 -100 50 100">
-	<circle cx="0" cy="-65" r="5"></circle> <!-- Top circle -->
-	<circle cx="0" cy="-35" r="5"></circle> <!-- Bottom -->
-	<circle cx="-15" cy="-50" r="5"></circle> <!-- Left -->
-	<circle cx="15" cy="-50" r="5"></circle> <!-- Right -->
+	<circle cx="0" cy="-65" r="6"></circle> <!-- Top circle -->
+	<circle cx="0" cy="-35" r="6"></circle> <!-- Bottom -->
+	<circle cx="-15" cy="-50" r="6"></circle> <!-- Left -->
+	<circle cx="15" cy="-50" r="6"></circle> <!-- Right -->
 </svg>
 ----
 
@@ -663,10 +663,10 @@ Again, I'll draw a border around the SVG.
 <div class="halign-center -with-bg">
 <p>
 <svg id="circles-svg" viewBox="-25 -100 50 100" width="75" height="150">
-<circle cx="0" cy="-65" r="5"></circle> <!-- Top circle -->
-<circle cx="0" cy="-35" r="5"></circle> <!-- Bottom -->
-<circle cx="-15" cy="-50" r="5"></circle> <!-- Left -->
-<circle cx="15" cy="-50" r="5"></circle> <!-- Right -->
+<circle cx="0" cy="-65" r="6"></circle> <!-- Top circle -->
+<circle cx="0" cy="-35" r="6"></circle> <!-- Bottom -->
+<circle cx="-15" cy="-50" r="6"></circle> <!-- Left -->
+<circle cx="15" cy="-50" r="6"></circle> <!-- Right -->
 </svg>
 </p>
 </div>
@@ -690,10 +690,10 @@ And the SVG we need is
 ----
 <svg>
 <clipPath id="four-circles" clipPathUnits="objectBoundingBox">
-	<circle cx="0" cy="-65" r="5"></circle> <!-- Top circle -->
-	<circle cx="0" cy="-35" r="5"></circle> <!-- Bottom -->
-	<circle cx="-15" cy="-50" r="5"></circle> <!-- Left -->
-	<circle cx="15" cy="-50" r="5"></circle> <!-- Right -->
+	<circle cx="0" cy="-65" r="6"></circle> <!-- Top circle -->
+	<circle cx="0" cy="-35" r="6"></circle> <!-- Bottom -->
+	<circle cx="-15" cy="-50" r="6"></circle> <!-- Left -->
+	<circle cx="15" cy="-50" r="6"></circle> <!-- Right -->
 </clipPath>
 </svg>
 ----
