@@ -57,8 +57,8 @@
 	:root {
 		--any-svg-clippath-bg-color-1: transparent;
 		--any-svg-clippath-bg-color-2: #222;
-		--dimmed-earth-brightness: .6;
-		--dimmed-earth-opacity: .4;
+		--dimmed-earth-brightness: .8;
+		--dimmed-earth-opacity: .15;
 	}
 }
 #-shapes-svg {
