@@ -1,0 +1,51 @@
+= Building Static {wasm}-Powered Webpages with Rust and {wp}
+:wasm: WebAssembly
+:js: JavaScript
+:node: Node.js
+:wp: Webpack
+
+== Introduction
+
+In this article I'll explain how to use Rust and {wp} to build a collection of static WebAssembly-powered webpages.
+This would allow one to create a static site consisting of multiple pages with a shared CSS and JS codebase, and which contain WebAssembly without writing any WebAssembly by hand.
+
+=== What is a Static Webpage?
+
+A static webpage is an HTML that is created and stored well before it is served, with no dependence on a server to generate the HTML at the time the request is made.
+Of course you still need a server to _serve_ the HTML.
+The point is that all of the HTML can be generated ahead of time and served without any further work being done.
+
+Static webpages are useful when you really do just want to serve the same content to all viewers — such as on this very site — and so there's no advantage to _not_ generating pages ahead of time.
+Compare to, say, an e-commerce site, where the page that shows a user's cart depends both on the user viewing the page and the contents of their cart at the moment they want to view their cart, and so cannot be stored ahead of time.
+Services like https://pages.github.com[GitHub pages], which host and serve a collection of the user's pages but do not provide a server with which to generate those pages on the fly, only work with static webpages.
+
+=== What is WebAssembly?
+According to https://en.wikipedia.org/wiki/WebAssembly[Wikipedia],
+
+[quote]
+____
+WebAssembly (sometimes abbreviated Wasm) defines a portable binary-code format and a corresponding text format for executable programs as well as software interfaces for facilitating interactions between such programs and their host environment.
+
+The main goal of WebAssembly is to enable high-performance applications on web pages, ...
+____
+
+For our purposes, what this means is: {wasm} makes it possible to write higher-performance code for the browser than is possible with {js}.
+For things like serious number crunching, where the performance cost of {js}'s dynamic nature becomes prohibitively expensive, you can drop down into {wasm} and get performance comparable to a compiled language.footnote:[But {js}'s performance is nothing to sneeze at.
+Thanks to the wizards who work on {js} runtimes, {js} manages to remain competitive with compiled languages like C/C++.
+The list of comparisons against C https://programming-language-benchmarks.vercel.app/{js}-vs-c[here] shows that while {js} always loses to C, it tends to keep things within an order of magnitude.
+Compare to e.g., Python, which routinely gets demolished by C.]
+
+Does this mean we have to learn a whole new language in order to write high-performance code for browsers?
+And how do we then _use_ that code from {js}?
+If we want to display the result of some {wasm} number crunching in a `<span>` somewhere, how do we do that?
+
+We'll answer those questions later.
+First, let's talk about {node} and {wp}.
+
+=== {node} and {wp}
+
+{node} is a cross-platform {js} runtime which runs outside a browser.
+In essence, it ships Chrome's https://en.wikipedia.org/wiki/V8_(JavaScript_engine)[V8] engine as a standalone runtime, which lets one use JavaScript to write code, as one would for a browser, but for non-browser environments.
+
+If the point here is to build _static_ webpages, why are we bringing up {node} — which runs on a server, outside the browser — at all?
+Because
