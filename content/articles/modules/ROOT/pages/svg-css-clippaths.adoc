@@ -507,7 +507,10 @@ We can do better!
 
 What we would really like to do, if it were possible, is *center the `<path>` first, and _then_ scale it down*.
 However, the `scale(...)` transform always scales relative to the origin: the result of scaling a point `(x, y)` by `s` will always be `(s*x, s*y)`.
-You don't get to specify your own "`scale origin`", so translating and then scaling won't work.
+You don't get to specify your own "`scale origin`", so translating and then scaling won't work.footnote:[Actually, that's not true; there is https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform-origin[`transform-origin`], which lets you specify an origin other than `(0, 0)` as the origin of the transform.
+However, it pretty much only makes scaling and rotating more convenient.
+Once you need to translate, all bets are off; you need the dimensions of the transformed element to know how to translate it, and then you're back to the situation above.
+But, if you do just need to scale and rotate, `transform-origin` probably does make things simpler.]
 
 If what we're looking for is a simpler way to translate our post-scale `<path>` — something simpler than `translate(0.5-(x+w/2)/h, 0.5-(y+h/2)/h)` — maybe we should perform the scaling on the shape when it's centered at the origin.
 Then translating it to the correct final position would simply be `translate(.5 .5)` — that's the center of a 1×1 square, after all.
