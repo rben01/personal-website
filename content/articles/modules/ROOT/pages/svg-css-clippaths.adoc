@@ -439,7 +439,7 @@ Let's try our `transform` trick from above; maybe it'll still work here.
 </svg>
 ----
 <1> 0.0625 = 1/16, which gets our shape with dimensions 10×16 to lie entirely in a 1×1 square.
-<2> Unfortunately, SVG doesn't let you write out the scale factor as a literal division like `1 / 16`, so you've got to plug the division into a calculator and write out the resulting decimal number.
+<2> Unfortunately, SVG doesn't let you write out the scale factor as a literal division like `1 / 16` (no, not even in `calc()`), so you've got to plug the division into a calculator and write out the resulting decimal number.
 
 
 ====
