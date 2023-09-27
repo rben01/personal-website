@@ -2,6 +2,7 @@
 :page-docdate: 2021-07-20
 :page-description: The correct way to indent is using both tabs and spaces
 :page-keywords: indentation, spaces, tabs, editing
+:page-font-unicode-blocks: supplemental-arrows-b, box-drawing
 :cursor: 𝚰
 :experimental:
 :tk: kbd:[Tab]
