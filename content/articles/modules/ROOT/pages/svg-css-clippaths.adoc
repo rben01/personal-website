@@ -387,7 +387,7 @@ Here is an up-arrow icon that which is taller (16) than it is wide (10):
 ----
 
 Now is a good time to talk about the SVG's `viewBox` attribute.
-If you imagine the SVG's contents lying in the infinite Cartesian plane, the `vieBox` tells us what rectangle in the plane to restrict our attention to; nothing outside this rectangle is drawn.
+If you imagine the SVG's contents lying in the infinite Cartesian plane, the `viewBox` tells us what rectangle in the plane to restrict our attention to; nothing outside this rectangle is drawn.
 (In a sense, the `viewBox` is like a rectangular `clip-path` of the whole SVG, which would otherwise be infinitely large and almost entirely empty.)
 ``viewBox``es take the form of `"x y w h"`, where `x` is the x-position of the rectangle's upper left corner, `y` is that corner's y-position, and `w` and `h` are the rectangle's width and height, respectively.
 The up-arrow SVG has its origin at `(x, y) = (0, 0)` and has a width of 10 and a height of 16.
